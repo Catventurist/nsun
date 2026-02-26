@@ -262,10 +262,10 @@ user:
   description: Decades of coding and years of adventures
   location: Spain
 pricing:
-  monthly: Monthly
-  yearly: Yearly
-  month: /month
-  year: /year
+  monthly: Northern
+  yearly: Sun
+  month: /stock
+  year: /stock
 empty: 
   page:
     title: Page not found

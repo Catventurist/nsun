@@ -1,22 +1,23 @@
 <script setup lang="ts">
 import colors from 'tailwindcss/colors'
 import * as nuxtUiLocales from '@nuxt/ui/locale'
-import { withLeadingSlash } from 'ufo'
-import type { Collections, PageCollections } from '@nuxt/content'
+import type { PageCollections } from '@nuxt/content'
 import { findPageChildren } from '@nuxt/content/utils'
-
+/*
+import { withLeadingSlash } from 'ufo'
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+*/
 const route = useRoute()
 const { locale } = useI18n()
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const localePath = useLocalePath()
 const appConfig = useAppConfig()
 const colorMode = useColorMode()
 const color = computed(() => colorMode.value === 'dark' ? (colors as never)[appConfig.ui.colors?.neutral as string][900] : 'white')
 const radius = computed(() => `:root { --ui-radius: ${appConfig.theme.radius}rem; }`)
 const blackAsPrimary = computed(() => appConfig.theme.blackAsPrimary ? `:root { --ui-primary: black; } .dark { --ui-primary: white; }` : ':root {}')
 const font = computed(() => `:root { --font-sans: '${appConfig.theme.font}', sans-serif; }`)
+const { desktoplinks } = useHeader()
 
-/* const { data: navigation } = await useAsyncData('navigation-docs-' + locale.value, () => queryCollectionNavigation('docs_' + locale.value as keyof PageCollections, ['description']))
- */
 const { data: navigation } = await useAsyncData(`navigation-${locale.value}`, async () => {
   const docsCollection = `docs_${locale.value}` as keyof PageCollections
   const blogCollection = `posts_${locale.value}` as keyof PageCollections
@@ -28,21 +29,37 @@ const { data: navigation } = await useAsyncData(`navigation-${locale.value}`, as
   return { docs, blog }
 }, { watch: [locale] })
 
-const { data: files } = useLazyAsyncData('search-' + slug.value, () => queryCollectionSearchSections('docs_' + locale.value as keyof Collections, {
+const { data: files } = useLazyAsyncData('search-' + locale.value, async () => {
+  const docName = `docs_${locale.value}` as keyof PageCollections
+  const postsName = `posts_${locale.value}` as keyof PageCollections
+
+  const [doc, posts] = await Promise.all([
+    queryCollectionSearchSections(docName, { ignoredTags: ['style'] }),
+    queryCollectionSearchSections(postsName, { ignoredTags: ['style'] })
+  ])
+
+  return [...doc, ...posts]
+}, {
+  server: false,
+  watch: [locale]
+})
+
+/* const { data: files } = useLazyAsyncData('search-' + locale.value, () => queryCollectionSearchSections('docs_' + locale.value as keyof Collections, {
   ignoredTags: ['style']
 }), {
   server: false,
   watch: [locale]
 })
+const { rootNavigation } = useNavigation(navigation)
 
-/* const { rootNavigation } = useNavigation(navigation)
+const docsi = computed(() => files.value?.doc)
+const blogi = computed(() => files.value?.posts)
 
-const docsi = computed(() => navigation.value?.docs)
-const blogi = computed(() => navigation.value?.blog) */
-const localePath = useLocalePath()
-const docNav = findPageChildren(navigation.value?.docs, localePath('/docs'))
 const blogNav = findPageChildren(navigation.value?.blog, localePath('/blog'))
-
+const docSea = findPageChildren(files.value, localePath('/docs'))
+const postsSea = findPageChildren(files.value?.posts) */
+const bothi = computed(() => files.value)
+const docNav = findPageChildren(navigation.value?.docs, localePath('/docs'))
 provide('navigation-' + locale.value, docNav)
 
 const nuxtUiLocale = computed(() => nuxtUiLocales[locale.value as keyof typeof nuxtUiLocales] || nuxtUiLocales.en)
@@ -75,8 +92,8 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: `%s - ` + appConfig.header.title,
-  ogSiteName: appConfig.header.title,
+  titleTemplate: `%s - ` + $t('site.title'),
+  ogSiteName: $t('site.title'),
   twitterCard: 'summary_large_image'
 })
 </script>
@@ -100,7 +117,7 @@ useSeoMeta({
     <AppFooter />
     <ClientOnly>
       <LazyUContentSearch
-        :files="files"
+        :files="bothi"
         :navigation="docNav"
       />
     </ClientOnly>

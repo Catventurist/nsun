@@ -372,10 +372,22 @@ const { data: ast } = await useAsyncData(codeKey, async () => {
 </script>
 
 <template>
-  <div class="my-5" :style="{ '--ui-header-height': '4rem' }">
-    <div ref="wrapperContainer" class="relative group/component">
-      <div v-if="options.length" class="flex flex-wrap items-center gap-2.5 border border-muted border-b-0 relative rounded-t-md px-4 py-2.5 overflow-x-auto">
-        <template v-for="option in options" :key="option.name">
+  <div
+    class="my-5"
+    :style="{ '--ui-header-height': '4rem' }"
+  >
+    <div
+      ref="wrapperContainer"
+      class="relative group/component"
+    >
+      <div
+        v-if="options.length"
+        class="flex flex-wrap items-center gap-2.5 border border-muted border-b-0 relative rounded-t-md px-4 py-2.5 overflow-x-auto"
+      >
+        <template
+          v-for="option in options"
+          :key="option.name"
+        >
           <UFormField
             :label="option.label"
             size="sm"
@@ -398,7 +410,10 @@ const { data: ast } = await useAsyncData(codeKey, async () => {
               :ui="{ itemLeadingChip: 'w-2' }"
               @update:model-value="setComponentProp(option.name, $event)"
             >
-              <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
+              <template
+                v-if="option.name.toLowerCase().endsWith('color')"
+                #leading="{ modelValue, ui }"
+              >
                 <UChip
                   v-if="modelValue"
                   inset
@@ -428,9 +443,19 @@ const { data: ast } = await useAsyncData(codeKey, async () => {
         class="flex justify-center border border-b-0 border-muted relative p-4 z-1"
         :class="[!options.length && 'rounded-t-md', props.class, { 'overflow-hidden': props.overflowHidden, 'dark:bg-default/50': props.elevated }]"
       >
-        <component :is="component" v-bind="{ ...componentProps, ...componentEvents }">
-          <template v-for="slot in Object.keys(slots || {})" :key="slot" #[slot]>
-            <slot :name="slot" mdc-unwrap="p">
+        <component
+          :is="component"
+          v-bind="{ ...componentProps, ...componentEvents }"
+        >
+          <template
+            v-for="slot in Object.keys(slots || {})"
+            :key="slot"
+            #[slot]
+          >
+            <slot
+              :name="slot"
+              mdc-unwrap="p"
+            >
               {{ slots?.[slot] }}
             </slot>
           </template>

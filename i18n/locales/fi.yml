@@ -317,10 +317,10 @@ user:
   description: Vuosikymmeniä koodausta ja jonkin verran seikkailuja
   location: Espanja
 pricing:
-  monthly: Kuukausittain
-  yearly: Vuosittain
-  month: /kk
-  year: /v
+  monthly: Pohjoinen
+  yearly: Aurinko
+  month: /osake
+  year: /osake
 about:
   readarticle: Lue julkaisu
   available: Saatavilla uusiin projekteihin

@@ -69,8 +69,14 @@ defineOgImageComponent('Saas')
       >
         <UContentToc :links="page.body.toc.links">
           <template #bottom>
-            <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
-            <UPageLinks :title="$t('links.title')" :links="tocLinks" />
+            <USeparator
+              v-if="page.body?.toc?.links?.length"
+              type="dashed"
+            />
+            <UPageLinks
+              :title="$t('links.title')"
+              :links="tocLinks"
+            />
             <USeparator type="dashed" />
           </template>
         </UContentToc>

@@ -145,7 +145,7 @@ export default defineContentConfig({
         ),
         logos: z.object({
           title: z.string().nonempty(),
-          icons: z.array(z.string())
+          icons: z.array(property(z.string()).editor({ input: 'icon' }))
         }),
         faq: Base().extend({
           items: z.array(
@@ -346,7 +346,7 @@ export default defineContentConfig({
         ),
         logos: z.object({
           title: z.string().nonempty(),
-          icons: z.array(z.string())
+          icons: z.array(property(z.string()).editor({ input: 'icon' }))
         }),
         faq: Base().extend({
           items: z.array(

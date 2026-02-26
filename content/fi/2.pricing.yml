@@ -1,70 +1,70 @@
-title: Jokaiselle jotain
-description: 'Arvojen ja moraalin pohjalta laadittu taulukko, numerot suuntaa antavia Bitcoinin satoshi-osina nollia säästäen.'
+title: Osakkuudet
+description: Jäsenyyden mukana tulevia etuja osakkuuksina.
 seo:
   title: Hintoja
   description: Valitse sopivin vaihtoehto.
 navigation.icon: i-lucide-credit-card
 plans:
-  - title: Perus
-    description: Yksilöille ja yhteisöille. 
+  - title: C-sarja
+    description: In Nature-kannattajaosake. Valinnaisia etuja ensisijoittajille. 
     price:
-      month: 0 s
-      year: 0 s
+      month: 10 s
+      year: 10 s
     button:
-      label: Aloitetaan
-      color: success
+      label: Kannattamaan
+      color: info
       variant: subtle
-      icon: lucide-user
+      icon: lucide-house
     features:
-      - 1 GB Tallennustilaa
-      - 1 Nettisivu
-      - 1 Tietokanta
-      - Tuki
-  - title: Organisaatio
-    description: Pienille organisaatioille.
+      - 12 000 000 osaketta.
+      - Osta tuotteita ja palveluita.
+      - +50 € mukaan tuotekehitysverkostoon.
+      - Kehitysvaiheessa olevia tuotteita.
+      - 20 kpl CBD-siemeniä.
+      - tai 10 kpl Strong-keräilysiementä.
+      - tai 10 ml uutetta.
+      - Ei äänivaltaa tai osinko-oikeutta.
+  - title: A-sarja
+    description: Etuja osaajille ja kehittäjille.
     price:
-      month: 9 s
-      year: 90 s
+      month: 10 s
+      year: 10 s
     highlight: true
     scale: true
     button:
-      label: Käynnistetään
+      label: Tutustu
       variant: outline
       icon: lucide-users
     features:
-      - 10 GB Tallennustilaa
-      - 10 Säköpostitiliä
-      - 10 Verkkotunnusta
-      - 10 Nettisivus
-      - 10 Tietokantaa
-      - 10 SSL Sertifikaattia
-      - 10 Tukilippua
-  - title: Suuryritys
-    description: Isoille firmoille.
+      - 600 000 / 1 800 000 osaketta.
+      - Osinko-oikeus ja äänioikeus.      
+      - Mukaan kehittämään yhtiön toimintaa.
+      - Siemenaineistoja ja asiantuntemusta.
+      - Kasvikantojen kehittäjille ja ylläpitäjille.      
+      - Uutto-ja erottelutekniikoiden kehittäjäille.
+      - Liiketoiminnan kehittämiseen sitoutuvia.
+  - title: B-sarja
+    description: Sijoitus pohjoismaiseen siemenpankkiin ja kannabisalan startup-yritykseen.
     price:
-      month: 100 s
-      year: 1000 s
+      month: 10 s
+      year: 10 s
     button:
-      label: Perehdytään
+      label: Sijoittamaan
       color: warning
       variant: subtle
-      icon: simple-icons-bitcoin
+      icon: lucide-euro
     features:
-      - 100 GB Tallennustilaa
-      - 100 Säköpostitiliä
-      - 100 Verkkotunnusta
-      - 100 Nettisivus
-      - 100 Tietokantaa
-      - 100 SSL Sertifikaattia
-      - 100 Tukilippua
+      - 900 000 osaketta.
+      - Sijoittajaosakkeet.
+      - Osinko-oikeus.
+      - Kotimaista ja kansainvälistä toimintaa.
+      - Ei äänivaltaa.
 logos:
   title: Uusimpia työkaluja käyttäen
   icons:
-    - i-simple-icons-hive-blockchain
     - i-simple-icons-nuxt
     - i-simple-icons-tailwindcss
     - i-simple-icons-typescript
-    - i-simple-icons-cloudflare
 faq:
   title: Kysymyksiä
   description: Tärkeimpiä ja oleellisimpia tietoja.
@@ -73,11 +73,11 @@ faq:
       content: Mikään ei ole täysin varmaa, mutta tuoreimmassa teknologiassa on suurin osa ratkaisuista sisäänrakennettuna.
     - label: Kuinka peruminen tapahtuu?
       content: Viestittelemällä, kaikesta voidaan sopia.
-    - label: Mitä ilmaista on tarjolla?
-      content: Lähes kaikki on avointa lähdekoodia. Tietokantojen ylläpito, varmistus ja päivitys on työläin osuus.
-    - label: Kryptomaailma?
-      content: Hajautettu tietokanta vahvoilla avaimilla ja eri tarkoituksiin luodut sovellukset tarjoavat melkoiset mahdollisuudet.
-    - label: Mitkä moraalit?
-      content: Rahan keinotekoinen niukkuus aiheuttaa ongelmia ja pitää yllä valtarakenteita, vaikka pohjalla on vain tyhjiä lupauksia.
+    - label: Minkälainen nettisivu?
+      content: Lähes kaikki on avointa lähdekoodia. Tietokantojen sekä sisällön ylläpito, varmistus ja päivitys on työläin osuus.
+    - label: Klubi
+      content: Jäsenyys, osakkuuksia ja ainutlaatuisia etuja. Lisätietoja sivulla osakeanti.
+    - label: Liittyminen
+      content: Jos haluat mukaan aurinkoyhteisöön, ota yhteyttä sähköpostilla. Kerro nimesi ja yhteystietosi ja millä summilla haluat sijoittaa eri sarjoihin.
     - label: Saako opastusta?
       content: Auttaminen on tärkeää ja aina kannattaa kysyä, jos on epäselvyyksiä. Kysyvä ei tieltä eksy!

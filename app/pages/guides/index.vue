@@ -39,14 +39,28 @@ function formatDate(date: string) {
 
 <template>
   <div class="relative flex flex-col min-h-[calc(100vh-150px)]">
-    <UPageHero v-if="page" :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }">
+    <UPageHero
+      v-if="page"
+      :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }"
+    >
       <LazyStarsBg />
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div
+        aria-hidden="true"
+        class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8"
+      />
       <template #title>
-        <MDC :value="page.hero.title" unwrap="p" cache-key="guides-hero-title" />
+        <MDC
+          :value="page.hero.title"
+          unwrap="p"
+          cache-key="guides-hero-title"
+        />
       </template>
       <template #description>
-        <MDC :value="page.hero.description" unwrap="p" cache-key="guides-hero-description" />
+        <MDC
+          :value="page.hero.description"
+          unwrap="p"
+          cache-key="guides-hero-description"
+        />
       </template>
     </UPageHero>
     <UPageBody class="my-0! py-0! border-y border-default">
@@ -68,7 +82,10 @@ function formatDate(date: string) {
                 <div class="flex-1 min-w-0">
                   <div class="flex flex-row items-center gap-2 text-xs text-muted font-mono shrink-0 mb-1 *:duration-300">
                     {{ formatDate(post.date) }}
-                    <UIcon name="lucide-clock" class="ms-2 group-hover:text-primary" />
+                    <UIcon
+                      name="lucide-clock"
+                      class="ms-2 group-hover:text-primary"
+                    />
                     {{ post.readingTime }} {{ $t('time.min') }}
                   </div>
                   <h3 class="font-medium text-highlighted group-hover:text-primary transition-colors duration-200 truncate sm:text-base">
@@ -79,10 +96,12 @@ function formatDate(date: string) {
                   </p>
                 </div>
               </div>
-
               <div class="flex items-center justify-between sm:justify-end gap-3 sm:gap-2 shrink-0">
-
-                <UAvatarGroup v-if="post.authors?.length" size="sm" class="sm:size-sm">
+                <UAvatarGroup
+                  v-if="post.authors?.length"
+                  size="sm"
+                  class="sm:size-sm"
+                >
                   <UAvatar
                     v-for="author in post.authors.slice(0, 3)"
                     :key="author.name"
@@ -104,7 +123,10 @@ function formatDate(date: string) {
     </UPageBody>
 
     <UContainer class="relative min-h-24 grow">
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div
+        aria-hidden="true"
+        class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8"
+      />
     </UContainer>
   </div>
 </template>

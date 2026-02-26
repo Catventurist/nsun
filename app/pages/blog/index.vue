@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { Collections, PageCollections, PostsEnCollectionItem, PostsFiCollectionItem } from '@nuxt/content'
+import type { Collections, PageCollections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
@@ -31,7 +31,7 @@ const { data: posts } = await useAsyncData('posts-' + slug.value, async () => {
 })
 */
 const { data: page } = await useAsyncData('blog-' + slug.value, () => queryCollection('blog_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
-const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts_' + locale.value as keyof Collections).order('date', 'DESC').all(), { watch: [locale] })
+const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts_' + locale.value as keyof Collections).order('title', 'DESC').all(), { watch: [locale] })
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
@@ -54,10 +54,18 @@ defineOgImageComponent('Saas')
       :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }"
     >
       <template #title>
-        <MDC :value="page.title" unwrap="p" cache-key="blog-hero-title" />
+        <MDC
+          :value="page.title"
+          unwrap="p"
+          cache-key="blog-hero-title"
+        />
       </template>
       <template #description>
-        <MDC :value="page.description" unwrap="p" cache-key="blog-hero-description" />
+        <MDC
+          :value="page.description"
+          unwrap="p"
+          cache-key="blog-hero-description"
+        />
       </template>
     </UPageHero>
 

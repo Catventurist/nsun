@@ -4,22 +4,9 @@ import { camelCase } from 'scule'
 import * as theme from '#build/ui'
 
 const props = defineProps<{
-  /**
-   * The container element to find slots in.
-   */
   container: HTMLElement | null
-  /**
-   * The positioned ancestor for highlight positioning.
-   * If not provided, uses container.
-   */
   positionContainer?: HTMLElement | null
-  /**
-   * Override the component slug taken from the route.
-   */
   slug?: string
-  /**
-   * Whether the component is a prose component.
-   */
   prose?: boolean
 }>()
 
@@ -28,7 +15,6 @@ const route = useRoute()
 const camelName = computed(() => camelCase(props.slug ?? route.path.split('/').pop() ?? ''))
 const componentTheme = computed(() => ((props.prose ? theme.prose : theme) as any)[camelName.value])
 
-// Get all slot names from theme definition
 const themeSlots = computed(() => Object.keys(componentTheme.value?.slots ?? {}))
 
 const open = ref(false)
@@ -45,13 +31,11 @@ function getSlotClasses(slotName: string): string {
 function findSlotElement(slotName: string): { element: Element, inPortal: boolean } | null {
   if (!props.container) return null
 
-  // First check in container
   const containerSlot = props.container.querySelector(`[data-slot="${slotName}"]`)
   if (containerSlot) {
     return { element: containerSlot, inPortal: false }
   }
 
-  // Then check in Reka UI portals (excluding our own popover's portal)
   for (const child of document.body.children) {
     const hasRekaAttr = Array.from(child.attributes).some(attr => attr.name.startsWith('data-reka-'))
     if (hasRekaAttr) {
@@ -103,7 +87,6 @@ function getSlotPosition(slotName: string): { style: { left: string, top: string
   }
 }
 
-// Initialize position to first rendered slot (so first hover can animate from there)
 function initializePosition() {
   for (const slotName of themeSlots.value) {
     const position = getSlotPosition(slotName)
@@ -134,7 +117,6 @@ function getSlotRenderLocation(slotName: string): 'container' | 'portal' | 'none
   return result.inPortal ? 'portal' : 'container'
 }
 
-// Initialize position when popover opens, clear when closes
 watch(open, (isOpen) => {
   if (isOpen) {
     initializePosition()
@@ -172,7 +154,10 @@ watch(open, (isOpen) => {
       </UTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-default">
+        <div
+          ref="popoverContentRef"
+          class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-default"
+        >
           {{ $t('theme.slots') }}
         </div>
         <div class="p-1">
@@ -185,17 +170,29 @@ watch(open, (isOpen) => {
             @mouseleave="clearHighlight"
           >
             <div class="flex items-center gap-2">
-              <code class="text-xs font-medium" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'text-highlighted' : 'text-muted']">
+              <code
+                class="text-xs font-medium"
+                :class="[getSlotRenderLocation(slotName) !== 'none' ? 'text-highlighted' : 'text-muted']"
+              >
                 {{ slotName }}
               </code>
-              <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] text-muted">
+              <span
+                v-if="getSlotRenderLocation(slotName) === 'portal'"
+                class="text-[10px] text-muted"
+              >
                 ({{ $t('theme.portal') }})
               </span>
-              <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] text-muted">
+              <span
+                v-else-if="getSlotRenderLocation(slotName) === 'none'"
+                class="text-[10px] text-muted"
+              >
                 ({{ $t('theme.norender') }})
               </span>
             </div>
-            <div v-if="getSlotClasses(slotName)" class="mt-0.5 text-[10px] text-muted line-clamp-2 font-mono">
+            <div
+              v-if="getSlotClasses(slotName)"
+              class="mt-0.5 text-[10px] text-muted line-clamp-2 font-mono"
+            >
               {{ getSlotClasses(slotName) }}
             </div>
           </div>
@@ -203,7 +200,10 @@ watch(open, (isOpen) => {
       </template>
     </UPopover>
 
-    <Teleport to="body" :disabled="!isPortalHighlight">
+    <Teleport
+      to="body"
+      :disabled="!isPortalHighlight"
+    >
       <div
         v-if="highlightStyle"
         :style="highlightStyle"

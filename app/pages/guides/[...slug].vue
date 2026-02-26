@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { Collections } from '@nuxt/content'
+import type { PageCollections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
@@ -8,7 +8,7 @@ const localePath = useLocalePath()
 const appConfig = useAppConfig()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
 
-const { data: page } = await useAsyncData('guides-' + slug.value, () => queryCollection('guides_' + locale.value as keyof Collections).path(route.path).first(), { watch: [locale] })
+const { data: page } = await useAsyncData('guides-' + slug.value, () => queryCollection('guides_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
 if (!page.value) {
   throw createError({ status: 404, statusText: 'Guide not found', fatal: true })
 }
@@ -17,9 +17,9 @@ const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
-  titleTemplate: '%s - Kaannos',
+  titleTemplate: '%s -' + $t('site.title'),
   title,
-  ogTitle: `${title} - Kaannos`,
+  ogTitle: `${title} -` + $t('site.title'),
   description,
   ogDescription: description
 })
@@ -44,8 +44,16 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
 </script>
 
 <template>
-  <UPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
-    <UPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
+  <UPage
+    v-if="page"
+    :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }"
+    class="lg:gap-8"
+  >
+    <UPageHeader
+      :title="page.title"
+      :description="page.description"
+      :ui="{ title: 'relative flex items-center' }"
+    >
       <template #headline>
         <UButton
           :icon="appConfig.ui.icons.arrowLeft"
@@ -61,15 +69,25 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
         </time>
       </template>
 
-      <div v-if="page.authors?.length" class="flex items-center gap-6 mt-6">
-        <template v-for="author in page.authors" :key="author.name">
+      <div
+        v-if="page.authors?.length"
+        class="flex items-center gap-6 mt-6"
+      >
+        <template
+          v-for="author in page.authors"
+          :key="author.name"
+        >
           <ULink
             v-if="author.to"
             :to="author.to"
             target="_blank"
             class="flex items-center gap-3 group"
           >
-            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
+            <UAvatar
+              :src="author.avatar?.src"
+              :alt="author.name"
+              size="lg"
+            />
             <div class="flex flex-col">
               <span class="text-sm font-medium text-highlighted">
                 {{ author.name }}
@@ -79,16 +97,28 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
               </span>
             </div>
           </ULink>
-          <div v-else class="flex items-center gap-3">
-            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
-            <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
+          <div
+            v-else
+            class="flex items-center gap-3"
+          >
+            <UAvatar
+              :src="author.avatar?.src"
+              :alt="author.name"
+              size="lg"
+            />
+            <span class="text-sm font-medium text-highlighted">
+              {{ author.name }}
+            </span>
           </div>
         </template>
       </div>
     </UPageHeader>
 
     <UPageBody>
-      <ContentRenderer v-if="page.body" :value="page" />
+      <ContentRenderer
+        v-if="page.body"
+        :value="page"
+      />
     </UPageBody>
 
     <template #right>
@@ -107,8 +137,14 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
             expand-all
             :ui="{ list: 'border-default', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-default [&>div>pre]:rounded-none' }"
           />
-          <div v-else class="size-full border-l border-default flex items-center justify-center">
-            <UIcon :name="appConfig.ui.icons.arrowDown" class="size-12 text-dimmed animate-bounce" />
+          <div
+            v-else
+            class="size-full border-l border-default flex items-center justify-center"
+          >
+            <UIcon
+              :name="appConfig.ui.icons.arrowDown"
+              class="size-12 text-dimmed animate-bounce"
+            />
           </div>
         </nav>
       </div>

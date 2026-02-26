@@ -97,7 +97,10 @@ function getEmojiFlag(locale: string): string {
         </div>
       </div>
     </div>
-    <ProseNote to="https://github.com/nuxt/ui/tree/v4/src/runtime/locale" target="_blank">
+    <ProseNote
+      to="https://github.com/nuxt/ui/tree/v4/src/runtime/locale"
+      target="_blank"
+    >
       {{ $t('language.additional') }}
       <ProseCode>
         src/runtime/locale/
@@ -107,7 +110,9 @@ function getEmojiFlag(locale: string): string {
       {{ $t('language.canuse') }}
       <ProseCode>nuxt-ui</ProseCode>
       {{ $t('language.cancreate') }}:
-      <ProsePre language="bash">nuxt-ui make locale --code "en" --name "English"</ProsePre>
+      <ProsePre language="bash">
+        nuxt-ui make locale --code "en" --name "English"
+      </ProsePre>
     </ProseTip>
   </div>
 </template>

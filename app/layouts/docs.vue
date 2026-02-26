@@ -8,26 +8,26 @@ const navigation = inject<Ref<ContentNavigationItem[]>>(('navigation-' + locale.
 
 <template>
   <div>
-  <UMain>
-    <UContainer>
-      <UPage>
-        <template #left>
-          <UPageAside>
-            <UContentNavigation
-              :key="route.path"
-              :collapsible="false"
-              :navigation="navigation"
-              highlight
-              :ui="{
-                linkTrailingBadge: 'font-semibold uppercase'
-              }"
-            />
-          </UPageAside>
-        </template>
+    <UMain>
+      <UContainer>
+        <UPage>
+          <template #left>
+            <UPageAside>
+              <UContentNavigation
+                :key="route.path"
+                :collapsible="false"
+                :navigation="navigation"
+                highlight
+                :ui="{
+                  linkTrailingBadge: 'font-semibold uppercase'
+                }"
+              />
+            </UPageAside>
+          </template>
 
-        <slot />
-      </UPage>
-    </UContainer>
-  </UMain>
-</div>
+          <slot />
+        </UPage>
+      </UContainer>
+    </UMain>
+  </div>
 </template>
