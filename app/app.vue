@@ -6,6 +6,7 @@ import { findPageChildren } from '@nuxt/content/utils'
 /*
 import { withLeadingSlash } from 'ufo'
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const { desktoplinks } = useHeader()
 */
 const route = useRoute()
 const { locale } = useI18n()
@@ -16,7 +17,6 @@ const color = computed(() => colorMode.value === 'dark' ? (colors as never)[appC
 const radius = computed(() => `:root { --ui-radius: ${appConfig.theme.radius}rem; }`)
 const blackAsPrimary = computed(() => appConfig.theme.blackAsPrimary ? `:root { --ui-primary: black; } .dark { --ui-primary: white; }` : ':root {}')
 const font = computed(() => `:root { --font-sans: '${appConfig.theme.font}', sans-serif; }`)
-const { desktoplinks } = useHeader()
 
 const { data: navigation } = await useAsyncData(`navigation-${locale.value}`, async () => {
   const docsCollection = `docs_${locale.value}` as keyof PageCollections

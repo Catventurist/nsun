@@ -32,9 +32,11 @@ export default defineNuxtConfig({
     '/en/docs/**': { appLayout: 'docs' },
     '/en/login/**': { appLayout: 'auth' },
     '/en/signup/**': { appLayout: 'auth' },
+    '/en/editor/**': { appLayout: 'edit' },
     '/fi/docs/**': { appLayout: 'docs' },
     '/fi/login/**': { appLayout: 'auth' },
-    '/fi/signup/**': { appLayout: 'auth' }
+    '/fi/signup/**': { appLayout: 'auth' },
+    '/fi/editor/**': { appLayout: 'edit' }
   },
 
   compatibilityDate: '2026-02-23',
@@ -45,6 +47,20 @@ export default defineNuxtConfig({
         '/'
       ],
       crawlLinks: true
+    }
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@nuxt/ui > prosemirror-state',
+        '@nuxt/ui > prosemirror-transform',
+        '@nuxt/ui > prosemirror-model',
+        '@nuxt/ui > prosemirror-view',
+        '@nuxt/ui > prosemirror-gapcursor',
+        '@nuxt/ui > prosemirror-tables',
+        'yjs'
+      ]
     }
   },
 

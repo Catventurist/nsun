@@ -25,10 +25,10 @@ export function useHeader() {
     label: t('header.guides.title'),
     to: localePath('/guides'),
     icon: appConfig.ui.icons.notebook
-  /*   }, {
+  }, {
     label: t('header.pricing.title'),
     to: localePath('/pricing'),
-    icon: appConfig.ui.icons.bitcoin */
+    icon: appConfig.ui.icons.euro
   }, {
     label: t('header.changelog.title'),
     to: localePath('/changelog'),
@@ -64,10 +64,10 @@ export function useHeader() {
     label: t('header.guides.title'),
     to: localePath('/guides'),
     icon: appConfig.ui.icons.notebook
-  /* }, {
+  }, {
     label: t('header.pricing.title'),
     to: localePath('/pricing'),
-    icon: appConfig.ui.icons.bitcoin */
+    icon: appConfig.ui.icons.euro
   }, {
     label: t('header.changelog.title'),
     to: localePath('/changelog'),
@@ -112,9 +112,53 @@ export function useHeader() {
     target: '_blank'
   }])
 
+  const footerLinks = [{
+    label: t('header.resources'),
+    children: [{
+      label: t('header.help'),
+      to: localePath('/docs/getting-started/usage')
+    }, {
+      label: t('header.docs.title'),
+      to: localePath('/docs/getting-started')
+    }, {
+      label: t('header.roadmap'),
+      to: localePath('/')
+    }, {
+      label: t('header.changelog.title'),
+      to: localePath('/changelog')
+    }]
+  /* }, {
+    label: t('header.features'),
+    children: [{
+      label: t('header.affiliates')
+    }, {
+      label: t('header.portal')
+    }, {
+      label: t('header.hobbies')
+    }, {
+      label: t('header.sponsors')
+    }] */
+  }, {
+    label: t('header.company'),
+    children: [{
+      label: t('header.about.title'),
+      to: localePath('/')
+    }, {
+      label: t('header.pricing.title'),
+      to: localePath('/pricing')
+    }, {
+      label: t('header.guides.title'),
+      to: localePath('/guides')
+    }, {
+      label: t('header.blog.title'),
+      to: localePath('/blog')
+    }]
+  }]
+
   return {
     desktopLinks,
     mobileLinks,
-    tocLinks
+    tocLinks,
+    footerLinks
   }
 }

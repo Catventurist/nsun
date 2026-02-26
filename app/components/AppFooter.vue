@@ -1,49 +1,6 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
 const appConfig = useAppConfig()
-const columns = [{
-  label: $t('header.resources'),
-  children: [{
-    label: $t('header.help'),
-    to: localePath('/docs/getting-started')
-  }, {
-    label: $t('header.docs.title'),
-    to: localePath('/docs/getting-started')
-  }, {
-    label: $t('header.roadmap'),
-    to: localePath('/')
-  }, {
-    label: $t('header.changelog.title'),
-    to: localePath('/changelog')
-  }]
-/* }, {
-  label: $t('header.features'),
-  children: [{
-    label: $t('header.affiliates')
-  }, {
-    label: $t('header.portal')
-  }, {
-    label: $t('header.hobbies')
-  }, {
-    label: $t('header.sponsors')
-  }] */
-}, {
-  label: $t('header.company'),
-  children: [{
-    label: $t('header.about.title'),
-    to: localePath('/')
-  }, {
-    label: $t('header.pricing.title'),
-    to: localePath('/')
-  }, {
-    label: $t('header.guides.title'),
-    to: localePath('/guides')
-  }, {
-    label: $t('header.blog.title'),
-    to: localePath('/blog')
-  }]
-}]
-
+const { footerLinks } = useHeader()
 const toast = useToast()
 
 const email = ref('')
@@ -68,7 +25,7 @@ function onSubmit() {
   <UFooter :ui="{ top: 'border-b border-default' }">
     <template #top>
       <UContainer>
-        <UFooterColumns :columns="columns">
+        <UFooterColumns :columns="footerLinks">
           <template #right>
             <form @submit.prevent="onSubmit">
               <UFormField

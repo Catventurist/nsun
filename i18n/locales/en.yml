@@ -86,6 +86,34 @@ header:
   home: Home
   speaking: Speaking
   actionsmenu: Open copy actions menu
+editor:
+  title: Editor
+  description: Create clever contern
+  add:
+    title: Add
+    image: Add Image
+  slopify: Slopify
+  spelling: Fix spelling & grammar
+  extend: Extend text
+  reduce: Reduce
+  simplify: Simplify
+  continue: Continue sentence
+  summarize: Summarize
+  translate: Translate
+  english: English
+  finnish: Finnish
+  french: French
+  spanish: Spanish
+  german: German
+  turn: Turn into
+  paragraph: Paragraph
+  heading: Heading
+  bullet: Bullet List
+  ordered: Ordered List
+  task: Task List
+  blockquote: Blockquote
+  undo: Undo
+  redo: Redo
 upload:
   title: Upload
   load:

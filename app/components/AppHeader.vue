@@ -26,6 +26,7 @@ const { desktopLinks, mobileLinks } = useHeader()
     <UNavigationMenu
       :items="desktopLinks"
       variant="link"
+      highlight
     />
 
     <template #right>
@@ -60,7 +61,7 @@ const { desktopLinks, mobileLinks } = useHeader()
 
       <USeparator class="my-6" />
 
-      <UButton
+      <!-- <UButton
         :label="$t('login.title')"
         color="neutral"
         variant="subtle"
@@ -74,7 +75,7 @@ const { desktopLinks, mobileLinks } = useHeader()
         variant="soft"
         :to="localePath('/signup')"
         block
-      />
+      /> -->
     </template>
   </UHeader>
 </template>

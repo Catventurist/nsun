@@ -89,6 +89,34 @@ header:
   home: Koti
   speaking: Tapahtumat
   actionsmenu: Avaa kopiotoimintojen valikko
+editor: 
+  title: Muokkain
+  description: Luo luovaa sisältöä
+  add:
+    title: Lisää
+    image: Lisää Kuva
+  slopify: Slopitus
+  spelling: Korjaa kirjoitusasu
+  extend: Laajenna tekstiä
+  reduce: Lyhennä
+  simplify: Yksinkertaista
+  continue: Jatka lausetta
+  summarize: Summaa
+  translate: Käännä
+  english: Englanti
+  finnish: Suomi
+  french: Ranska
+  spanish: Espanja
+  german: Saksa
+  turn: Muunna
+  paragraph: Lauseke
+  heading: Otsikko
+  bullet: Lista
+  ordered: Numeroitu lista
+  task: Tehtävälista
+  blockquote: Lainaus
+  undo: Kumoa
+  redo: Uudestaan
 upload:
   title: Lisää tiedosto
   load:
