@@ -1,0 +1,562 @@
+header:
+  about: 
+    title: Tietoa
+    description: Perustietoa tekijästä
+  authors:
+    title: Tekijät
+    description: Kasvaen hitaasti mutta varmasti
+  blog: 
+    title: Julkaisut
+    description: Ideat ja ajatukset
+  dashboard: 
+    title: Kojelauta
+    description: Hallitse asetuksia ym.
+  docs: 
+    title: Dokumentit
+    description: Kuinka käyttää alustaa
+  guides: 
+    title: Oppaat
+    description: Koodausohjeita
+  pricing: 
+    title: Hintoja
+    description: Jokaiselle jotain.
+  changelog: 
+    title: Muutoslista
+    description: Kehittymisen aikajana.
+  resources: Resurssit
+  help: Apukeskus
+  roadmap: Suunnitelma
+  features: Ominaisuuksia
+  company: Yhteisö
+  community: Yleiset
+  hobbies: Harrastukset
+  affiliates : Kumppanit
+  portal: Portaali
+  sponsors: Sponssaajat
+  switchto: Vaihda tila
+  language: Kieli
+  search: Etsi
+  theme: Teema
+  mode: Tila
+  login: Kirjaudu
+  signin: Kirjaudu
+  signup: Rekisteröidy
+  user: Käyttäjä
+  close: Sulje
+  open: Avaa
+  logout: Uloskirjaus
+  sidebar: Sivupaneeli
+  subscribed:
+    title: Tilaus
+    description: Sähköpostilista tulossa.
+  subscribe: 
+    title: Tilaa
+    description: Tuleva uutiskirje
+    enter: Lisää sähköposti
+  inbox:
+    title: Saapuneet
+    description: Saapuneet viestit
+  customers:
+    title: Jäsenet
+    description: Tärkeät ihmiset
+  settings:
+    title: Asetukset
+    description: Hallitse asetuksia
+  projects: 
+    title: Projektit
+    description: Linkkejä jänniin juttuihin.
+    view: Tutustu tarkemmin
+  faq: UKK
+  introduction:
+    title: Esittely
+    description: Tervetuloa tutustumaan lähemmin.
+  essentials: 
+    title: Sisältö
+    description: Ohjeita kauniin sisällön luomiseen.
+  pages: Sivut
+  events:
+    title: Tapahtumat
+    description: Tietoa menneestä ja tulevasta.
+  tasks: 
+    title: Tehtävää
+    description: Keskeneräisiä asioita.
+  animations: 
+    title: Animaatiot
+    description: Tailwind CSS sekä edistyeet visuaaliset ominaisuudet.
+  users:
+    title: Yhteisön jäsen
+    description: Hitaasti mutta varmasti.
+  home: Koti
+  speaking: Tapahtumat
+  actionsmenu: Avaa kopiotoimintojen valikko
+upload:
+  title: Lisää tiedosto
+  load:
+    title: Ladataan tiedostoa...
+    description: Tiedosto latautuu palvelimelle.
+  loaded:
+    title: Tiedosto tallennettu!
+    description: Tallennus onnistui muitta mukinoitta.
+lists:
+  title: Nuxt
+  description: Mainio alusta kaikenlaiseen koodaukseen.
+  updated: Päivitetty
+  suggested: Suositellut listat
+  future: Tutut
+  stack: Kokoelmani
+  inspiration: Inspiroivat
+  create: Luo lista
+  give: Anna tähti
+  detailsc: Yhteystiedot
+  editc: Muokkaa tietoja
+  phone: Puhelinnumero
+  email: Sähköposti
+  website: Nettisivu
+  social: SOME
+  address: Osoite
+contact: 
+  title: Yhteydenotto
+  description: Kommunikaatio ratkaisee
+  headline: Ota yhteyttä
+  selectdep: Valitse osasto
+  responsetime: Arvioitu vastausaika
+  hours: ' tuntia'
+  firstname: Etunimi
+  lastname: Sukunimi
+  email: Sähköposti
+  subject: Aihe
+  subjectdesc: Lyhyt kuvaus
+  message: Viesti
+  messagedesc: Kerro lisää...
+  urgent: Tämä on kiireellinen
+  sendto: Lähetä osastolle
+  sales: Myynti
+  support: Tuki
+  billing: Laskutus
+  technical: Tekniset
+  general: Yleinen
+  platforms: Alustat
+  knowledge: 
+    title: Tietopankki
+    description: Paljon jännää tietoa
+    link: Opettele
+  faq: 
+    title: UKK
+    description: Yleisimpiä kysymyksiä
+    link: Tutustu
+  developer:
+    title: Kehittäjille
+    description: Jotain koodaamisesta kiinnostuneille
+    link: Teknistä
+authors: 
+  viewprofile: Näytä profiili
+  lover: Tykkää Avoimesta Lähdekoodista
+iconspreset: Oletuskuvakkeet
+steps:
+  title: Etenemissuunnitelma
+  description: Mahdollinen aikataulu projektin etenemisessä.
+  headline: Aikajana
+  prev: Edellinen
+  next: Seuraava
+  problem: 
+    title: Ongelma
+    description: Teesi
+    content: Luo ongelma
+  reaction:
+    title: Reaktio
+    description: Antiteesi
+    content: Vetoa tunteisiin
+  solution:
+    title: Ratkaisu
+    description: Synteesi
+    content: Pakota ratkaisu
+  start:
+    title: Alkurysäys
+    description: Ajatusten ja työkalujen kartoitusta
+  design:
+    title: Suunnitteluvaihe
+    description: Pohditaan miten saadaan kaikki toimimaan yhteen
+  dev:
+    title: Kehityskokeilut
+    description: Koodin naputtelua ja virheiden korjailua
+  dep:
+    title: Testaus & Julkistus
+    description: Viimeiset viilaukset ja kaikkien kokeiltavaksi
+translation:
+  title: Käännä
+  description: Käännöksiä helpottavia komponentteja.
+  error: 
+    locale: Valitse kieli
+    text: Teksti puuttuu
+  success: Onnistui
+  submitted: Käännös on lähetetty.
+  from: 
+    title: Kielestä
+    description: Käännettävä teksti
+  to:
+    title: Kielelle
+    description: Käännetty teksti
+  reset: Nollaa
+  switch: Vaihda
+  submit: Lähetä
+  dictionary: Sanakirja
+  date: Päiväys
+  original: Lähde
+  result: Käännetty
+  letters: Kirjaimia
+  filter: Rajaa
+  status: Tila
+  finished: Valmis
+  proofread: Oikoluku
+  empty: Kääntämättä
+  actions: Valinnat
+  copy: Kopioi teksti
+  copied: Teksti kopoitu leikepöydälle!
+  details: Lisätietoa
+  asc: Nouseva
+  desc: Laskeva
+  columns: Sarakkeet
+  comment: Kommentoi
+  main: Käännökset
+  table: Taulukko
+  form: Lomake
+events:
+  title: Puheet ja tapahtumat
+  description: Konferensseja ja työpajoja kehittämisen saralla.
+  more: Näytä kaikki tapahtumat
+  details: Lisätiedot
+guides: 
+  back: Takaisin oppaisiin
+  headline: Oppaat
+cookie: 
+  title: Käytämme ensisijaisia keksejä käyttökokemuksen parantamiseen.
+  accept: Hyväksy
+  optout: Kieltäydy
+customers:
+  actions: Toiminnot
+  copyid: Kopioi käyttäjä-ID
+  copiedclip:
+    title: Kopioitu leikepöydälle
+    description: Käyttäjä-ID kopioitu leikepöydälle
+  details: Käyttäjätiedot
+  payments: Selaa maksuja
+  delete:
+    label: Poista käyttäjä
+    title: Käyttäjä poistettu
+    description: Käyttäjää ei enää ole.
+    button: Poista
+  select: 
+    all: Valitse kaikki
+    row: Valitse rivi
+  name: Nimi
+  email: Sähköposti
+  location: Sijainti  
+  title: Käyttäjä
+  filteremails: Valikoi sähköposteja
+  status:
+    title: Tila
+    all: Kaikki
+    subscribed: Liittynyt
+    unsubscribed: Poistunut
+    bounced: Jäähyllä
+    filter: Valikoi tila
+  display: Näkymä
+  selectedrows: rivi/rivejä valittuna
+  modal:
+    success: Onnistui
+    new: Uusi käyttäjä
+    added: lisätty
+    description: Lisää uusi käyttäjä tietokantaan
+    name: 
+      title: Nimi
+      placeholder: Cat
+    email: 
+      title: Sähköposti
+      placeholder: catcat.com
+    cancel: Peruuta
+    create: Luo
+    delete: Poista
+    multiple: ä
+    confirm: Oletko varma, toimintoa ei voi peruuttaa.
+  member:
+    edit: Muokkaa käyttäjää
+    remove: Poista käyttäjä
+    title: jäsen
+    owner: omistaja
+terms:
+  trigger: Palveluehdot
+  title: Palveluehdot
+  accept: Hyväksyntä
+  acceptdesc: By accessing and using this website, users agree to comply with and be bound by these Terms of Service.
+  account: User Account Responsibilities
+  accountdesc: Users are responsible for maintaining the confidentiality of their account credentials. Any activities occurring under an account are the sole responsibility of the account holder.
+  content: Content Usage and Restrictions
+  contentdesc: Users may reproduce, distribute, modify, create derivative works, or commercially exploit any content without explicit written permission from the website owners.
+  limit: Limitation of Liability
+  limitdesc: The website provides content without any warranties. The website owners shall not be liable for direct, indirect, incidental, consequential, or punitive damages arising from user interactions with the platform.
+  conduct:
+    label: User Conduct Guidelines
+    upload: No uploaing harmful or malicious content
+    respect: Respect the rights of other users
+    avoid: Avoid activities that could disrupt website functionality
+    comply: Comply with applicable local and international laws
+  modif: Modifications to Terms
+  modifdesc: The website reserves the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.
+  termination: Termination Clause
+  terminationdesc: The website may terminate or suspend user access with a prior notice for violations of these terms or for any logical reason deemed appropriate
+  law: Governing Law
+  lawdesc: These terms are governed by the laws of the jurisdiction where the website is primarily operated, without regard to conflict of law principles.
+  decline: Hylkää
+site:
+  title: Pohjoinen Aurinko
+  description: Hyvinvointia ja terveyttä pohjoisen auringon alla
+  offer: Liity klubiin
+user:
+  title: Catventurist
+  role: Vapausintoilija
+  description: Vuosikymmeniä koodausta ja jonkin verran seikkailuja
+  location: Espanja
+pricing:
+  monthly: Kuukausittain
+  yearly: Vuosittain
+  month: /kk
+  year: /v
+about:
+  readarticle: Lue julkaisu
+  available: Saatavilla uusiin projekteihin
+  notavailable: Kiireinen tällä hetkellä
+error:
+  minlength: Liian lyhyt. Tarvitaan yli 1 kirjain.
+submit:
+  success:
+    title: Onnistui
+    description: Lomake on lähetetty (tulossa).
+task:
+  completed: Valmis
+empty: 
+  page: 
+    title: Sivua ei löytynyt
+    description: Ei vielä sisältöä
+    error: Harmiksemme sivua ei löytynyt.
+  authors: 
+    title: Käyttäjiä ei löytynyt
+    description: Ei ketään
+  themes: Teemaa ei löytynyt
+  blog: Julkaisua ei löytynyt
+  docs: Dokumenttia ei löytynyt
+  log: Listaa ei löytynyt
+  faq: Kysymyksiä ei löytynyt
+  tasks: Tehtäviä ei löytynyt
+links:
+  title: Yhteisö
+  edit:
+    git: Muokkaa - Github
+    editor: Muokkain
+  star: GitHub-arvostelu
+  releases: Muutokset
+  copymd: Kopioi Markdown-linkki
+  copyclip: Kopioitu leikepöydälle
+  copypage: Kopioi sivu
+  viewmd: Katso Markdown-sivuna
+login:
+  title: Kirjaudu
+  description: Kirjaudu tilille jatkaaksesi
+  or: tai
+  name:
+    title: Nimi
+    placeholder: Luo käyttäjänimi
+    invalid: Nimi tarvitaan
+  email:
+    title: Sähköposti
+    placeholder: Lisää sähköposti
+    invalid: Sopimaton osoite
+  password:
+    title: Salasana
+    placeholder: Lisää salasana
+    invalid: Sopimaton salasana
+  remember: Muista minut
+  with:
+    google: Google-kirjautuminen
+    github: Github-kirjautuminen
+    githlab: Gitlab-kirjautuminen
+  submitted: Lähetetty
+  welcome:
+    title: Tervetuloa
+    description: Ei vielä tiliä?
+  signup: Rekisteröidy
+  forgot: Salasana hukassa?
+  disclaimer: Kirjautumalla hyväksyt
+  terms: Käyttöehdot
+  message: 'Kirjauduttu käyttäjänä '
+signup:
+  title: Rekisteröidy
+  description: Luo tili aloittaaksesi
+  name:
+    title: Nimi
+    placeholder: Lisää nimimerkki
+    required: Nimi vaaditaan
+  with:
+    google: Google-tunnuksilla
+    github: Github-tunnuksilla
+  create: 
+    title: Luo tili
+    description: Tili hukassa?
+  message: 'Ole tervetullut, '
+signin:
+  title: Kirjaudu
+date:
+  today: Tänään
+  yesterday: Eilen
+  lastwd: Edelliset 7 päivää
+  lasttwd: Edelliset 14 päivää
+  lastmd: Edelliset 30 päivää
+  lasttm: Edelliset 3 kuukautta
+  lastsm: Edelliset 6 kuukautta
+  thism: Tämä kuukausi
+  lastm: Edellinen kuukausi
+  thisq: Tämä kuukausi
+  lastq: Edellinen neljännes
+  thisy: Tämä vuosi
+  lasty: Edellinen vuosi
+  invalidd: Väärä päiväys
+profile:
+  joined: Liittynyt
+  following: Seurattua
+  followers: Seuraajaa
+  location: Maailma
+  posts: Julkaisut
+  replies: Vastaukset
+  highlights: Kohokohdat
+  media: Media
+  reactions: Reaktiot
+  username: Cat
+  usertag: cat
+  userbio: Seikkailua ja koodausta.
+  follownum: "0"
+  followernum: "0"
+nav:
+  site:
+    title: SaaSanoa
+    description: Vapaa ja avoin alusta
+  pages:
+    title: Sivut
+    blogs: 
+      title: Julkaisut
+    dev: 
+      title: Kehitys
+      description: Sivuston kehittelysmuistio
+    projects:
+      title: Projektit
+      view: Tutustu
+      wp:
+        title: Wordpress-blogeja
+        description: Erilaisia WP-sivustoja
+      ecency:
+        title: Ecency dAppi
+        description: Hajautettu ja sensuurivapaa SOME
+      docs:
+        title: Shadcn Docs
+        description: Dokumentaatiota Shadcn-pohjalla
+      movies:
+        title: Nuxt Movies
+        description: Leffalistaus eri kielillä
+    speaking: Puheet
+    authors:
+      title: Ihmiset
+      description: Kasassa oleva porukka
+    icons:
+      title: Kuvakkeet
+      description: Animoituja ikoneita
+    docs:
+      title: Lue
+    learn:
+      title: Opi muualla
+      styling:
+        title: Tyyli
+        description: "Tailwind 4 säästää näppäimistöä ja aikaa."
+      animation:
+        title: Animaatiot
+        description: Motion tekee sen, mihin CSS ei veny.
+      access:
+        title: Käytettävyys
+        description: Käytä näppistä, hiirtä tai sormea.
+      typo:
+        title: Typografia
+        description: Tekstin luettavuuden parannuksia.
+    home: Koti
+    appereance: Ulkoasu
+    about: 
+      title: Lyhyesti
+      description: Tekijästä
+    skills:
+      title: Taidot
+      description: Ja tiedot
+    faq:
+      title: UKK
+      description: Usein kysyttyjä kysymyksiä
+english: English
+finnish: Suomi
+theme: 
+  title: Teema
+  primary: Pääväri
+  tone: Sävy
+  radius: Pyöristys
+  font: Fontti
+  icons: Kuvakkeet
+  black: Musta
+  mode: Teema
+  dark: Tumma
+  light: Vaalea
+  system: Oma
+  slate: Liuske
+  gray: Harmaa
+  zinc: Sinkki
+  neutral: Neutraali
+  stone: Kivi
+  red: Punainen
+  orange: Oranssi
+  amber: Pihka
+  yellow: Keltainen
+  lime: Lime
+  green: Vihreä
+  emerald: Smaragdi
+  teal: Sinivihreä
+  cyan: Syaani
+  sky: Taivas
+  blue: Sininen
+  indigo: Indigo
+  violet: Violetti
+  purple: Purppura
+  fuchsia: Fuksia
+  pink: Pinkki
+  rose: Ruusu
+  export: Vie
+  reset: Oletusteema
+  preset: Kuvakkeiden esiasetukset
+  slots: Teeman osiot
+  appereance: Ulkoasu
+  inspect: Katsele teeman osioita
+  portal: portaalissa
+  norender: renderöimätön
+language:
+  bydefault: Käytetään kieltä
+  isused: oletuksena
+  additional: Jos tarvitset muita kieliä, voit ottaa osaa luomalla PR:n.
+  canuse: Voit käyttää
+  cancreate: CLI:a lisätäksesi uuden kielen
+  code: Koodi
+time:
+  h: t
+  min: min
+  weekshort: vk
+  reading: Lukuaika
+  created: Luomispäivämäärä
+  tag: Tunnisteet
+component:
+  slot: Osio
+  type: Tyyppi  
+  prop: Ominaisuus
+  default: Oletus
+  theme: Teema
+  compound: Yhdistelmävariantit
+  variants: Jotkut \`compoundVariants\` värit on jätetty pois paremman luettavuuden vuoksi. Katso lähdekoodi GitHubista.

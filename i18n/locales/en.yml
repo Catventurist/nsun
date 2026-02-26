@@ -1,0 +1,494 @@
+header:
+  about: 
+    title: About
+    description: Basic info of creator
+  authors:
+    title: Authors
+    description: Slowly but surely growing.
+  blog: 
+    title: Blog
+    description: Writings and ideas
+  dashboard: 
+    title: Dashboard
+    description: Control the settings
+  docs: 
+    title: Docs
+    description: Documentation for use
+  guides: 
+    title: Guides
+    description: How to code etc.
+  pricing: 
+    title: Pricing
+    description: Something for Everyone.
+  changelog: 
+    title: Changelog
+    description: Improvements made along the way.
+  resources: Resources
+  help: Help Center
+  roadmap: Roadmap
+  features: Features
+  company: Company
+  community: Community
+  hobbies: Hobbies
+  affiliates : Affiliates
+  portal: Portal
+  sponsors: Sponsors
+  switchto: Switch to
+  language: Language
+  search: Search
+  theme: Theme
+  mode: Mode
+  login: Log In
+  signin: Sign in
+  signup: Sign up
+  user: User
+  close: Close
+  open: Open
+  logout: Log out
+  sidebar: Toggle Sidebar
+  subscribed:
+    title: Subscriptions coming
+    description: Subscribe to our newsletter in the future.
+  subscribe: 
+    title: Subscribe
+    description: Subscribe to our newsletter.
+    enter: Enter your email
+  inbox:
+    title: Inbox
+    description: Received mails
+  customers:
+    title: Customers
+    description: Precious people
+  settings:
+    title: Settings
+    description: Manage everything
+  projects: 
+    title: Projects
+    description: Interesting sources of information.
+    view: View Project
+  faq: FAQ
+  introduction:
+    title: Introduction
+    description: Fully styled texts.
+  essentials: 
+    title: Essentials
+    description: Learn how to use components.
+  pages: Pages
+  events: 
+    title: Events
+    description: Categorized and timed material.
+  tasks: 
+    title: Tasks
+    description: Things to do.
+  animations: 
+    title: Animations
+    description: Tailwind CSS and advanced animation techniques.
+  home: Home
+  speaking: Speaking
+  actionsmenu: Open copy actions menu
+upload:
+  title: Upload
+  load:
+    title: Uploading file...
+    description: Your file is being uploaded.
+  loaded:
+    title: File uploaded!
+    description: Your file has been successfully uploaded.
+lists:
+  title: Nuxt
+  description: Great Framework for creating good code.
+  updated: Updated
+  suggested: Suggested Lists
+  future: Future Ideas
+  stack: My Stack
+  inspiration: Inspiration
+  create: Create List
+  give: Give a Star
+  detailsc: Personal Details
+  editc: Edit Information
+  phone: Phone Number
+  email: Email
+  website: Website
+  social: Social Platforms
+  address: Address
+contact: 
+  title: Communication is the key
+  description: Choose a department and fill your information.
+  headline: Contact us
+  selectdep: Select Department
+  responsetime: Typical response time
+  hours: ' hours'
+  firstname: First Name
+  lastname: Last Name
+  email: Email
+  subject: Subject
+  subjectdesc: Brief description
+  message: Message
+  messagedesc: Tell us more...
+  urgent: This is a very urgent matter
+  sendto: Send to
+  sales: Sales
+  support: Support
+  billing: Billing
+  technical: Technical
+  general: General
+  platforms: Platforms
+  knowledge: 
+    title: Knowledgebase
+    description: Lot of information to learn
+    link: Think thoughts
+  faq: 
+    title: FAQ
+    description: Look for answers to basic questions
+    link: Read texts
+  developer:
+    title: Developer Corner
+    description: Stuff for coding enthusiasts
+    link: Technical things
+guides:
+  back: Back to guides
+  headline: Guides
+cookie: 
+  title: We use first-party cookies to enhance your experience on our website.
+  accept: Accept
+  optout: Opt out
+authors: 
+  viewprofile: View Profile
+  lover: Open Source Lover
+iconspreset: Icons preset
+steps:
+  title: Roadmap
+  description: Possible route to finishing the project
+  headline: Timeline
+  prev: Prev
+  next: Next
+  problem: 
+    title: Problem
+    description: Thesis
+    content: Create a problem
+  reaction:
+    title: Reation
+    description: Antithesis
+    content: Make people triggered
+  solution:
+    title: Solution
+    description: Synthesis
+    content: Enforce the solution
+  start:
+    title: Project Kickoff
+    description: Gathering the tools and ideas
+  design:
+    title: Design Phase
+    description: Thinking how to make everything fit together
+  dev:
+    title: Development Sprint
+    description: Lots of writing code and solving errors
+  dep:
+    title: Testing & Deployment
+    description: Final touches and publishing to the public
+translation:
+  title: Translate
+  description: Tools to help localization.
+  error: 
+    locale: Select language
+    text: Text missing
+  success: Success
+  submitted: The translation has been submitted.
+  from: 
+    title: From
+    description: Text to translate
+  to:
+    title: To
+    description: Translated text
+  reset: Reset
+  switch: Switch
+  submit: Submit
+  dictionary: Dictionary
+  date: Date
+  original: Original
+  result: Translated
+  letters: Letters
+  filter: Filter
+  status: Status
+  finished: Finished
+  proofread: Proofread
+  empty: Empty
+  actions: Actions
+  copy: Copy phrase
+  copied: Translation copied to clipboard!
+  details: View details
+  asc: Asc
+  columns: Columns
+  comment: Add Comment,
+  main: Translations
+  table: Table
+  form: Form
+events:
+  title: Speaking Engagements & Workshops
+  description: Speeches at conferences and workshops on design and development.
+  more: View all events
+  details: View details
+terms:
+  trigger: Terms
+  title: Terms and Conditions
+  accept: Acceptance of Terms
+  acceptdesc: By accessing and using this website, users agree to comply with and be bound by these Terms of Service.
+  account: User Account Responsibilities
+  accountdesc: Users are responsible for maintaining the confidentiality of their account credentials. Any activities occurring under an account are the sole responsibility of the account holder.
+  content: Content Usage and Restrictions
+  contentdesc: Users may reproduce, distribute, modify, create derivative works, or commercially exploit any content without explicit written permission from the website owners.
+  limit: Limitation of Liability
+  limitdesc: The website provides content without any warranties. The website owners shall not be liable for direct, indirect, incidental, consequential, or punitive damages arising from user interactions with the platform.
+  conduct:
+    label: User Conduct Guidelines
+    upload: No uploaing harmful or malicious content
+    respect: Respect the rights of other users
+    avoid: Avoid activities that could disrupt website functionality
+    comply: Comply with applicable local and international laws
+  modif: Modifications to Terms
+  modifdesc: The website reserves the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.
+  termination: Termination Clause
+  terminationdesc: The website may terminate or suspend user access with a prior notice for violations of these terms or for any logical reason deemed appropriate
+  law: Governing Law
+  lawdesc: These terms are governed by the laws of the jurisdiction where the website is primarily operated, without regard to conflict of law principles.
+  decline: Decline
+site:
+  title: Northern Sun
+  description: Health and well-being under the Northern Sun
+  offer: Join the club
+user:
+  title: Catventurist
+  role: Freedom enthusiast
+  description: Decades of coding and years of adventures
+  location: Spain
+pricing:
+  monthly: Monthly
+  yearly: Yearly
+  month: /month
+  year: /year
+empty: 
+  page:
+    title: Page not found
+    description: Nothing here yet
+    error: We are sorry but this page could not be found.
+  authors: 
+    title: No Authors found
+    description: Nobody here yet
+  themes: No Themes found
+  blog: Blog not found
+  docs: Documentation not found
+  log: Logs not found
+  faq: Questions not found
+  tasks: Tasks not found
+  projects: Projects not found
+  events: Events not found
+  pricing: Prices not found
+links:
+  title: Community
+  edit:
+    git: Edit in Github
+    editor: Use Editor
+  star: Star on GitHub
+  releases: Releases
+  copymd: Copy Markdown link
+  copyclip: Copied to clipboard
+  copypage: Copy page
+  viewmd: View as Markdown
+login:
+  title: Login
+  description: Login to your account to continue
+  or: or
+  name:
+    title: Name
+    placeholder: Create username
+    invalid: Invalid username
+  email:
+    title: Email
+    placeholder: Enter your email
+    invalid: Invalid email
+  password:
+    title: Password
+    placeholder: Enter your password
+    invalid: Must be at least 8 characters
+  remember: Remember me
+  with:
+    google: Login with Google
+    github: Login with Github
+    gitlab: Login with Gitlab
+  submitted: Submitted
+  welcome:
+    title: Welcome back
+    description: Do not have an account?
+  signup: Sign up
+  forgot: Forgot password?
+  disclaimer: By signing in, you agree to the
+  terms: Terms of Service
+  message: 'Logged in as '
+signup:
+  title: Sign up
+  description: Create an account to get started
+  name:
+    title: Name
+    placeholder: Enter your name
+    required: Name is required
+  with:
+    google: Sign up with Google
+    github: Sign up with Github
+  create: 
+    title: Create account
+    description: Already have an account?
+  message: 'Feel welcome, '
+date:
+  today: Today
+  yesterday: Yesterday
+  lastwd: Last 7 days
+  lasttwd: Last 14 days
+  lastmd: Last 30 days
+  lasttm: Last 3 months
+  lastsm: Last 6 months
+  thism: This month
+  lastm: Last month
+  thisq: This month
+  lastq: Last quarter
+  thisy: This year
+  lasty: Last year
+  invalidd: Invalid date
+profile:
+  joined: Joined
+  following: Following
+  followers: Followers
+  location: World
+  posts: Posts
+  replies: Replies
+  highlights: Highlights
+  media: Media
+  reactions: Reactions
+  username: Cat
+  usertag: cat
+  userbio: Catventures and Catography with some Coding
+  follownum: "0"
+  followernum: "0"
+nav:
+  site:
+    title: SaaSanoa
+    description: Web platform for freedom
+  pages:
+    title: Pages
+    blogs: 
+      title: Blogs
+    dev: 
+      title: Dev
+      description: Development notes
+    projects:
+      title: Projects
+      view: View Project
+      wp:
+        title: Wordpress blogs
+        description: Various sites on WP
+      ecency:
+        title: Ecency dApp
+        description: Decentralized social media
+      docs:
+        title: Shadcn Docs
+        description: Documentation built with Shadcn
+      movies:
+        title: Nuxt Movies
+        description: Movies in different languages
+    speaking: Speaking
+    icons:
+      title: Icons
+      description: A set of animated icons, balanced and quite consistent.
+    docs:
+      title: Read
+    learn:
+      title: Learn
+      styling:
+        title: Styling
+        description: "Tailwind 4, compatible with any styling solution."
+      animation:
+        title: Animation
+        description: Motion can do a lot outside CSS.
+      access:
+        title: Accessibility
+        description: Usable with keyboard, touching and scrolling.
+      typo:
+        title: Typography
+        description: Make text more readable and adjusted to personal preferences.
+    home: Home
+    appereance: Appereance
+    about: 
+      title: About
+      description: Information
+    skills:
+      title: Skills
+      description: Knowhow
+    faq:
+      title: FAQ
+      description: Frequently Asked Questions
+english: English
+finnish: Suomi
+theme: 
+  title: Theme
+  primary: Primary
+  tone: Tone
+  radius: Radius
+  font: Font
+  icons: Icons
+  black: Black
+  mode: Mode
+  dark: Dark
+  light: Light
+  system: System
+  slate: Slate
+  gray: Gray
+  zinc: Zinc
+  neutral: Neutral
+  stone: Stone
+  red: Red
+  orange: Orange
+  amber: Amber
+  yellow: Yellow
+  lime: Lime
+  green: Green
+  emerald: Emerald
+  teal: Teal
+  cyan: Cyan
+  sky: Sky
+  blue: Blue
+  indigo: Indigo
+  violet: Violet
+  purple: Purple
+  fuchsia: Fuchsia
+  pink: Pink
+  rose: Rose
+  export: Export
+  reset: Reset Theme
+  preset: Icons preset
+  slots: Theme slots
+  appereance: Appereance
+  inspect: Inspect theme slots
+  portal: in portal
+  norender: not rendered
+language:
+  bydefault: By default, the
+  isused: locale is used
+  additional: If you need additional languages, you can contribute by creating a PR to add a new locale in
+  canuse: You can use the
+  cancreate: CLI to create a new locale
+  code: Code
+time:
+  h: h
+  min: min
+  weekshort: Wk
+  reading: Reading Time
+  created: Date Created
+  tag: Tags
+component:
+  slot: Slot
+  type: Type
+  prop: Prop
+  default: Default
+  theme: Theme
+  compound: Compound variants
+  variants: Some colors in \`compoundVariants\` are omitted for readability. Check out the source code on GitHub.
+  code: Code

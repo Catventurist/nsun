@@ -1,0 +1,160 @@
+title: "Pohjoinen [Aurinko]{.text-warning}"
+description: Hyvinvointia ja terveyttä pohjoisen auringon alla.
+seo:
+  title: Pohjoinen Aurinko
+  description: Hyvinvointia ja terveyttä pohjoisen auringon alla.
+navigation: false
+hero:
+  links:
+    - label: Aloitetaan
+      icon: i-lucide-arrow-right
+      trailing: true
+      variant: soft
+      to: /fi/docs/getting-started/installation
+      size: xl
+    - label: Lue Blogeja
+      icon: i-lucide-book-open
+      size: xl
+      color: neutral
+      variant: subtle
+      to: /fi/blog
+sections:
+  - title: Siemenpankki ja kasvinjalostusyhtiö.
+    description: Olemme suuntautumassa erityisesti pohjoisten lääke- ja rohdoskasvien siementen, sekä luontaistuotteiden tuotantoon.
+    id: features
+    orientation: horizontal
+    features:
+      - title: Pohjoismainen geenipankki
+        description: Pohjolan hamppuharrastajia kutsutaan yhteistyöhön.
+        icon: i-cat-finland
+        to: /fi/blog/geenipankki
+      - title: Startup-vaihe
+        description: Siemenpankki ja kasvinjalostusyhtiö tarjoaa lisäksi neuvontaa ja osaamista.
+        icon: i-lucide-shield
+        to: /fi/blog/siemen-tilaus
+      - title: Hamppuklubin jäsenyys etuineen
+        description: Olemme tuottaneet osakkaiden arviointiin CBD-uutteita ja tinktuuroita.
+        icon: i-lucide-users
+        to: /fi/blog/osakkaaksi
+  - title: Kaikkea Kasveista
+    description: Kasvinjalostuksen kulmakiviä.
+    orientation: horizontal
+    reverse: true
+    features:
+      - title: Pohjoinen omena
+        description: Osallistu Pohjolan Punainen-terveysomenahankkeeseen.
+        icon: i-lucide-apple
+        to: /fi/blog/omena
+      - title: Iisalmen ihmetammi
+        description: Iisalmen Ihmetammen tarina.
+        icon: i-lucide-trees
+        to: /fi/blog/ihme-tammi
+      - title: Tyrni
+        description: Erittäin arvokas superfood-kasvi.
+        icon: i-lucide-cherry
+        to: /fi/blog/tyrni
+features:
+  title: Kaikkia tarpeellista
+  description: Ominaisuuksia ja etuja.
+  items:
+    - title: Tietoa hampusta
+      description: Kulttuurimme äiti.
+      icon: i-lucide-leaf
+      to: /fi/blog/hamppu
+    - title: Kasvinjalostus
+      description: Tietoa kromosomeista, geeneistä, jalostuksesta jne.
+      icon: i-lucide-scissors
+      to: /fi/blog/jalostus
+    - title: Siementilaukset
+      description: Siemenlaki estää meitä myymästä viljelykäyttöön, mutta siemenlaki ei koske koristekasvatusta.
+      icon: i-lucide-truck
+      to: /fi/blog/siemen-tilaus
+    - title: Osakkaaksi
+      description: Yhtiön tehdessä kasvinjalostusta syntyy aina myös kasvimateriaalia jatkojalostuksen tarpeisiin.
+      icon: i-lucide-users
+      to: /fi/blog/osakkaaksi
+    - title: Koristehamppu
+      description: Oikeus hamppuun. Tule mukaan koristehamppukisaan!.
+      icon: i-lucide-check-circle
+      to: /fi/blog/koristehamppu
+    - title: Kasvatusopas
+      description: Linkkejä ja tietoa hampun kasvatuksesta.
+      icon: i-lucide-wheat
+      to: /fi/guides/hampun-kasvatus
+testimonials:
+  headline: Valo tulee Pohjolasta
+  title: Kasvetaan ja kasvatetaan yhdessä
+  description: Miksi valita Pohjoinen Aurinko muiden joukosta?
+  items:
+    - quote: Pohjoinen Aurinko transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility, and dark mode built in.
+      user:
+        name: Sarah Chen
+        description: CTO at TechScale Solutions
+        avatar:
+          src: /hero/random-1.avif
+    - quote: We shipped our MVP in 2 weeks instead of 2 months. The authentication flows and form components saved us countless hours of development time.
+      user:
+        name: Marcus Rodriguez
+        description: VP of Engineering at DataFlow
+        avatar:
+          src: /hero/random-2.avif
+    - quote: The design system with AppConfig is brilliant. We maintain brand consistency across all our products while leveraging the full component library.
+      user:
+        name: David Kumar
+        description: Security Director at SecureStack
+        avatar:
+          src: /hero/random-3.avif
+    - quote: Perfect Lighthouse scores out of the box. Our Core Web Vitals improved dramatically just by switching to Pohjoinen Aurinko components.
+      user:
+        name: Emily Zhang
+        description: Lead Architect at ScaleForce
+        avatar:
+          src: /hero/random-4.avif
+    - quote: The Tailwind Variants system makes customization so intuitive. We can override any component style while keeping the functionality intact.
+      user:
+        name: James Wilson
+        description: DevOps Lead at CloudPro
+        avatar:
+          src: /hero/random-5.avif
+    - quote: From the SaaS template to production in days. The pre-built layouts, navigation, and content structure accelerated our launch.
+      user:
+        name: Lisa Patel
+        description: CEO at AutoScale
+        avatar:
+          src: /hero/random-6.avif
+    - quote: Reka UI foundation means accessibility is never an afterthought. We achieved WCAG compliance without any custom work.
+      user:
+        name: Michael Torres
+        description: Frontend Lead at AccessFirst
+        avatar:
+          src: /hero/random-7.avif
+    - quote: The documentation is outstanding. Every component has clear examples, and the community on Discord is incredibly helpful.
+      user:
+        name: Rachel Kim
+        description: Performance Engineer at APIHub
+        avatar:
+          src: /hero/random-8.avif
+    - quote: We replaced three different UI libraries with Pohjoinen Aurinko. The consistency and quality across all components is unmatched.
+      user:
+        name: Thomas Weber
+        description: UI Architecture Lead at DesignScale
+        avatar:
+          src: /hero/random-9.avif
+    - quote: The integration with Nuxt modules is seamless. Color mode, fonts, icons - everything works together perfectly.
+      user:
+        name: Sophia Martinez
+        description: Integration Specialist at TechFlow
+        avatar:
+          src: /hero/random-1.avif
+cta:
+  title: Valmiina luomaan jotain uutta?
+  description: Liity mukaan Pohjoisen Auringon porukkaan. Avointa ja vapaata!
+  links:
+    - label: Liity klubiin
+      to: /fi/blog/osakkaaksi
+      trailingIcon: i-lucide-users
+      variant: soft
+    - label: Tutustu tekijöihin
+      to: /fi/authors
+      variant: subtle
+      icon: i-lucide-book-open
