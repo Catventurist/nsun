@@ -1,12 +1,1 @@
 name: ci
-
-on: push
-
-jobs:
-  ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [22]
