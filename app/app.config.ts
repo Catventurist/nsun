@@ -115,7 +115,8 @@ export default defineAppConfig({
       settings2: 'i-lucide-settings-2',
       mail: 'i-lucide-mail',
       shield: 'i-lucide-shield',
-      euro: 'i-lucide-euro'
+      euro: 'i-lucide-euro',
+      pen: 'i-lucide-pen'
     },
     prose: {
       codeIcon: {

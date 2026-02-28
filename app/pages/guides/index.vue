@@ -1,17 +1,37 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
 import { withLeadingSlash } from 'ufo'
-import type { Collections } from '@nuxt/content'
+import type { GuideEnCollectionItem, GuideFiCollectionItem, GuidesEnCollectionItem, GuidesFiCollectionItem, PageCollections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
 const appConfig = useAppConfig()
 
+const { data: page } = await useAsyncData('guide-' + slug.value, async () => {
+  const content = await queryCollection(('guide_' + locale.value) as keyof PageCollections).first()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('guide_en').first()
+  }
+  return content as GuideEnCollectionItem | GuideFiCollectionItem
+}, {
+  watch: [locale]
+})
+
+const { data: posts } = await useAsyncData('guides-list-' + slug.value, async () => {
+  const content = await queryCollection(('guides_' + locale.value) as keyof PageCollections).all()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('guides_en').all()
+  }
+  return content as GuidesEnCollectionItem[] | GuidesFiCollectionItem[]
+}, {
+  watch: [locale]
+})
+/*
 const { data: page } = await useAsyncData('guide-' + slug.value, async () => queryCollection('guide_' + locale.value as keyof Collections).first(), { watch: [locale] })
 const { data: posts } = await useAsyncData('guides-' + slug.value, async () => queryCollection('guides_' + locale.value as keyof Collections).all(), { watch: [locale] })
 
-/* const { data: page } = await useAsyncData('guide', () =>
+const { data: page } = await useAsyncData('guide', () =>
   queryCollection('guide').first()
 )
 if (!page.value) {
@@ -23,10 +43,10 @@ const { data: posts } = await useAsyncData('guides-posts', () =>
 ) */
 
 useSeoMeta({
-  titleTemplate: '%s - Kaannos',
+  titleTemplate: '%s - ' + $t('site.title'),
   title: page.value?.title,
   description: page.value?.description,
-  ogTitle: `${page.value?.title} - Kaannos`,
+  ogTitle: `${page.value?.title} - ` + $t('site.title'),
   ogDescription: page.value?.description
 })
 

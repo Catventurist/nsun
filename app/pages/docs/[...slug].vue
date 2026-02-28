@@ -6,17 +6,17 @@ const { tocLinks } = useHeader()
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
-const { data: page } = await useAsyncData('docs-' + slug.value, () => queryCollection('docs_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
-
-/* const { data: page } = await useAsyncData('docs-' + slug.value, async () => {
-  const content = await queryCollection('docs_' + locale.value as keyof Collections).path(route.path).first()
+/* const { data: page } = await useAsyncData('docs-' + slug.value, () => queryCollection('docs_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
+ */
+const { data: page } = await useAsyncData('docs-' + slug.value, async () => {
+  const content = await queryCollection('docs_' + locale.value as keyof PageCollections).path(route.path).first()
   if (!content && locale.value !== 'en') {
     return await queryCollection('docs_en').first()
   }
   return content
 }, {
   watch: [locale]
-}) */
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings(('docs_' + locale.value) as keyof PageCollections, route.path, {

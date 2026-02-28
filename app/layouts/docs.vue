@@ -15,7 +15,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>(('navigation-' + locale.
             <UPageAside>
               <UContentNavigation
                 :key="route.path"
-                :collapsible="false"
+                :collapsible="true"
                 :navigation="navigation"
                 highlight
                 :ui="{

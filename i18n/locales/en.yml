@@ -173,6 +173,25 @@ contact:
     title: Developer Corner
     description: Stuff for coding enthusiasts
     link: Technical things
+  error:
+    name: Name Required
+    email: Email not correct
+    subject: Subject is empty
+    message: Message is missing
+  toast:
+    title: Success
+    description: The form has been submitted
+  sendme: Send Message
+  name: Name
+  phone: Phone
+  location: Location
+  desc: Something on your mind? Let's discuss how we can work together
+  work:
+    title: Working Hours
+    mon: Monday - Friday
+    sat: Saturday
+    sun: Sunday
+    closed: Closed
 guides:
   back: Back to guides
   headline: Guides
@@ -214,6 +233,20 @@ steps:
   dep:
     title: Testing & Deployment
     description: Final touches and publishing to the public
+product:
+  title: Products
+  more: Read more
+  new: New
+  fast: Selling fast!
+  tinctures:
+    title: Tinctures
+    description: Products distilled in alcohol
+  seeds:
+    title: Seeds
+    description: High-quality CBD strains
+  oils:
+    title: Oils
+    description: For multiple puropses
 translation:
   title: Translate
   description: Tools to help localization.
@@ -282,7 +315,7 @@ terms:
   decline: Decline
 site:
   title: Northern Sun
-  description: Health and well-being under the Northern Sun
+  description: Health and well-being
   offer: Join the club
 user:
   title: Catventurist

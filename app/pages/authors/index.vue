@@ -1,13 +1,32 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { PageCollections } from '@nuxt/content'
+import type { AutEnCollectionItem, AutFiCollectionItem, AuthorsEnCollectionItem, AuthorsFiCollectionItem, Collections, PageCollections } from '@nuxt/content'
 
 const appConfig = useAppConfig()
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
-const { data: page } = await useAsyncData('aut-' + slug.value, () => queryCollection('aut_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
+/* const { data: page } = await useAsyncData('aut-' + slug.value, () => queryCollection('aut_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
 const { data: authors } = await useAsyncData('authors-list-' + slug.value, () => queryCollection('authors_' + locale.value as keyof PageCollections).order('id', 'ASC').all(), { watch: [locale] })
+ */
+const { data: page } = await useAsyncData('aut-' + slug.value, async () => {
+  const content = await queryCollection(('aut_' + locale.value) as keyof PageCollections).first()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('aut_en').first()
+  }
+  return content as AutEnCollectionItem | AutFiCollectionItem
+}, {
+  watch: [locale]
+})
+const { data: authors } = await useAsyncData('authors-list-' + slug.value, async () => {
+  const content = await queryCollection(('authors_' + locale.value) as keyof Collections).all()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('authors_en').all()
+  }
+  return content
+}, {
+  watch: [locale]
+})
 
 const roleConfig: Record<string, { color: 'warning' | 'info' | 'success', icon: string }> = {
   creator: { color: 'warning', icon: appConfig.ui.icons.crown },
@@ -69,7 +88,7 @@ useSeoMeta({
     <UPageSection :ui="{ container: '!pt-0' }">
       <UPageGrid>
         <UPageCard
-          v-for="author in authors"
+          v-for="author in authors as AuthorsEnCollectionItem[] | AuthorsFiCollectionItem[]"
           :key="author.name"
           spotlight
           class="group relative overflow-visible"
@@ -170,7 +189,7 @@ useSeoMeta({
           >
             <UButton
               v-for="link in author.links"
-              :key="link.title"
+              :key="link.label"
               :to="link.to"
               :color="link.color"
               :trailing-icon="link.icon"

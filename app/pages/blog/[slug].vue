@@ -7,15 +7,25 @@ if (!post.value) {
 } */
 
 import { withLeadingSlash } from 'ufo'
-import type { PageCollections } from '@nuxt/content'
+import type { PageCollections, PostsEnCollectionItem, PostsFiCollectionItem } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
 
+const { data: post } = await useAsyncData('posts-' + slug.value, async () => {
+  const content = await queryCollection(('posts_' + locale.value) as keyof PageCollections).first()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('posts_en').first()
+  }
+  return content as PostsEnCollectionItem | PostsFiCollectionItem
+}, {
+  watch: [locale]
+})
+/*
 const { data: post } = await useAsyncData('posts-' + slug.value, () => queryCollection('posts_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
 
-/* const { data: post } = await useAsyncData('posts-' + slug.value, async () => {
+ const { data: post } = await useAsyncData('posts-' + slug.value, async () => {
   const collection = ('posts_' + locale.value) as keyof Collections
   const content = await queryCollection(collection).first()
   if (!content && locale.value !== 'en') {
@@ -54,7 +64,7 @@ if (post.value?.image?.src) {
 </script>
 
 <template>
-  <div v-if="post">
+  <UContainer v-if="post">
     <UPageHeader
       :title="post.title"
       :description="post.description"
@@ -127,5 +137,5 @@ if (post.value?.image?.src) {
         <UContentToc :links="post.body.toc.links" />
       </template>
     </UPage>
-  </div>
+  </UContainer>
 </template>

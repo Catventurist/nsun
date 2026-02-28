@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { PageCollections } from '@nuxt/content'
+import type { PageCollections, PricingEnCollectionItem, PricingFiCollectionItem } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
@@ -11,7 +11,7 @@ const { data: page } = await useAsyncData('pricing-' + slug.value, async () => {
   if (!content && locale.value !== 'en') {
     return await queryCollection('pricing_en').first()
   }
-  return content
+  return content as PricingEnCollectionItem | PricingFiCollectionItem
 }, {
   watch: [locale]
 })
@@ -38,11 +38,23 @@ const isYearly = ref('0')
     label: $t('pricing.yearly'),
     value: '1'
   }
-]) */
+])
+
+const eimages = [
+  '/hero/random-1.avif',
+  '/hero/random-2.avif',
+  '/hero/random-3.avif',
+  '/hero/random-4.avif',
+  '/hero/random-5.avif'
+]
+   */
 </script>
 
 <template>
   <div v-if="page">
+    <ClientOnly>
+      <AUploadToast />
+    </ClientOnly>
     <UPageHero
       :title="page.title"
       :description="page.description"

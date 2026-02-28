@@ -176,6 +176,25 @@ contact:
     title: Kehittäjille
     description: Jotain koodaamisesta kiinnostuneille
     link: Teknistä
+  error:
+    name: Nimi vaaditaan
+    email: Sähköposti ei kelpaa
+    subject: Aihe on tyhjä
+    message: Viestiä ei löydy
+  toast:
+    title: Onnistui
+    description: Kaavake on lähetetty
+  sendme: Lähetä viesti
+  name: Nimi
+  phone: Puhelin
+  location: Paikka
+  desc: Mitä on mielessä? Keskustellaan kuinka voimme toimia yhdessä
+  work:
+    title: Saavutettavissa
+    mon: Arkipäivisin
+    sat: Lauantaisin
+    sun: Sunnuntaisin
+    closed: Suljettu
 authors: 
   viewprofile: Näytä profiili
   lover: Tykkää Avoimesta Lähdekoodista
@@ -210,6 +229,20 @@ steps:
   dep:
     title: Testaus & Julkistus
     description: Viimeiset viilaukset ja kaikkien kokeiltavaksi
+product:
+  title: Tuotteet
+  more: Lue lisää
+  new: Uusi
+  fast: Paljon kysyntää!
+  tinctures:
+    title: Tinktuurat
+    description: Alkoholiin uutettuja tuotteita
+  seeds:
+    title: Siemenet
+    description: Korkealuokkaisista CBD-lajikkeista
+  oils:
+    title: Öljyt
+    description: Moneen tarkoitukseen
 translation:
   title: Käännä
   description: Käännöksiä helpottavia komponentteja.
@@ -337,7 +370,7 @@ terms:
   decline: Hylkää
 site:
   title: Pohjoinen Aurinko
-  description: Hyvinvointia ja terveyttä pohjoisen auringon alla
+  description: Hyvinvointia ja terveyttä
   offer: Liity klubiin
 user:
   title: Catventurist

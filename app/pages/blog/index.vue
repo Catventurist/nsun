@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { Collections, PageCollections } from '@nuxt/content'
+import type { BlogEnCollectionItem, BlogFiCollectionItem, PageCollections, PostsEnCollectionItem, PostsFiCollectionItem } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
 /*
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
+const { data: page } = await useAsyncData('blog-' + slug.value, () => queryCollection('blog_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
+const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts_' + locale.value as keyof Collections).order('title', 'DESC').all(), { watch: [locale] })
 
 const { data: page } = await useAsyncData('blog-' + slug.value, async () => {
   const collection = 'blog_' + locale.value as keyof Collections
@@ -30,8 +32,25 @@ const { data: posts } = await useAsyncData('posts-' + slug.value, async () => {
   watch: [locale]
 })
 */
-const { data: page } = await useAsyncData('blog-' + slug.value, () => queryCollection('blog_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
-const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts_' + locale.value as keyof Collections).order('title', 'DESC').all(), { watch: [locale] })
+const { data: page } = await useAsyncData('blog-' + slug.value, async () => {
+  const content = await queryCollection(('blog_' + locale.value) as keyof PageCollections).first()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('blog_en').first()
+  }
+  return content as BlogEnCollectionItem | BlogFiCollectionItem
+}, {
+  watch: [locale]
+})
+
+const { data: posts } = await useAsyncData('posts-' + slug.value, async () => {
+  const content = await queryCollection(('posts_' + locale.value) as keyof PageCollections).all()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('posts_en').all()
+  }
+  return content
+}, {
+  watch: [locale]
+})
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
@@ -72,7 +91,7 @@ defineOgImageComponent('Saas')
     <UPageBody>
       <UBlogPosts>
         <UBlogPost
-          v-for="(post, index) in (posts as any)"
+          v-for="(post, index) in (posts as PostsEnCollectionItem[] | PostsFiCollectionItem[])"
           :key="post.title"
           :to="post.path"
           :title="post.title"

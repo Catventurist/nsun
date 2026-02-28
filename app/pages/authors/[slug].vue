@@ -1,12 +1,21 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
-import type { PageCollections } from '@nuxt/content'
+import type { AuthorsEnCollectionItem, AuthorsFiCollectionItem, PageCollections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 const slug = computed(() => Array.isArray(route.params.slug) ? withLeadingSlash(String(route.params.slug.join('/'))) : withLeadingSlash(String(route.params.slug)))
-const { data: author } = await useAsyncData('authors-' + slug.value, () => queryCollection('authors_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
-
+/* const { data: author } = await useAsyncData('authors-' + slug.value, () => queryCollection('authors_' + locale.value as keyof PageCollections).path(route.path).first(), { watch: [locale] })
+ */
+const { data: author } = await useAsyncData('authors-' + slug.value, async () => {
+  const content = await queryCollection(('authors_' + locale.value) as keyof PageCollections).first()
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('authors_en').first()
+  }
+  return content as AuthorsEnCollectionItem | AuthorsFiCollectionItem
+}, {
+  watch: [locale]
+})
 const title = author.value?.seo?.title || author.value?.title
 const description = author.value?.seo?.description || author.value?.description
 
@@ -37,7 +46,7 @@ defineOgImageComponent('Saas')
         {{ author.name }}
         <UButton
           v-for="link in author.links"
-          :key="link.title"
+          :key="link.label"
           variant="subtle"
           v-bind="link"
         />

@@ -30,9 +30,9 @@ export function useHeader() {
     to: localePath('/pricing'),
     icon: appConfig.ui.icons.euro
   }, {
-    label: t('header.changelog.title'),
-    to: localePath('/changelog'),
-    icon: appConfig.ui.icons.list
+    label: t('editor.title'),
+    to: localePath('/editor'),
+    icon: appConfig.ui.icons.pen
   /*   }, {
     label: t('header.dashboard.title'),
     to: localePath('/dash'),
@@ -69,9 +69,9 @@ export function useHeader() {
     to: localePath('/pricing'),
     icon: appConfig.ui.icons.euro
   }, {
-    label: t('header.changelog.title'),
-    to: localePath('/changelog'),
-    icon: appConfig.ui.icons.list
+    label: t('editor.title'),
+    to: localePath('/editor'),
+    icon: appConfig.ui.icons.pen
   /* }, {
     label: t('header.dashboard.title'),
     to: localePath('/dash'),
