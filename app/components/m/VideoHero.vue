@@ -112,7 +112,7 @@ const selectedAnimation = animationVariants[props.animationStyle]
         :tab-index="0"
         :on-key-down="(e: { key: string }) => { (e.key === 'Escape' || e.key === 'Enter' || e.key === ' '); { isVideoOpen = (false) } }"
         :exit="{ opacity: 0 }"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-muted/50 backdrop-blur-md"
+        class="fixed top-8 inset-0 z-50 flex items-center justify-center bg-muted/50 backdrop-blur-md"
         @click="() => isVideoOpen = (false)"
       >
         <motion.div
@@ -120,7 +120,7 @@ const selectedAnimation = animationVariants[props.animationStyle]
           :transition="{ type: 'spring', damping: 30, stiffness: 300 }"
           class="relative mx-4 aspect-video w-full max-w-4xl md:mx-0"
         >
-          <motion.button class="absolute -top-6 -right-10 flex rounded-full bg-default/50 p-2 text-xl text-muted ring-1 backdrop-blur-md">
+          <motion.button class="absolute top-0 -right-10 flex rounded-full bg-default/50 p-2 text-xl text-muted ring-1 backdrop-blur-md">
             <Icon
               name="lucide-x"
               class="size-5"

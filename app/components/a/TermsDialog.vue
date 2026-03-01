@@ -7,7 +7,7 @@ const handleScroll = () => {
   if (!content) return
 
   const scrollPercentage = content.scrollTop / (content.scrollHeight - content.clientHeight)
-  if (scrollPercentage >= 0.99 && !hasReadToBottom.value) {
+  if (scrollPercentage >= 0.90 && !hasReadToBottom.value) {
     hasReadToBottom.value = true
   }
 }
@@ -20,12 +20,14 @@ const handleScroll = () => {
     :title="$t('terms.title')"
   >
     <UButton
-      variant="ghost"
+      :label="$t('terms.title')"
+      variant="soft"
       icon="lucide:scale"
       aria-describedby="terms"
+      class="text-center justify-center"
     />
     <template #body>
-      <div class="flex flex-col justify-center sm:max-h-[min(640px,60vh)] [&>button:last-child]:top-3.5">
+      <div class="flex flex-col justify-center sm:max-h-[min(640px,60vh)] [&>button:last-child]:top-3.5 ">
         <div
           ref="contentRef"
           class="overflow-y-auto"

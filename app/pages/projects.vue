@@ -111,7 +111,10 @@ useSeoMeta({
         >
           <template #leading>
             <span class="flex items-center gap-1 text-sm text-muted">
-              <UIcon name="lucide-calendar" class="group-hover:text-info" />
+              <UIcon
+                name="lucide-calendar"
+                class="group-hover:text-info"
+              />
               {{ new Date(project.date).getFullYear() }}
             </span>
           </template>
@@ -122,6 +125,7 @@ useSeoMeta({
                 :key="tag"
                 :label="tag"
                 variant="outline"
+                size="sm"
               />
               <ULink
                 :to="project.url"

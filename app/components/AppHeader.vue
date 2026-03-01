@@ -25,9 +25,58 @@ const { desktopLinks, mobileLinks } = useHeader()
 
     <UNavigationMenu
       :items="desktopLinks"
+      :ui="{
+        viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
+        content: 'sm:w-auto',
+        childList: 'sm:w-96',
+        childLinkDescription: 'text-balance line-clamp-2'
+      }"
+      class="w-full justify-center"
       variant="link"
+      trailing-icon=""
       highlight
-    />
+    >
+      <template #pages-content="{ item }">
+        <ul class="grid gap-2 p-4 lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
+          <!-- <li class="row-span-3">
+            <NuxtLink
+              :to="localePath('/')"
+              as-child
+            >
+              <UColorModeImage
+                :light="appConfig.header.logo.light"
+                :dark="appConfig.header.logo.dark"
+                :alt="appConfig.header.logo.alt"
+                :width="140"
+                :height="200"
+                class="min-w-45 min-h-50 mb-2 bg-muted/80 duration-300 hover:scale-110 active:scale-90 overflow-hidden rounded-xl"
+              />
+            </NuxtLink>
+          </li> -->
+          <li
+            v-for="child in item.children"
+            :key="child.label"
+            class="px-2 w-45 flex duration-300 hover:bg-radial-[at_25%_25%] hover:from-primary/20"
+          >
+            <NuxtLink
+              :to="child.to"
+              class="text-sm text-left size-full rounded-md p-3"
+            >
+              <Icon
+                v-if="child.icon"
+                :name="child.icon"
+              />
+              <p class="font-medium text-highlighted">
+                {{ child.label }}
+              </p>
+              <p class="text-muted line-clamp-2">
+                {{ child.description }}
+              </p>
+            </NuxtLink>
+          </li>
+        </ul>
+      </template>
+    </UNavigationMenu>
 
     <template #right>
       <ClientOnly>

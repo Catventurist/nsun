@@ -159,7 +159,7 @@ const events = [
               <span class="mr-2">
                 {{ $t('events.details') }}
               </span>
-              <Icon name="lucide-arrw-right" class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <Icon name="lucide-arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </NuxtLink>
           </div>
         </Motion>

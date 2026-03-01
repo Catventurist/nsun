@@ -32,7 +32,7 @@ function setActive(index: number) {
 </script>
 
 <template>
-  <MotionConfig :transition="{ duration: 0.7, type: 'spring', bounce: 0.5 }">
+  <MotionConfig :transition="{ duration: 0.7, type: 'spring', bounce: 0.3 }">
     <Motion
       layout
       as="div"

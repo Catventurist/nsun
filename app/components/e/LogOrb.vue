@@ -15,7 +15,6 @@
       :delay="0"
       :radius="120"
       direction="reverse"
-      to="/fi"
     >
       <Icon
         name="simple-icons-whatsapp"
@@ -69,8 +68,8 @@
       path
     >
       <Icon
-        name="simple-icons-google-drive"
-        size="50"
+        name="simple-icons-googledrive"
+        size="40"
       />
     </AOrbit>
     <AOrbit

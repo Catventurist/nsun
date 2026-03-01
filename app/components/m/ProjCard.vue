@@ -14,11 +14,11 @@ interface ProjectCardProps {
 }
 
 const pro: ProjectCardProps = {
-  title: 'Growing Platform',
-  description: 'Something interesting',
+  title: $t('site.title'),
+  description: $t('site.description'),
   tags: ['Nuxt', 'Node.js', 'Bun', 'Tailwind'],
   image: '/catbirchdark.webp',
-  links: { demo: '/', github: '/' }
+  links: { demo: '/', github: 'https://github.com/Catventurist/nsun' }
 }
 </script>
 

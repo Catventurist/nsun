@@ -28,8 +28,9 @@ function showToast() {
   <UButton
     :label="$t('upload.title')"
     icon="lucide-file-plus"
-    color="neutral"
+    color="info"
     variant="outline"
+    class="text-center justify-center"
     @click="showToast"
   />
 </template>

@@ -5,13 +5,31 @@ export function useHeader() {
   const { t } = useI18n()
 
   const desktopLinks = computed(() => [{
-  /*     label: t('header.about.title'),
-    to: localePath('/about'),
-    icon: appConfig.ui.icons.info
-  }, { */
-    label: t('header.authors.title'),
-    to: localePath('/authors'),
-    icon: appConfig.ui.icons.users
+    label: t('header.pages'),
+    icon: appConfig.ui.icons.info,
+    slot: 'pages' as const,
+    children: [
+      {
+        label: t('header.authors.title'),
+        description: t('header.authors.description'),
+        to: localePath('/authors'),
+        icon: appConfig.ui.icons.users
+      }, {
+        label: t('header.pricing.title'),
+        description: t('header.pricing.description'),
+        to: localePath('/pricing'),
+        icon: appConfig.ui.icons.euro
+      }, {
+        label: t('editor.title'),
+        description: t('editor.description'),
+        to: localePath('/editor'),
+        icon: appConfig.ui.icons.pen
+      }, {
+        label: t('header.projects.title'),
+        description: t('header.projects.description'),
+        to: localePath('/projects'),
+        icon: appConfig.ui.icons.light
+      }]
   }, {
     label: t('header.docs.title'),
     to: localePath('/docs/getting-started/introduction'),
@@ -25,22 +43,11 @@ export function useHeader() {
     label: t('header.guides.title'),
     to: localePath('/guides'),
     icon: appConfig.ui.icons.notebook
-  }, {
-    label: t('header.pricing.title'),
-    to: localePath('/pricing'),
-    icon: appConfig.ui.icons.euro
-  }, {
-    label: t('editor.title'),
-    to: localePath('/editor'),
-    icon: appConfig.ui.icons.pen
   /*   }, {
     label: t('header.dashboard.title'),
     to: localePath('/dash'),
     icon: appConfig.ui.icons.layoutDashboard
-  }, {
-    label: t('header.projects.title'),
-    to: localePath('/projects'),
-    icon: appConfig.ui.icons.light */
+ */
   }])
 
   const mobileLinks = computed(() => [{
@@ -75,18 +82,18 @@ export function useHeader() {
   /* }, {
     label: t('header.dashboard.title'),
     to: localePath('/dash'),
-    icon: appConfig.ui.icons.layoutDashboard
+    icon: appConfig.ui.icons.layoutDashboard */
   }, {
     label: t('header.projects.title'),
     to: localePath('/projects'),
-    icon: appConfig.ui.icons.light */
+    icon: appConfig.ui.icons.light
   }, {
     label: t('login.title'),
     to: localePath('/login'),
     icon: appConfig.ui.icons.login
   }, {
-    label: t('singnup.title'),
-    to: localePath('/singnup'),
+    label: t('signup.title'),
+    to: localePath('/signup'),
     icon: appConfig.ui.icons.signup
   }])
 

@@ -43,7 +43,7 @@ const negativeDelay = computed(() => -props.delay)
   </svg>
   <div
     class="animate-orbit absolute flex size-full transform-gpu"
-    :class="[props.class]"
+    :class="props.class"
   >
     <slot />
   </div>
