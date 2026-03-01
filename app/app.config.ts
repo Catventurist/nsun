@@ -167,7 +167,9 @@ export default defineAppConfig({
       'to': 'https://github.com/Catventurist',
       'target': '_blank',
       'aria-label': 'GitHub'
-    }]
+    }],
+    meetingLink: '/',
+    mail: 'cat@mail.com'
   },
   footer: {
     credits: `Catventurist • © ${new Date().getFullYear()}`,

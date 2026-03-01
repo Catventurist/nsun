@@ -53,7 +53,7 @@ const eimages = [
 <template>
   <div v-if="page">
     <ClientOnly>
-      <AUploadToast />
+      <EValues />
     </ClientOnly>
     <UPageHero
       :title="page.title"

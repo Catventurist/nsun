@@ -42,12 +42,14 @@ const { data: posts } = await useAsyncData('guides-posts', () =>
   queryCollection('guides').order('stem', 'DESC').all()
 ) */
 
+const title = page.value?.seo?.title || page.value?.title
+const description = page.value?.seo?.description || page.value?.description
+
 useSeoMeta({
-  titleTemplate: '%s - ' + $t('site.title'),
-  title: page.value?.title,
-  description: page.value?.description,
-  ogTitle: `${page.value?.title} - ` + $t('site.title'),
-  ogDescription: page.value?.description
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description
 })
 
 defineOgImageComponent('Docs')

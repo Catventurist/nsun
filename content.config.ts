@@ -266,14 +266,18 @@ export default defineContentConfig({
     }),
     pro_en: defineCollection({
       type: 'page',
-      source: [{ include: 'en/8.projects.yml' }],
+      source: {
+        include: 'en/8.projects.yml'
+      },
       schema: z.object({
         links: z.array(Link())
       })
     }),
     projects_en: defineCollection({
       type: 'data',
-      source: 'en/8.projects/*.yml',
+      source: {
+        include: 'en/8.projects/*.yml'
+      },
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
@@ -467,14 +471,18 @@ export default defineContentConfig({
     }),
     pro_fi: defineCollection({
       type: 'page',
-      source: [{ include: 'fi/8.projects.yml' }],
+      source: {
+        include: 'fi/8.projects.yml'
+      },
       schema: z.object({
         links: z.array(Link())
       })
     }),
     projects_fi: defineCollection({
       type: 'data',
-      source: 'fi/8.projects/*.yml',
+      source: {
+        include: 'fi/8.projects/*.yml'
+      },
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),

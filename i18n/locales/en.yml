@@ -139,6 +139,33 @@ lists:
   website: Website
   social: Social Platforms
   address: Address
+stats:
+  revenuem: Monthly recurring revenue
+  users: Users
+  productsnew: Products
+  more: View More
+features:
+  highlight: Features
+  title: Key Benefits of Freedom
+  description: The Feeling is worth all the hard work.
+  pro:
+    title: Learn from others
+    description: The best way to learn is by observing and doing.
+  needs:
+    title: Basic Needs
+    description: Food, water and shelter are required.
+  hobbies:
+    title: Things to do
+    description: Hobbies instead of a career.
+  online:
+    title: Online Tools
+    description: Free and Open Source.
+  communication:
+    title: Open Communication
+    description: Honest, truthful, collaborative.
+  intuition:
+    title: Intuition
+    description: Following the heart and feeling more.
 contact: 
   title: Communication is the key
   description: Choose a department and fill your information.

@@ -142,6 +142,33 @@ lists:
   website: Nettisivu
   social: SOME
   address: Osoite
+stats:
+  revenuem: Viime kuukauden tulos
+  users: Käyttäjiä
+  productsnew: Tuotevalikoima
+  more: Lue lisää
+features:
+  highlight: Ominaisuudet
+  title: Vapaudessa elämisen etuja
+  description: Saavutettu tunne on kaiken vaivan arvoista.
+  pro:
+    title: Kanssakulkijoilta oppiminen
+    description: Helpoin tapa oppia on seurata ja tehdä.
+  needs:
+    title: Perustarpeet
+    description: Ruoka, juoma ja katto pään päällä on edellytys.
+  hobbies:
+    title: Mielekästä tekemistä
+    description: Harrastuksia uran sijaan.
+  online:
+    title: Nettiohjelmistot
+    description: Ilmaista ja Avoimella Lähdekoodilla.
+  communication:
+    title: Avoin keskustelu
+    description: Aito, rehellinen ja myötäelävä.
+  intuition:
+    title: Intuitio
+    description: Sydämen kuuntelu ja tunteiden lisääntyminen.
 contact: 
   title: Yhteydenotto
   description: Kommunikaatio ratkaisee

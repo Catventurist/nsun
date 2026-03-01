@@ -2,11 +2,6 @@
 import * as z from 'zod/v4'
 import type { FormSubmitEvent } from '@nuxt/ui'
 
-useSeoMeta({
-  title: $t('login.title'),
-  description: $t('login.description')
-})
-
 const appConfig = useAppConfig()
 const localePath = useLocalePath()
 const toast = useToast()
@@ -66,6 +61,11 @@ type Schema = z.output<typeof schema>
 function onSubmit(payload: FormSubmitEvent<Schema>) {
   toast.add({ title: $t('login.message') + payload.data.name })
 }
+
+useSeoMeta({
+  title: $t('login.title'),
+  description: $t('login.description')
+})
 </script>
 
 <template>
