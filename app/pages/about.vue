@@ -74,8 +74,8 @@ useSeoMeta({
       </UPageAside>
     </template> -->
     <UPageCTA
-      :title="$t('header.about.title')"
-      :description="$t('header.about.description')"
+      :title="title"
+      :description="description"
       orientation="horizontal"
       :links="twlinks"
     >
@@ -83,23 +83,30 @@ useSeoMeta({
     </UPageCTA>
     <UPageList>
       <ClientOnly>
-        <AProjectLine />
-        <AFeatureAround />
-        <AProductList />
-        <EContScroll />
+        <AProjectLine id="roadmap" />
+        <EMarq id="affiliates" />
+        <ESpoSec id="sponsors" />
+        <AProductList id="products" />
+        <MContactBlock id="contact" />
+        <AFeatureAround id="values" />
         <EStatsLinks />
         <ELogOrb />
         <AExpGallery :images="eimages" />
-        <MContactBlock />
+        <!--
+        <EContScroll />
         <EEventCards />
         <ESliderTest />
-        <ESpringCal />
+        <ESpringCal /> -->
       </ClientOnly>
     </UPageList>
+    <UPageHero
+      :title="$t('header.examples.title')"
+      :description="$t('header.examples.description')"
+    />
     <UPageGrid>
       <ClientOnly>
         <div class="flex flex-col justify-around">
-          <ATermsDialog class="text-center self-center w-full" />
+          <!--  <ATermsDialog class="text-center self-center w-full" /> -->
           <AUploadToast class="text-center self-center w-full" />
         </div>
         <ECardFlip />

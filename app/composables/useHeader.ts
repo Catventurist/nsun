@@ -10,6 +10,11 @@ export function useHeader() {
     slot: 'pages' as const,
     children: [
       {
+        label: t('header.about.title'),
+        description: t('header.about.description'),
+        to: localePath('/about'),
+        icon: appConfig.ui.icons.info
+      }, {
         label: t('header.authors.title'),
         description: t('header.authors.description'),
         to: localePath('/authors'),
@@ -51,10 +56,10 @@ export function useHeader() {
   }])
 
   const mobileLinks = computed(() => [{
-  /*     label: t('header.about.title'),
+    label: t('header.about.title'),
     to: localePath('/about'),
     icon: appConfig.ui.icons.info
-  }, { */
+  }, {
     label: t('header.authors.title'),
     to: localePath('/authors'),
     icon: appConfig.ui.icons.users

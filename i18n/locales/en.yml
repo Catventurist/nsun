@@ -66,7 +66,10 @@ header:
     title: Projects
     description: Interesting sources of information.
     view: View Project
-  faq: FAQ
+  faq: 
+    title: Frequently Asked Questions
+    description: We have gathered the questions we hear most often and answered them to help you make informed decisions.
+    short: FAQ
   introduction:
     title: Introduction
     description: Fully styled texts.
@@ -77,6 +80,10 @@ header:
   events: 
     title: Events
     description: Categorized and timed material.
+    meeting:
+      sync: Team Sync Meeting
+      review: Design Review
+      pres: Client Presentation
   tasks: 
     title: Tasks
     description: Things to do.
@@ -86,6 +93,15 @@ header:
   home: Home
   speaking: Speaking
   actionsmenu: Open copy actions menu
+  partners:
+    title: Partners
+    description: Working with
+  examples: 
+    title: Examples
+    description: Sample of components
+scratch:
+  title: Scratched successifully
+  description: This task was completed at
 editor:
   title: Editor
   description: Create clever contern
@@ -122,6 +138,18 @@ upload:
   loaded:
     title: File uploaded!
     description: Your file has been successfully uploaded.
+faq:
+  check: Check All Common Questions
+  firstq: What does your company do?
+  firsta: Our company specializes in delivering high-quality CBD information and products, that are tailored to meet the evolving needs of individuals and groups alike.
+  secondq: What services do you offer?
+  seconda: We offer a wide range of products including seeds, tinctures and above all, information.
+sponsors:
+  title: Hall of Fame
+  description: Celebrating the first
+  starg: stargazers
+  star: Star on GitHub
+  believe: who believed in us.
 lists:
   title: Nuxt
   description: Great Framework for creating good code.
@@ -140,10 +168,17 @@ lists:
   social: Social Platforms
   address: Address
 stats:
+  title: Key Performance Metrics
+  description: Enhance your creations with our expert guidance. Discover innovative strategies to enhance your life.
   revenuem: Monthly recurring revenue
   users: Users
   productsnew: Products
   more: View More
+  sections: Sections
+  templates: Templates
+  customers: Customers
+  tickets: Support tickets
+  components: Components
 features:
   highlight: Features
   title: Key Benefits of Freedom
@@ -262,6 +297,7 @@ steps:
     description: Final touches and publishing to the public
 product:
   title: Products
+  description: Quality collection of CBD products
   more: Read more
   new: New
   fast: Selling fast!

@@ -53,9 +53,10 @@ const eimages = [
 <template>
   <div v-if="page">
     <ClientOnly>
-      .
+      <ESpoSec />
     </ClientOnly>
     <UPageHero
+      id="prices"
       :title="page.title"
       :description="page.description"
     >
@@ -99,6 +100,7 @@ const eimages = [
     </UPageSection>
 
     <UPageSection
+      id="faq"
       :title="page.faq.title"
       :description="page.faq.description"
     >

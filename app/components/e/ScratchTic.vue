@@ -10,8 +10,8 @@ function handleComplete() {
     year: 'numeric'
   })
   toast.add({
-    title: 'Scratched successifully',
-    description: `This task was completed around ${formattedDate}.`,
+    title: $t('scratch.title'),
+    description: $t('scratch.description') + ` ${formattedDate}.`,
     icon: 'i-lucide-calendar-days',
     color: 'success'
   })

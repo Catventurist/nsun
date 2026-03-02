@@ -1,6 +1,11 @@
-title: Designing Interfaces, Building Experiences.
-description: I've worked on a variety of projects, focusing on creating intuitive digital experiences where thoughtful design meets clean code. Here are some highlights I'm proud of, showcasing my process from concept to execution.
+title: Building Experiences.
+description: A variety of projects, focusing on creating intuitive digital experiences, where thoughtful design meets good results. Here are some highlights.
 links:
-  - label: "Let's talk"
+  - label: Have a talk
     color: neutral
-  - label: Email me
+    variant: subtle
+    icon: lucide-speech
+  - label: Send an Email
+    color: info
+    variant: subtle
+    icon: lucide-mail

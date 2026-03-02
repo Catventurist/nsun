@@ -1,25 +1,25 @@
 header:
   about: 
     title: Tietoa
-    description: Visuaalinen esittely sivustosta ja projektista.
+    description: Visuaalinen esittely projektista.
   authors:
     title: Tekijät
-    description: Kasvaen hitaasti mutta varmasti
+    description: Kasvaen hitaasti mutta varmasti.
   blog: 
     title: Julkaisut
-    description: Ideat ja ajatukset
+    description: Ideat ja ajatukset.
   dashboard: 
     title: Kojelauta
     description: Hallitse asetuksia ym.
   docs: 
     title: Dokumentit
-    description: Kuinka käyttää alustaa
+    description: Kuinka käyttää alustaa.
   guides: 
     title: Oppaat
-    description: Koodausohjeita
+    description: Ohjeita käyttöön.
   pricing: 
     title: Hintoja
-    description: Jokaiselle jotain.
+    description: Jäsenyysetuja osakkaille.
   changelog: 
     title: Muutoslista
     description: Kehittymisen aikajana.
@@ -66,7 +66,10 @@ header:
     title: Projektit
     description: Linkkejä jänniin juttuihin.
     view: Tutustu tarkemmin
-  faq: UKK
+  faq: 
+    title: Usein kysyttyjä kysymyksiä
+    description: Koostettuna usein esitettyjä kysymyksiä auttamaan sinua tekemään tietoisia valintoja.
+    short: UKK
   introduction:
     title: Esittely
     description: Tervetuloa tutustumaan lähemmin.
@@ -89,9 +92,18 @@ header:
   home: Koti
   speaking: Tapahtumat
   actionsmenu: Avaa kopiotoimintojen valikko
+  partners:
+    title: Kumppanit
+    description: Mukana menossa.
+  examples: 
+    title: Esimerkkejä
+    description: Valikoima komponentteja
+scratch:
+  title: Onnistunut raaputus!
+  description: Tämä tapahtui
 editor: 
   title: Muokkain
-  description: Luo luovaa sisältöä
+  description: Luo luovaa sisältöä.
   add:
     title: Lisää
     image: Lisää Kuva
@@ -125,6 +137,18 @@ upload:
   loaded:
     title: Tiedosto tallennettu!
     description: Tallennus onnistui muitta mukinoitta.
+faq:
+  check: Katso kaikki yleisimmät kysymykset
+  firstq: Mitä yritys tekee?
+  firsta: Erikoistumme tuottamaan laadukasta CBD-tietoutta sekä tuotteita, jotka on suunnattu kasvaviin ihmisten tarpeisiin.
+  secondq: Mitä palveluita on tarjolla?
+  seconda: Meillä on laaja valikoima tuotteita, kuten siemeniä ja tinktuuroita, sekä ennen kaikkea tärkeää tietoa.
+sponsors:
+  title: Kunniamaininnat
+  description: Juhlimme ensimmäisiä
+  starg: tähdittäjiä
+  star: Anna tähti GitHubissa
+  believe: joilla riittää uskoa meihin.
 lists:
   title: Nuxt
   description: Mainio alusta kaikenlaiseen koodaukseen.
@@ -143,10 +167,17 @@ lists:
   social: SOME
   address: Osoite
 stats:
+  title: Tärkeimpiä lukemia
+  description: Ota hyödyt irti erityisosaamisestamme. Löydä uusia tapoja kehittää tekemistä.
   revenuem: Viime kuukauden tulos
   users: Käyttäjiä
   productsnew: Tuotevalikoima
   more: Lue lisää
+  sections: Osiota
+  templates: Mallia
+  customers: Asiakasta
+  tickets: Tukilippua
+  components: Komponenttia
 features:
   highlight: Ominaisuudet
   title: Vapaudessa elämisen etuja
@@ -258,6 +289,7 @@ steps:
     description: Viimeiset viilaukset ja kaikkien kokeiltavaksi
 product:
   title: Tuotteet
+  description: Valikoima laadukkaita CBD-tuotteita
   more: Lue lisää
   new: Uusi
   fast: Paljon kysyntää!
@@ -313,6 +345,10 @@ events:
   description: Konferensseja ja työpajoja kehittämisen saralla.
   more: Näytä kaikki tapahtumat
   details: Lisätiedot
+  meeting:
+    sync: Yhteisötaito-kokous
+    review: Kehityspalaveri
+    pres: Asiakasesittely
 guides: 
   back: Takaisin oppaisiin
   headline: Oppaat

@@ -73,15 +73,15 @@ function onSubmit() {
         variant="ghost"
       />
       <UButton
-        to="https://gitlab.com/catventurist"
+        to="https://www.facebook.com/NorthernSunUprising"
         target="_blank"
-        icon="i-simple-icons-gitlab"
-        aria-label="Gitlab"
-        color="warning"
+        icon="i-simple-icons-facebook"
+        aria-label="Facebook"
+        color="info"
         variant="ghost"
       />
       <UButton
-        to="https://github.com/Catventurist"
+        to="https://github.com/Catventurist/nsun"
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"
