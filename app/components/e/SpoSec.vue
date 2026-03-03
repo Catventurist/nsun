@@ -19,7 +19,7 @@ const stars = ref(6)
   >
     <motion.div
       :style="{ y, opacity }"
-      class="absolute inset-0 z-0"
+      class="absolute top-0 inset-0 z-0"
     >
       <div class="absolute inset-0 bg-linear-to-b from-default via-default/90 to-default z-10" />
       <div class="absolute inset-0 bg-[linear(#d1d5db_1.5px,transparent_1.5px)] [default-size:20px_20px] opacity-[0.15] dark:bg-[radial-linear(#374151_1.5px,transparent_1.5px)] dark:opacity-[0.25]" />
@@ -92,6 +92,5 @@ const stars = ref(6)
         </NuxtLink>
       </motion.div>
     </div>
-    <ESpoGrid />
   </div>
 </template>

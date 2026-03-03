@@ -84,14 +84,12 @@ useSeoMeta({
     <UPageList>
       <ClientOnly>
         <AProjectLine id="roadmap" />
-        <EMarq id="affiliates" />
-        <ESpoSec id="sponsors" />
-        <AProductList id="products" />
         <MContactBlock id="contact" />
+        <AExpGallery :images="eimages" />
         <AFeatureAround id="values" />
+        <AProductList id="products" />
         <EStatsLinks />
         <ELogOrb />
-        <AExpGallery :images="eimages" />
         <!--
         <EContScroll />
         <EEventCards />
@@ -108,6 +106,7 @@ useSeoMeta({
         <div class="flex flex-col justify-around">
           <!--  <ATermsDialog class="text-center self-center w-full" /> -->
           <AUploadToast class="text-center self-center w-full" />
+          <EQuickActions class="text-center self-center w-full" />
         </div>
         <ECardFlip />
         <EScratchTic />

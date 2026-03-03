@@ -26,13 +26,13 @@ header:
   resources: Resources
   help: Help Center
   roadmap: Roadmap
-  features: Features
+  features: 
+    title: Features
+    description: Thanks goes to
   company: Company
   community: Community
   hobbies: Hobbies
-  affiliates : Affiliates
   portal: Portal
-  sponsors: Sponsors
   switchto: Switch to
   language: Language
   search: Search
@@ -99,6 +99,28 @@ header:
   examples: 
     title: Examples
     description: Sample of components
+  future:
+    title: Upcoming Features
+    description: Examples on what is possible.
+  careers:
+    title: Find your next role
+    description: Join a team of passionate individuals working on cutting-edge products.
+    headline: Careers
+menu:
+  actions: Actions
+  interface: Interface
+  show: Show
+  bookmarks: Bookmarks
+  history: History
+  downloads: Downloads
+  shortcuts: Keyboard shortcuts
+  file: File
+  view: View
+  copy: Copy
+  edit: Edit
+  delete: Delete
+  team: Team
+  logout: Login
 scratch:
   title: Scratched successifully
   description: This task was completed at
@@ -201,6 +223,51 @@ features:
   intuition:
     title: Intuition
     description: Following the heart and feeling more.
+  jobs:
+    title: Work
+    description: Available positions.
+  studies:
+    title: Studies
+    description: A selection of the most impactful work.
+  affiliates:
+    title: Affiliates
+    description: Respected ones.
+  sponsors:
+    title: Sponsors
+    description: Providing possibilities for growth.
+  invest: Investment
+  future: Future Features
+jobs:
+  apply: Apply
+  brand: 
+    title: Brand Identity for Startup
+    description: Create a complete brand identity system for a startup, including logo design, color palette, typography, and usage guidelines.
+    pos: Brand Designer
+  research: 
+    title: Platform Redesign
+    description: Complete redesign of the user experience for an online app, focusing on improving navigation and content organization.
+    pos: UX Designer & Researcher
+  product: 
+    title: Mobile Application
+    description: Design and develop a secure and intuitive mobile application, that allows users to learn new things.
+    pos: Product Designer & Frontend Developer
+  design:
+    tag: Design
+    title: Senior Product Designer
+    description: Lead design initiatives for our products and mentor juniors.
+  engi:
+    tag: Engineer
+    title: Senior Product Engineer
+    description: Lead engineer initiatives for our products and mentor juniors.
+  remote: Remote
+  anywhere: Anywhere
+  fullt: Full-time
+  senior: Senior Level
+  all: All positions
+  products: Product
+  learning: Learning
+  details: View details
+  more: Load more positions
 contact: 
   title: Communication is the key
   description: Choose a department and fill your information.

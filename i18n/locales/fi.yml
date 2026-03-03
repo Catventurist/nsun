@@ -26,13 +26,13 @@ header:
   resources: Resurssit
   help: Apukeskus
   roadmap: Suunnitelma
-  features: Ominaisuuksia
+  features: 
+    title: Esittely
+    description: Tukijoita ja tekijöitä tarvitaan.
   company: Yhteisö
   community: Yleiset
   hobbies: Harrastukset
-  affiliates : Kumppanit
   portal: Portaali
-  sponsors: Sponssaajat
   switchto: Vaihda tila
   language: Kieli
   search: Etsi
@@ -98,6 +98,71 @@ header:
   examples: 
     title: Esimerkkejä
     description: Valikoima komponentteja
+  jobs:
+    title: Tehtäviä tarjolla
+    description: Esimerkki avoimista hommista.
+  studies:
+    title: Tutkimuksia
+    description: Kokoelmä tärkeimpiä projekteja.
+  affiliates:
+    title: Osakkaita
+    description: Kunnioitus kuuluu.
+  sponsors:
+    title: Sponsors
+    description: Providing possibilities for growth.
+  future:
+    title: Tulevia ominaisuuksia
+    description: Esimerkkejä siitä, mikä olisi mahdollista. Englannin kielellä.
+  careers:
+    title: Löydä paikkasi
+    description: Liity inspiroituneeseen porukkaan, joka tekee uraauurtavia tuotteita.
+    headline: Urapolku
+menu:
+  actions: Toiminnot
+  interface: Käyttö
+  show: Näytä
+  bookmarks: Kirjainmerkit
+  history: Historia
+  downloads: Lataukset
+  shortcuts: Pikanäppäimet
+  file: Tiedosto
+  view: Katso
+  copy: Kopioi
+  edit: Muokkaa
+  delete: Poista
+  team: Porukka
+  logout: Kirjaudu
+jobs:
+  apply: Valitse
+  brand: 
+    title: Brändäys Startupille
+    description: Koko identiteettijärjestelmä startupille, mukaanlukien logon suunnittelu väripaletit, typografia, sekä käyttöohjeet.
+    pos: Brandisuunnittelu
+  research: 
+    title: Järjestelmän uudelleenrakennus
+    description: Täysin uuden käyttökokemuksen luominen nettisovellukselle, keskittyen navigointiin ja sisällön hallintaan.
+    pos: Ulkoasusuunnittelu & Tutkimus
+  product: 
+    title: Mobiiliappi
+    description: Turvallisen ja intuitiivisen mobiobiiliapin suunnittelu ja kehitys, jotta käyttäjät voivat oppia uusia juttuja.
+    pos: Tuotesuunnittelu & Käyttöliittymän kehitys
+  design:
+    tag: Suunnittelu
+    title: Tuotesuunnittelija
+    description: Johda tuotteiden suunnittelua ja opasta uudempia osaajia.
+  engi:
+    tag: Insinööri
+    title: Tuoteinsinööri
+    description: Johda tuotteiden valmistusta ja opasta uudempia osaajia.
+  remote: Etänä
+  anywhere: Missä vain
+  fullt: Kokoaikainen
+  senior: Vanhempi
+  all: Kaikki paikat
+  products: Tuotteet
+  learning: Oppiminen
+  details: Katso lisätietoja
+  more: Lataa lisää pestejä
 scratch:
   title: Onnistunut raaputus!
   description: Tämä tapahtui
@@ -200,6 +265,8 @@ features:
   intuition:
     title: Intuitio
     description: Sydämen kuuntelu ja tunteiden lisääntyminen.
+  invest: Sijoitukset
+  future: Tulevia ominaisuuksia
 contact: 
   title: Yhteydenotto
   description: Kommunikaatio ratkaisee

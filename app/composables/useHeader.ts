@@ -15,6 +15,11 @@ export function useHeader() {
         to: localePath('/about'),
         icon: appConfig.ui.icons.info
       }, {
+        label: t('header.features.title'),
+        description: t('header.features.description'),
+        to: localePath('/features'),
+        icon: appConfig.ui.icons.give
+      }, {
         label: t('header.authors.title'),
         description: t('header.authors.description'),
         to: localePath('/authors'),
@@ -128,39 +133,42 @@ export function useHeader() {
     label: t('header.resources'),
     children: [{
       label: t('header.help'),
-      to: localePath('/docs/getting-started/usage')
+      to: localePath('/changelog#faq')
     }, {
       label: t('header.docs.title'),
       to: localePath('/docs/getting-started')
     }, {
       label: t('header.roadmap'),
-      to: localePath('/')
+      to: localePath('/about#roadmap')
     }, {
       label: t('header.changelog.title'),
       to: localePath('/changelog')
     }]
-  /* }, {
-    label: t('header.features'),
+  }, {
+    label: t('header.features.title'),
     children: [{
-      label: t('header.affiliates')
+      label: t('header.affiliates.title'),
+      to: localePath('/features#affiliates')
     }, {
       label: t('header.portal')
     }, {
-      label: t('header.hobbies')
+      label: t('header.jobs.title'),
+      to: localePath('/features#jobs')
     }, {
-      label: t('header.sponsors')
-    }] */
+      label: t('header.sponsors.title'),
+      to: localePath('/features#sponsors')
+    }]
   }, {
     label: t('header.company'),
     children: [{
       label: t('header.about.title'),
-      to: localePath('/')
+      to: localePath('/about')
     }, {
       label: t('header.pricing.title'),
       to: localePath('/pricing')
     }, {
-      label: t('header.guides.title'),
-      to: localePath('/guides')
+      label: t('header.jobs.title'),
+      to: localePath('/features#jobs')
     }, {
       label: t('header.blog.title'),
       to: localePath('/blog')

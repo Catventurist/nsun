@@ -3,8 +3,15 @@ import type { Ref } from 'vue'
 import { Motion, useAnimate } from 'motion-v'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 
+interface Props {
+  class?: string
+  width: number
+  height: number
+  minScratchPercentage?: number
+  gradientColors?: [string, string, string]
+}
 const props = withDefaults(defineProps<Props>(), {
-  gradientColors: () => ['#A97CF8', '#F38CB8', '#FDCC92'],
+  gradientColors: () => ['#360f5a', '#002600', '#000033'],
   minScratchPercentage: 50
 })
 
@@ -13,13 +20,6 @@ const emit = defineEmits<{
 }>()
 
 const cursorImg = 'cursor-[url(/paw.png),pointer]'
-interface Props {
-  class?: string
-  width: number
-  height: number
-  minScratchPercentage?: number
-  gradientColors?: [string, string, string]
-}
 
 const canvasRef = ref<HTMLCanvasElement>()
 
@@ -177,6 +177,7 @@ onUnmounted(() => {
       :width="width"
       :height="height"
       class="absolute top-0 left-0"
+      willReadFrequently="true"
       @mousedown="handleMouseDown"
       @touchstart="handleTouchStart"
     />

@@ -39,22 +39,11 @@ const isYearly = ref('0')
     value: '1'
   }
 ])
-
-const eimages = [
-  '/hero/random-1.avif',
-  '/hero/random-2.avif',
-  '/hero/random-3.avif',
-  '/hero/random-4.avif',
-  '/hero/random-5.avif'
-]
-   */
+*/
 </script>
 
 <template>
   <div v-if="page">
-    <ClientOnly>
-      <ESpoSec />
-    </ClientOnly>
     <UPageHero
       id="prices"
       :title="page.title"
