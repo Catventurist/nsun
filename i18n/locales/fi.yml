@@ -108,8 +108,8 @@ header:
     title: Osakkaita
     description: Kunnioitus kuuluu.
   sponsors:
-    title: Sponsors
-    description: Providing possibilities for growth.
+    title: Sponsorit
+    description: Isossa osassa kasvavassa yrityksessä.
   future:
     title: Tulevia ominaisuuksia
     description: Esimerkkejä siitä, mikä olisi mahdollista. Englannin kielellä.
@@ -194,6 +194,21 @@ editor:
   blockquote: Lainaus
   undo: Kumoa
   redo: Uudestaan
+tasks:
+  title: Tehtävä
+  status: Tila
+  priority: Vakavuus
+  time: Aikajana
+  language: Kieli
+  actions: Toiminnot
+  backlog: Jumissa
+  todo: Todo
+  pending: Riippuu
+  done: Valmis
+  canceled: Hyljätty
+  high: Korkea
+  medium: Keskitaso
+  low: Matala
 upload:
   title: Lisää tiedosto
   load:
@@ -561,6 +576,8 @@ login:
     title: Sähköposti
     placeholder: Lisää sähköposti
     invalid: Sopimaton osoite
+    success: Onnistui
+    sent: Sähköposti on matkalla.
   password:
     title: Salasana
     placeholder: Lisää salasana
@@ -576,6 +593,7 @@ login:
     description: Ei vielä tiliä?
   signup: Rekisteröidy
   forgot: Salasana hukassa?
+  forgotdesc: Lähetämme ohjeet nollaukseen sähköpostilla.
   disclaimer: Kirjautumalla hyväksyt
   terms: Käyttöehdot
   message: 'Kirjauduttu käyttäjänä '

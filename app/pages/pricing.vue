@@ -44,6 +44,9 @@ const isYearly = ref('0')
 
 <template>
   <div v-if="page">
+    <ClientOnly>
+      .
+    </ClientOnly>
     <UPageHero
       id="prices"
       :title="page.title"

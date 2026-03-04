@@ -287,6 +287,28 @@ export default defineContentConfig({
         date: z.date()
       })
     }),
+    tasks_en: defineCollection({
+      source: {
+        include: 'en/tasks.yml'
+      },
+      type: 'page',
+      schema: Page()
+    }),
+    todos_en: defineCollection({
+      source: 'en/tasks/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(Link()),
+        priority: z.string(),
+        status: z.string(),
+        start: z.date(),
+        end: z.date(),
+        completed: z.boolean(),
+        locale: z.string()
+      })
+    }),
     landing_fi: defineCollection({
       source: 'fi/0.index.yml',
       type: 'page',
@@ -490,6 +512,28 @@ export default defineContentConfig({
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.date()
+      })
+    }),
+    tasks_fi: defineCollection({
+      source: {
+        include: 'fi/tasks.yml'
+      },
+      type: 'page',
+      schema: Page()
+    }),
+    todos_fi: defineCollection({
+      source: 'fi/tasks/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(Link()),
+        priority: z.string(),
+        status: z.string(),
+        start: z.date(),
+        end: z.date(),
+        completed: z.boolean(),
+        locale: z.string()
       })
     })
   }

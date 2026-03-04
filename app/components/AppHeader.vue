@@ -26,8 +26,8 @@ const { desktopLinks, mobileLinks } = useHeader()
     <UNavigationMenu
       :items="desktopLinks"
       :ui="{
-        viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
-        content: 'sm:w-auto',
+        viewport: 'sm:min-w-105',
+        content: 'flex items-center justify-center sm:w-auto',
         childList: 'sm:w-96',
         childLinkDescription: 'text-balance line-clamp-2'
       }"

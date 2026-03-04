@@ -5,7 +5,7 @@ export function useHeader() {
   const { t } = useI18n()
 
   const desktopLinks = computed(() => [{
-    label: t('header.pages'),
+    label: t('header.about.title'),
     icon: appConfig.ui.icons.info,
     slot: 'pages' as const,
     children: [
@@ -20,15 +20,26 @@ export function useHeader() {
         to: localePath('/features'),
         icon: appConfig.ui.icons.give
       }, {
-        label: t('header.authors.title'),
-        description: t('header.authors.description'),
-        to: localePath('/authors'),
-        icon: appConfig.ui.icons.users
-      }, {
         label: t('header.pricing.title'),
         description: t('header.pricing.description'),
         to: localePath('/pricing'),
         icon: appConfig.ui.icons.euro
+      }, {
+        label: t('header.projects.title'),
+        description: t('header.projects.description'),
+        to: localePath('/projects'),
+        icon: appConfig.ui.icons.light
+      }]
+  }, {
+    label: t('header.authors.title'),
+    icon: appConfig.ui.icons.heart,
+    slot: 'pages' as const,
+    children: [
+      {
+        label: t('header.authors.title'),
+        description: t('header.authors.description'),
+        to: localePath('/authors'),
+        icon: appConfig.ui.icons.users
       }, {
         label: t('editor.title'),
         description: t('editor.description'),
@@ -39,6 +50,11 @@ export function useHeader() {
         description: t('header.projects.description'),
         to: localePath('/projects'),
         icon: appConfig.ui.icons.light
+      }, {
+        label: t('header.tasks.title'),
+        description: t('header.tasks.description'),
+        to: localePath('/tasks'),
+        icon: appConfig.ui.icons.check
       }]
   }, {
     label: t('header.docs.title'),
@@ -167,8 +183,8 @@ export function useHeader() {
       label: t('header.pricing.title'),
       to: localePath('/pricing')
     }, {
-      label: t('header.jobs.title'),
-      to: localePath('/features#jobs')
+      label: t('header.tasks.title'),
+      to: localePath('/tasks')
     }, {
       label: t('header.blog.title'),
       to: localePath('/blog')

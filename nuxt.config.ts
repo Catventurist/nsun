@@ -110,7 +110,12 @@ export default defineNuxtConfig({
     ],
     strategy: 'prefix',
     defaultLocale: 'en',
-    skipSettingLocaleOnNavigate: true
+    skipSettingLocaleOnNavigate: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
   },
 
   icon: {

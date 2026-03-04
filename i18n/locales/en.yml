@@ -106,6 +106,15 @@ header:
     title: Find your next role
     description: Join a team of passionate individuals working on cutting-edge products.
     headline: Careers
+  sponsors:
+    title: Hall of Fame
+    description: Celebrating the first
+  jobs:
+    title: Things to do
+    description: Available positions.
+  affiliates:
+    title: Affiliates
+    description: Respected ones.
 menu:
   actions: Actions
   interface: Interface
@@ -152,6 +161,21 @@ editor:
   blockquote: Blockquote
   undo: Undo
   redo: Redo
+tasks:
+  title: Task
+  status: Status
+  priority: Priority
+  time: Range
+  language: Language
+  actions: Actions
+  backlog: Backlog
+  todo: Todo
+  pending: Pending
+  done: Done
+  canceled: Canceled
+  high: High
+  medium: Medium
+  low: Low
 upload:
   title: Upload
   load:
@@ -497,6 +521,8 @@ login:
     title: Email
     placeholder: Enter your email
     invalid: Invalid email
+    success: Success
+    sent: The mail has been submitted.
   password:
     title: Password
     placeholder: Enter your password
@@ -512,6 +538,7 @@ login:
     description: Do not have an account?
   signup: Sign up
   forgot: Forgot password?
+  forgotdesc: We will send the instuctions for a reset.
   disclaimer: By signing in, you agree to the
   terms: Terms of Service
   message: 'Logged in as '
