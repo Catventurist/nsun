@@ -30,7 +30,6 @@ header:
     title: Esittely
     description: Tukijoita ja tekijöitä tarvitaan.
   company: Yhteisö
-  community: Yleiset
   hobbies: Harrastukset
   portal: Portaali
   switchto: Vaihda tila
@@ -117,6 +116,9 @@ header:
     title: Löydä paikkasi
     description: Liity inspiroituneeseen porukkaan, joka tekee uraauurtavia tuotteita.
     headline: Urapolku
+  community:
+    title: Yhteinen päätöksenteko
+    description: Anna äänesi kuulua.
 menu:
   actions: Toiminnot
   interface: Käyttö
@@ -132,6 +134,54 @@ menu:
   delete: Poista
   team: Porukka
   logout: Kirjaudu
+feedback:
+  title: Arvosteluita
+  lastby: Viimeisin käyttäjältä
+  items:
+    clarity: Dokumentaation selkeys
+    clarityc: Kaunistelua komponenteilla ja käännöksillä
+    speed: APIn suorituskyky
+    speedc: Useimmat esimerkit eivät vaadi palvelinlaskentaa
+    support: Yhteisötuki
+    supportc: Voisi olla enemmän yhteydenpitovälineitä käytössä
+  actions: 
+    colder: Kylmenee
+    hotter: Kuumenee
+  user:
+    current: Cat
+  comments: Huomioita
+  write: Lisää kommentti
+community:
+  title: Yhteiset päätökset
+  description: Äänestä sydämesi kyllyydestä.
+  you: Minä
+  reject: Kylmä / Hylkää
+  neutral: Neutraali
+  approve: Kuuma / Hyväksy
+  last_by: Viimeisin päivitys
+  logo: Uusi Logo
+  logoc: Voisi olla värikkäämpi
+  rules: Päivitetyt hallintaohjeet
+  rulesc: Kultainen sääntö riittänee
+  event: Yleinen kokooontumisaika
+  eventc: Netin kautta luultavimmin
+  user:
+    current: Cat
+  feedback:
+    title: Palaute
+    description: Tarjoa mielipiteesi.
+  voting:
+    title: Äänestys
+    description: Päätöksiin saapuminen yleisen ymmärryksen pohjalta.
+quiz:
+  finish: Valmis
+  next: Seuraava
+  question: Kysymys
+  of: /
+  vs: vs
+  finished: Kysely valmis!
+  score: Tuloksesi
+  retry: Uudestaan
 jobs:
   apply: Valitse
   brand: 
@@ -422,6 +472,13 @@ translation:
   main: Käännökset
   table: Taulukko
   form: Lomake
+  open: Avaa
+  changes: Seuraa muutoksia
+  rules: Käännössäännöt
+  copys: Kopioi lähde
+  copieds: Lähde lisätty leikepöydälle!
+  ndraft: Uusi ehdotus
+  refs: Lähdeviite
 events:
   title: Puheet ja tapahtumat
   description: Konferensseja ja työpajoja kehittämisen saralla.
@@ -641,8 +698,8 @@ profile:
   username: Cat
   usertag: cat
   userbio: Seikkailua ja koodausta.
-  follownum: "0"
-  followernum: "0"
+  follownum: '0'
+  followernum: '0'
 nav:
   site:
     title: SaaSanoa
@@ -682,7 +739,7 @@ nav:
       title: Opi muualla
       styling:
         title: Tyyli
-        description: "Tailwind 4 säästää näppäimistöä ja aikaa."
+        description: Tailwind 4 säästää näppäimistöä ja aikaa.
       animation:
         title: Animaatiot
         description: Motion tekee sen, mihin CSS ei veny.

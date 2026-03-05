@@ -25,7 +25,7 @@ useSeoMeta({
 const route = useRoute()
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: navigation } = await useAsyncData('navigation-' + slug.value, () => queryCollectionNavigation('docs_' + locale.value as keyof PageCollections), { watch: [locale] })
-const { data: files } = useLazyAsyncData('search-' + slug.value as keyof Collections, () => queryCollectionSearchSections('docs_' + locale.value as keyof Collections), {
+const { data: files } = useLazyAsyncData('search-' + slug.value as keyof Collections, () => queryCollectionSearchSections('docs_' + locale.value as keyof PageCollections), {
   server: false,
   watch: [locale]
 })
@@ -36,11 +36,8 @@ provide('navigation-' + slug.value, navigation)
 <template>
   <UApp :locale="nuxtUiLocale">
     <AppHeader />
-
     <UError :error="error" />
-
     <AppFooter />
-
     <ClientOnly>
       <LazyUContentSearch
         :files="files"

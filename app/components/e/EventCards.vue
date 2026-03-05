@@ -142,11 +142,17 @@ const events = [
           <div class="grow">
             <div class="mb-4 flex flex-col space-y-2">
               <div class="text-muted flex items-center text-sm">
-                <Icon name="lucide-calendar" class="mr-2 size-4 text-primary" />
+                <Icon
+                  name="lucide-calendar"
+                  class="mr-2 size-4 text-primary"
+                />
                 {{ event.date }}
               </div>
               <div class="text-muted flex items-center text-sm">
-                <Icon name="lucide-map-pin" class="mr-2 size-4 text-primary" />
+                <Icon
+                  name="lucide-map-pin"
+                  class="mr-2 size-4 text-primary"
+                />
                 {{ event.location }}
               </div>
             </div>
@@ -155,19 +161,31 @@ const events = [
             </p>
           </div>
           <div class="p-2 flex flex-col items-end">
-            <NuxtLink :to="event.link" class="group text-primary flex items-center">
+            <NuxtLink
+              :to="event.link"
+              class="group text-primary flex items-center"
+            >
               <span class="mr-2">
                 {{ $t('events.details') }}
               </span>
-              <Icon name="lucide-arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <Icon
+                name="lucide-arrow-right"
+                class="size-4 transition-transform duration-300 group-hover:translate-x-1"
+              />
             </NuxtLink>
           </div>
         </Motion>
       </Motion>
     </div>
     <div class="mt-12 text-center">
-      <NuxtLink to="/" class="inline-flex p-2 duration-300 hover:text-primary hover:bg-muted/40 rounded-xl bg-primary/20 items-center gap-2">
-        <Icon name="lucide-mic" class="size-4" />
+      <NuxtLink
+        to="/"
+        class="inline-flex p-2 duration-300 hover:text-primary hover:bg-muted/40 rounded-xl bg-primary/20 items-center gap-2"
+      >
+        <Icon
+          name="lucide-mic"
+          class="size-4"
+        />
         <span>
           {{ $t('events.more') }}
         </span>

@@ -37,25 +37,57 @@ defineOgImageComponent('Saas')
 </script>
 
 <template>
-  <div v-if="todo" class="mx-4">
+  <div
+    v-if="todo"
+    class="mx-4"
+  >
     <UPageHero
       :title="todo.title"
       :description="todo.description"
     >
       <div class="flex flex-col justify-center items-center gap-3 mt-4">
         <UAvatarGroup :max="3">
-          <ULink :to="localePath('/authors/catventurist')" class="hover:ring-primary transition" raw>
-            <UAvatar src="/cat.png" alt="Cat" loading="lazy" />
+          <ULink
+            :to="localePath('/authors/catventurist')"
+            class="hover:ring-primary transition"
+            raw
+          >
+            <UAvatar
+              src="/cat.png"
+              alt="Cat"
+              loading="lazy"
+            />
           </ULink>
-          <ULink to="#" target="_blank" class="hover:ring-primary transition" raw>
-            <UAvatar src="/catbirchdark.webp" alt="OG" loading="lazy" />
+          <ULink
+            to="#"
+            target="_blank"
+            class="hover:ring-primary transition"
+            raw
+          >
+            <UAvatar
+              src="/catbirchdark.webp"
+              alt="OG"
+              loading="lazy"
+            />
           </ULink>
-          <ULink to="#" class="hover:ring-primary transition" raw>
-            <UAvatar src="/ns-logo-dark.webp" alt="NS" loading="lazy" />
+          <ULink
+            to="#"
+            class="hover:ring-primary transition"
+            raw
+          >
+            <UAvatar
+              src="/ns-logo-dark.webp"
+              alt="NS"
+              loading="lazy"
+            />
           </ULink>
         </UAvatarGroup>
         <UFieldGroup>
-          <UInputDate ref="inputDate" v-model="modelValue" range>
+          <UInputDate
+            ref="inputDate"
+            v-model="modelValue"
+            range
+          >
             <template #trailing>
               <UPopover :reference="inputDate?.inputsRef[0]?.$el">
                 <UButton
@@ -67,19 +99,32 @@ defineOgImageComponent('Saas')
                   class="px-0"
                 />
                 <template #content>
-                  <UCalendar v-model="modelValue" class="p-2" :number-of-months="2" range />
+                  <UCalendar
+                    v-model="modelValue"
+                    class="p-2"
+                    :number-of-months="2"
+                    range
+                  />
                 </template>
               </UPopover>
             </template>
           </UInputDate>
           <ETodoStatusMenu class="max-w-70" />
         </UFieldGroup>
-        <UButton v-for="link in todo.links" :key="link.label" variant="subtle" v-bind="link" />
+        <UButton
+          v-for="link in todo.links"
+          :key="link.label"
+          variant="subtle"
+          v-bind="link"
+        />
       </div>
     </UPageHero>
     <UPage>
       <UPageBody>
-        <ContentRenderer v-if="todo" :value="todo.body" />
+        <ContentRenderer
+          v-if="todo"
+          :value="todo.body"
+        />
       </UPageBody>
     </UPage>
   </div>

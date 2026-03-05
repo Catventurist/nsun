@@ -90,7 +90,7 @@ export function useEditorCollaboration(options: CollaborationOptions) {
     if (!states) return
 
     const users = Array.from(states.entries())
-      .filter((entry): entry is [number, { user: CollaborationUser }] => !!entry[1].user)
+      .filter((entry: any): entry is [number, { user: CollaborationUser }] => !!entry[1].user)
       .map(([id, state]) => ({ ...state.user, id }))
 
     if (JSON.stringify(users) !== JSON.stringify(connectedUsers.value)) {

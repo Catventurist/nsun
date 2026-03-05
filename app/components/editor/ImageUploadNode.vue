@@ -9,11 +9,11 @@ const fileUploadRef = useTemplateRef('fileUploadRef')
 const error = ref<string | null>(null)
 const loading = ref(false)
 
-const upload = useUpload('/api/upload', {
+/* const upload = useUpload('/api/upload', {
   formKey: 'file',
   multiple: false
 })
-
+ */
 async function onFileChange() {
   const target = fileUploadRef.value?.inputRef
   if (!target) {
@@ -24,7 +24,7 @@ async function onFileChange() {
   error.value = null
 
   try {
-    const result = await upload(target)
+    /* const result = await upload(target) */
 
     const pos = props.getPos()
     if (typeof pos !== 'number') {
@@ -35,7 +35,7 @@ async function onFileChange() {
       .chain()
       .focus()
       .deleteRange({ from: pos, to: pos + 1 })
-      .setImage({ src: result.url || `/images/${result.pathname}` })
+      /* .setImage({ src: result.url || `/images/${result.pathname}` }) */
       .run()
   } catch (e) {
     error.value = (e as Error & { data: { message: string } }).data.message || 'An unknown error occurred'

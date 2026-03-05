@@ -162,10 +162,10 @@ const childVariant: MotionProps['variants'] = {
             <div class="mx-auto w-full justify-start">
               <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <Motion
-                  v-for="(c, index) in item.items"
+                  v-for="c in item.items"
                   :key="c.title"
                   :variants="childVariant"
-                  :transition="{ delay: index * 0.05 }"
+                  :transition="{ delay: c.index * 0.05 }"
                 >
                   <UCard class="group h-full py-0 transition-all hover:border-primary/50 hover:shadow-lg">
                     <div class="p-6">

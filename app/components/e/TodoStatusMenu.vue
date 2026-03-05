@@ -31,7 +31,7 @@ const items = ref([
     value: 'canceled',
     icon: 'i-lucide-circle-x',
     class: '**:text-error'
-  },
+  }
 ] satisfies InputMenuItem[])
 
 const pitems = ref([
@@ -60,7 +60,17 @@ const pvalue = ref(pitems.value[0])
 
 <template>
   <div class="flex flex-row">
-    <UInputMenu v-model="value" :icon="value?.icon" :class="value?.class" :items="items" />
-    <UInputMenu v-model="pvalue" :icon="pvalue?.icon" :class="pvalue?.class" :items="pitems" />
+    <UInputMenu
+      v-model="value"
+      :icon="value?.icon"
+      :class="value?.class"
+      :items="items"
+    />
+    <UInputMenu
+      v-model="pvalue"
+      :icon="pvalue?.icon"
+      :class="pvalue?.class"
+      :items="pitems"
+    />
   </div>
 </template>

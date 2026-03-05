@@ -45,7 +45,7 @@ const isYearly = ref('0')
 <template>
   <div v-if="page">
     <ClientOnly>
-      .
+      <EPlayGround />
     </ClientOnly>
     <UPageHero
       id="prices"

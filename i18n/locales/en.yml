@@ -30,7 +30,6 @@ header:
     title: Features
     description: Thanks goes to
   company: Company
-  community: Community
   hobbies: Hobbies
   portal: Portal
   switchto: Switch to
@@ -115,6 +114,9 @@ header:
   affiliates:
     title: Affiliates
     description: Respected ones.
+  community:
+    title: Project Decisions
+    description: Vote as you like.
 menu:
   actions: Actions
   interface: Interface
@@ -130,6 +132,54 @@ menu:
   delete: Delete
   team: Team
   logout: Login
+feedback:
+  title: Sentiment Analysis
+  lastby: Last feedback by
+  items:
+    clarity: Documentation Clarity
+    clarityc: Needs more translations and components
+    speed: API Performance
+    speedc: Most of the examples do not use it
+    support: Community Support
+    supportc: More avenues for collaboration and communication
+  actions: 
+    colder: Colder
+    hotter: Hotter
+  user:
+    current: Cat
+  comments: Comments
+  write: Give a comment
+community:
+  title: Project Decisions
+  description: Vote as you like.
+  you: You
+  reject: Negative / Reject
+  neutral: Neutral
+  approve: Positive / Approve
+  lastby: Last update by
+  logo: New Community Logo
+  logoc: Could be more colorful
+  rules: Updated Governance Rules
+  rulesc: The Golder Rule should be sufficient
+  event: Annual Meetup Date
+  eventc: Online most likely
+  user:
+    current: Cat
+  feedback:
+    title: Feedback
+    description: Give us your opinion.
+  voting:
+    title: Voting
+    description: Arriving at conclusions based on common thoughts.
+quiz:
+  finish: Finish
+  next: Next
+  question: Question
+  of: of
+  vs: vs
+  finished: Quiz Finished!
+  score: Your score
+  retry: Retry
 scratch:
   title: Scratched successifully
   description: This task was completed at
@@ -438,6 +488,13 @@ translation:
   main: Translations
   table: Table
   form: Form
+  open: Open
+  changes: View Changes
+  rules: Translation Rules
+  copys: Copy Source
+  copieds: Source text copied to clipboard!
+  ndraft: New Draft
+  refs: Source Reference
 events:
   title: Speaking Engagements & Workshops
   description: Speeches at conferences and workshops on design and development.
@@ -584,8 +641,8 @@ profile:
   username: Cat
   usertag: cat
   userbio: Catventures and Catography with some Coding
-  follownum: "0"
-  followernum: "0"
+  follownum: '0'
+  followernum: '0'
 nav:
   site:
     title: SaaSanoa
@@ -622,7 +679,7 @@ nav:
       title: Learn
       styling:
         title: Styling
-        description: "Tailwind 4, compatible with any styling solution."
+        description: Tailwind 4, compatible with any styling solution.
       animation:
         title: Animation
         description: Motion can do a lot outside CSS.
