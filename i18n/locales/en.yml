@@ -115,7 +115,7 @@ header:
     title: Affiliates
     description: Respected ones.
   community:
-    title: Project Decisions
+    title: Decisions
     description: Vote as you like.
 menu:
   actions: Actions
@@ -171,6 +171,9 @@ community:
   voting:
     title: Voting
     description: Arriving at conclusions based on common thoughts.
+tier:
+  popular: Popular
+  season: season
 quiz:
   finish: Finish
   next: Next
@@ -252,7 +255,7 @@ lists:
   updated: Updated
   suggested: Suggested Lists
   future: Future Ideas
-  stack: My Stack
+  stack: The Stack
   inspiration: Inspiration
   create: Create List
   give: Give a Star
@@ -263,6 +266,13 @@ lists:
   website: Website
   social: Social Platforms
   address: Address
+  choose: Choose one or many
+  search: Search...
+  categories:
+    communication: Communication
+    collaboration: Collaboration 
+    productivity: Productivity
+    social: Social
 stats:
   title: Key Performance Metrics
   description: Enhance your creations with our expert guidance. Discover innovative strategies to enhance your life.
@@ -342,6 +352,27 @@ jobs:
   learning: Learning
   details: View details
   more: Load more positions
+  highi: High Impact
+  growtha: Growth Area
+  activec: Active Connections
+  tip:
+    the: The
+    path: path emphasizes
+    strength: to strengthen your
+    profile: Profile
+  conn:
+    title: How things relate
+    occurrences: occurrences
+    paths: Paths
+  types:
+    network: Network
+    skill: Skill
+    career: Career
+    resourcea: resource access
+    commitment: commitment
+  score:
+    high: High
+    growth: Growth
 contact: 
   title: Communication is the key
   description: Choose a department and fill your information.
@@ -395,6 +426,18 @@ contact:
     sat: Saturday
     sun: Sunday
     closed: Closed
+strain:
+  genetics: Genetics
+  results: View lab results
+  content: Content
+  none: N/A
+  flowering: Flowering Time
+  yield: Yield
+  aroma: Aroma Profile
+  terpenea: Terpene Analysis
+  difficultyc: Cultivation Difficulty
+  norate: Not Rated
+  legall: Legal limit
 guides:
   back: Back to guides
   headline: Guides

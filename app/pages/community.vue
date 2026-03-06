@@ -31,7 +31,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <UPage>
+    <UPage class="relative">
       <UPageHero
         id="feedback"
         :title="$t('community.feedback.title')"
@@ -39,6 +39,7 @@ useSeoMeta({
         :links="featLinks"
       />
       <ClientOnly>
+        <ERoleCard />
         <EFeedBack />
       </ClientOnly>
       <UPageHero

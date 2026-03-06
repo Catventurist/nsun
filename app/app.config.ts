@@ -117,7 +117,8 @@ export default defineAppConfig({
       shield: 'i-lucide-shield',
       euro: 'i-lucide-euro',
       pen: 'i-lucide-pen',
-      give: 'i-lucide-hand-heart'
+      give: 'i-lucide-hand-heart',
+      scale: 'i-lucide-scale'
     },
     prose: {
       codeIcon: {

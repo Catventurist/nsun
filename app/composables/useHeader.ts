@@ -46,10 +46,10 @@ export function useHeader() {
         to: localePath('/editor'),
         icon: appConfig.ui.icons.pen
       }, {
-        label: t('header.projects.title'),
-        description: t('header.projects.description'),
-        to: localePath('/projects'),
-        icon: appConfig.ui.icons.light
+        label: t('header.community.title'),
+        description: t('header.community.description'),
+        to: localePath('/community'),
+        icon: appConfig.ui.icons.scale
       }, {
         label: t('header.tasks.title'),
         description: t('header.tasks.description'),
@@ -105,10 +105,10 @@ export function useHeader() {
     label: t('editor.title'),
     to: localePath('/editor'),
     icon: appConfig.ui.icons.pen
-  /* }, {
-    label: t('header.dashboard.title'),
-    to: localePath('/dash'),
-    icon: appConfig.ui.icons.layoutDashboard */
+  }, {
+    label: t('header.community.title'),
+    to: localePath('/community'),
+    icon: appConfig.ui.icons.scale
   }, {
     label: t('header.projects.title'),
     to: localePath('/projects'),
@@ -166,7 +166,8 @@ export function useHeader() {
       label: t('header.affiliates.title'),
       to: localePath('/features#affiliates')
     }, {
-      label: t('header.portal')
+      label: t('header.community.title'),
+      to: localePath('/community')
     }, {
       label: t('header.jobs.title'),
       to: localePath('/features#jobs')

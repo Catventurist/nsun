@@ -117,7 +117,7 @@ header:
     description: Liity inspiroituneeseen porukkaan, joka tekee uraauurtavia tuotteita.
     headline: Urapolku
   community:
-    title: Yhteinen päätöksenteko
+    title: Yhteisöpäätökset
     description: Anna äänesi kuulua.
 menu:
   actions: Toiminnot
@@ -173,6 +173,9 @@ community:
   voting:
     title: Äänestys
     description: Päätöksiin saapuminen yleisen ymmärryksen pohjalta.
+tier:
+  popular: Suosittu
+  season: kausi
 quiz:
   finish: Valmis
   next: Seuraava
@@ -213,6 +216,27 @@ jobs:
   learning: Oppiminen
   details: Katso lisätietoja
   more: Lataa lisää pestejä
+  highi: Merkittävä vaikutus
+  growtha: Kasvumahdollisuuksia
+  activec: Aktiivisia yhteyksiä
+  tip:
+    the: ''
+    path: -suuntaus korostaa
+    strength: vahvistaen
+    profile: -profiiliasi
+  conn:
+    title: Kuinka suhteet pelaa
+    occurrences: kerta
+    paths: Painopisteet
+  types:
+    network: Verkkoympäristö
+    skill: Taito
+    career: Tehtävä
+    resourcea: -resursseihin pääsy
+    commitment: vakaumusta
+  score:
+    high: Korkea
+    growth: Kasvu
 scratch:
   title: Onnistunut raaputus!
   description: Tämä tapahtui
@@ -285,7 +309,7 @@ lists:
   updated: Päivitetty
   suggested: Suositellut listat
   future: Tutut
-  stack: Kokoelmani
+  stack: Kokoelmamme
   inspiration: Inspiroivat
   create: Luo lista
   give: Anna tähti
@@ -296,6 +320,13 @@ lists:
   website: Nettisivu
   social: SOME
   address: Osoite
+  choose: Valitse yksi tai useampi
+  search: Etsi...
+  categories:
+    communication: Kommunikaatio
+    collaboration: Yhteistyö
+    productivity: Tuottavuus
+    social: Sosiaalisuus
 stats:
   title: Tärkeimpiä lukemia
   description: Ota hyödyt irti erityisosaamisestamme. Löydä uusia tapoja kehittää tekemistä.
@@ -385,6 +416,18 @@ contact:
     sat: Lauantaisin
     sun: Sunnuntaisin
     closed: Suljettu
+strain:
+  genetics: Genetiikka
+  results: Katso labratulokset
+  content: Sisällys
+  none: Tyhjä
+  flowering: Kukkimisaika
+  yield: Sato
+  aroma: Aromiprofiili
+  terpenea: Terpeenianalyysi
+  difficultyc: Viljelyn vaikeusaste
+  norate: Ei määritetty
+  legall: Laillisuusraja
 authors: 
   viewprofile: Näytä profiili
   lover: Tykkää Avoimesta Lähdekoodista
