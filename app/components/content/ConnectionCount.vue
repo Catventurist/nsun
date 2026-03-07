@@ -81,7 +81,10 @@ const topConnections = computed(() => {
 <template>
   <div class="my-10 max-w-6xl mx-auto">
     <div class="flex items-center gap-3 mb-8">
-      <UIcon name="i-lucide-network" class="size-8 text-primary" />
+      <UIcon
+        name="i-lucide-network"
+        class="size-8 text-primary"
+      />
       <h2 class="text-3xl font-bold">
         {{ title || $t('jobs.conn.title') }}
       </h2>
@@ -107,14 +110,20 @@ const topConnections = computed(() => {
                 selectedIndex === index ? 'bg-primary/20 text-default' : 'bg-muted'
               ]"
             >
-              <UIcon :name="`i-lucide-${item.icon}`" class="size-6" />
+              <UIcon
+                :name="`i-lucide-${item.icon}`"
+                class="size-6"
+              />
             </div>
             <div class="flex-1">
               <div class="flex justify-between items-center mb-1">
                 <span class="font-bold text-lg">
                   {{ item.label }}
                 </span>
-                <UBadge :color="item.type === 'benefit' ? 'primary' : 'warning'" variant="outline">
+                <UBadge
+                  :color="item.type === 'benefit' ? 'primary' : 'warning'"
+                  variant="outline"
+                >
                   {{ item.type }}
                 </UBadge>
               </div>
@@ -126,16 +135,23 @@ const topConnections = computed(() => {
         </div>
       </div>
       <div class="lg:col-span-7">
-        <UCard v-if="activeItem" class="h-full border-dashed border-2 border-primary/40">
+        <UCard
+          v-if="activeItem"
+          class="h-full border-dashed border-2 border-primary/40"
+        >
           <template #header>
             <div class="flex justify-between items-center">
               <h3 class="font-bold text-xl flex items-center gap-2">
-                <UIcon name="i-lucide-zap" class="text-warning" />
+                <UIcon
+                  name="i-lucide-zap"
+                  class="text-warning"
+                />
                 {{ $t('jobs.activec') }}
               </h3>
               <div class="flex gap-1">
                 <UIcon
-                  v-for="i in 5" :key="i"
+                  v-for="i in 5"
+                  :key="i"
                   name="i-lucide-star"
                   :class="['size-4', i <= activeItem.impactScore ? 'text-warning fill-warning' : 'text-muted']"
                 />
@@ -166,7 +182,10 @@ const topConnections = computed(() => {
 
           <template #footer>
             <div class="bg-primary/20 p-4 rounded-lg flex items-start gap-3">
-              <UIcon name="i-lucide-info" class="text-primary mt-0.5" />
+              <UIcon
+                name="i-lucide-info"
+                class="text-primary mt-0.5"
+              />
               <p class="text-sm text-default italic">
                 {{ $t('jobs.tip.the') }} {{ activeItem.label }} {{ $t('jobs.tip.path') }} {{ activeItem.type === 'benefit' ? $t('jobs.types.resourcea') : $t('jobs.types.commitment') }}
                 {{ $t('jobs.tip.strength') }} {{ processedConnections[0]?.category.toLowerCase() }} {{ $t('jobs.tip.profile') }}.
@@ -176,10 +195,16 @@ const topConnections = computed(() => {
         </UCard>
       </div>
     </div>
-    <div v-if="topConnections.length" class="mt-12 p-8 bg-muted/40 rounded-3xl border border-primary/30">
+    <div
+      v-if="topConnections.length"
+      class="mt-12 p-8 bg-muted/40 rounded-3xl border border-primary/30"
+    >
       <div class="flex items-center gap-3 mb-8">
         <div class="p-2 bg-primary/20 rounded-lg ">
-          <UIcon name="i-lucide-award" class="size-5" />
+          <UIcon
+            name="i-lucide-award"
+            class="size-5"
+          />
         </div>
         <h3 class="font-bold text-2xl">
           {{ $t('jobs.conn.paths') }}
@@ -191,7 +216,10 @@ const topConnections = computed(() => {
           :key="path.label"
           class="group p-5 bg-radial from-muted/80 rounded-2xl border border-muted/60 hover:shadow-md hover:shadow-primary transition-shadow"
         >
-          <UIcon :name="`i-lucide-${path.icon}`" class="w-8 h-8 text-primary mb-4 opacity-80 group-hover:opacity-100" />
+          <UIcon
+            :name="`i-lucide-${path.icon}`"
+            class="w-8 h-8 text-primary mb-4 opacity-80 group-hover:opacity-100"
+          />
           <div class="font-bold text-lg mb-1">
             {{ path.label }}
           </div>

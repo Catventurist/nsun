@@ -26,9 +26,9 @@ const { desktopLinks, mobileLinks } = useHeader()
     <UNavigationMenu
       :items="desktopLinks"
       :ui="{
-        viewport: 'sm:min-w-105',
+        viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
         content: 'flex items-center justify-center sm:w-auto',
-        childList: 'sm:w-96',
+        childList: '',
         childLinkDescription: 'text-balance line-clamp-2'
       }"
       class="w-full justify-center"
@@ -37,7 +37,7 @@ const { desktopLinks, mobileLinks } = useHeader()
       highlight
     >
       <template #pages-content="{ item }">
-        <ul class="grid gap-2 p-4 lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
+        <ul class="grid gap-2 min-w-110 p-2 lg:grid-cols-2">
           <!-- <li class="row-span-3">
             <NuxtLink
               :to="localePath('/')"
@@ -56,7 +56,7 @@ const { desktopLinks, mobileLinks } = useHeader()
           <li
             v-for="child in item.children"
             :key="child.label"
-            class="px-2 w-45 flex duration-300 hover:bg-radial-[at_25%_25%] hover:from-primary/20"
+            class="px-2 flex duration-300 hover:bg-radial-[at_25%_25%] hover:from-primary/20"
           >
             <NuxtLink
               :to="child.to"

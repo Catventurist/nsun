@@ -21,10 +21,12 @@ interface Strain {
   limit: number
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   title?: string
-  strains: Strain[]
-}>()
+  strains?: Strain[]
+}>(), {
+  strains: () => []
+})
 
 const activeIndex = ref(0)
 const selectedStrain = computed(() => props.strains[activeIndex.value])
@@ -37,7 +39,10 @@ const isLegal = (thcStr: string) => {
 
 <template>
   <div class="my-10 border border-muted rounded-2xl overflow-hidden">
-    <div class="flex flex-col lg:flex-row">
+    <div
+      v-if="strains.length > 0"
+      class="flex flex-col lg:flex-row"
+    >
       <div class="w-full lg:w-1/4  p-4 border-b lg:border-b-0 lg:border-r border-muted/60">
         <div class="flex flex-col gap-2">
           <button
@@ -60,13 +65,19 @@ const isLegal = (thcStr: string) => {
           </button>
         </div>
       </div>
-      <div v-if="selectedStrain" class="flex-1 p-6 md:p-10">
+      <div
+        v-if="selectedStrain"
+        class="flex-1 p-6 md:p-10"
+      >
         <div class="flex flex-wrap justify-between items-start gap-4 mb-8">
           <div>
             <h3 class="text-4xl text-info">
               {{ selectedStrain.name }}
             </h3>
-            <p v-if="selectedStrain.parentage" class="text-sm text-success font-medium mt-1">
+            <p
+              v-if="selectedStrain.parentage"
+              class="text-sm text-success font-medium mt-1"
+            >
               {{ $t('strain.genetics') }}: {{ selectedStrain.parentage }}
             </p>
           </div>
@@ -79,10 +90,21 @@ const isLegal = (thcStr: string) => {
             >
               THC: {{ selectedStrain.thc }}
               <UTooltip :text="($t('strain.legall') + ' < ' + limit + '%')">
-                <UButton icon="lucide-info" variant="soft" class="rounded-full" size="sm" color="info" />
+                <UButton
+                  icon="lucide-info"
+                  variant="soft"
+                  class="rounded-full"
+                  size="sm"
+                  color="info"
+                />
               </UTooltip>
             </div>
-            <UButton v-if="selectedStrain.coaUrl" :to="selectedStrain.coaUrl" :label="$t('strain.results')" variant="subtle" />
+            <UButton
+              v-if="selectedStrain.coaUrl"
+              :to="selectedStrain.coaUrl"
+              :label="$t('strain.results')"
+              variant="subtle"
+            />
           </div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 p-4 bg-muted/30 rounded-xl">
@@ -124,12 +146,20 @@ const isLegal = (thcStr: string) => {
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-muted">
           <div class="max-w-none">
-            <div v-if="selectedStrain.aroma" class="flex flex-col">
+            <div
+              v-if="selectedStrain.aroma"
+              class="flex flex-col"
+            >
               <h4 class="text-xs text-muted uppercase tracking-wide mb-4">
                 {{ $t('strain.aroma') }}
               </h4>
               <div class="flex flex-wrap gap-2">
-                <UBadge v-for="a in selectedStrain.aroma" :key="a" :label="a" variant="soft" />
+                <UBadge
+                  v-for="a in selectedStrain.aroma"
+                  :key="a"
+                  :label="a"
+                  variant="soft"
+                />
               </div>
             </div>
           </div>
@@ -138,7 +168,12 @@ const isLegal = (thcStr: string) => {
               {{ $t('strain.terpenea') }}
             </h4>
             <div class="flex flex-wrap gap-2">
-              <UBadge v-for="t in selectedStrain.terpenes" :key="t" :label="t" variant="outline" />
+              <UBadge
+                v-for="t in selectedStrain.terpenes"
+                :key="t"
+                :label="t"
+                variant="outline"
+              />
             </div>
           </div>
           <div>
@@ -150,12 +185,19 @@ const isLegal = (thcStr: string) => {
                 'px-4 py-2 rounded text-xs uppercase',
                 selectedStrain.difficulty === 'easy' ? 'bg-success/20 text-success'
                 : selectedStrain.difficulty === 'moderate' ? 'bg-warning/20 text-warning' : 'bg-error/20 text-error'
-              ]">
+              ]"
+            >
               {{ selectedStrain.difficulty || $t('strain.norate') }}
             </span>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      v-else
+      class="p-10 text-center text-muted italic"
+    >
+      {{ $t('strain.empty') }}
     </div>
   </div>
 </template>

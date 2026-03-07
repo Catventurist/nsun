@@ -426,6 +426,17 @@ contact:
     sat: Saturday
     sun: Sunday
     closed: Closed
+  online: Live
+  busy: Busy
+  away: Away
+  desk: Help Desk
+  assis: Get Assistance
+  copied: Copied!
+  copytic: Copy Ticket ID
+  emergency: Emergency
+  offline: Offline
+  feedback: Feedback
+  docs: Documentation
 strain:
   genetics: Genetics
   results: View lab results
@@ -438,6 +449,122 @@ strain:
   difficultyc: Cultivation Difficulty
   norate: Not Rated
   legall: Legal limit
+  empty: No strains to show
+  stage:
+    germination: Germination
+    seedling: Seedling
+    vegetative: Vegetative
+    flowering: Flowering
+    harvesting: Harvesting
+    curing: Curing
+  cycle: Light Cycle
+  phl: pH Level
+  ecl: EC (Nutrients)
+  climate: Climate
+  progress: Progress
+  cond: Growth Conditions
+  goalv: Value Goal
+  status:
+    title: Status
+    optimal: Optimal
+    warning: Warning
+    alert: Alert
+    info: Info
+  analysis:
+    official: Official Analysis
+    done: Analyzed
+    total:
+      thc: Total THC
+      cbd: Total CBD
+    moisture: Moisture
+    profile: Cannabinoid Profile
+    terparo: Terpenes & Aromas
+    wateract: Water Activity
+    safety: Safety Audit
+    heavy: Heavy Metals
+    micro: Microbiology
+    negative: Negative
+    detected: Detected
+    download: Donload the original COA (PDF)
+  intensity:
+    nope: N/A
+    mild: Mild
+    medium: Medium
+    strong: Strong
+    extreme: Extreme
+    undefined: Undefined
+  trichomes: Trichomes
+  sense:
+    look: Look
+    smell: Smell
+    taste: Taste
+    effect: Effect
+    feel: Feel
+  taste:
+    title: Taste Profile
+    sweetness: Sweetness
+    earthiness: Earthiness
+    sourness: Sourness
+    gas: Gas
+  thera:
+    title: Therapeutic Benefits
+    anxiety: Anxiety
+    pain: Pain
+    sleep: Sleep
+    focus: Focus
+    undefined: Undefined
+  tastep: 
+  good: Good
+  bad: Bad
+  recommend: Would buy again
+  recommendno: Would not recommend
+  entour: Biochemical Entourage Model
+  analyzed: Analyzed Compounds
+  synergyf: Synergy Connections Found (Entourage)
+  vpdtitle: VPD Optimizer
+  insight:
+    dark: 
+      title: Dark Perioid
+      advice: Leaf spores are closing a bit. Keep VPD between 0.8-1.0 to prevent rotting.
+    rich:
+      title: Rich on CO2
+      advice: Higher CO2 enables higher temperature and VPD. Optimal VPD in CO2-feeding is 1.2-1.5 kPa.
+    stress:
+      title: Light Stress
+      advice: Strong light without enough pressure to evaporate lifts the leaf temperature too much. Decrease humidity or rise the temperature.
+    low:
+      title: Low
+      advice: The evaporation is too slow. Nutrion intake decreases.
+    high:
+      title: High
+      advice: The plant is fading. Increase humidity asap.
+    optimal:
+      title: Optimal
+      advice: Balanced state. Photosynthesis functions at its best.
+    params: 
+      title: Parameters Included
+      temp: Temperature
+      humidity: Humidity
+      colevel: CO2 Level
+      light: Light
+      lighth: Light time
+      nutrients: Nutrients
+      vpd: Evaporation Pressure
+      lightcol: Daylight accumulation
+      nutrentcon: Nutrition Concentration
+    vapo: Evaporative Load
+    metab: 
+      activity: Plant Metabolic Activity
+      analysis: Metabolic Analysis
+    opthint: Optimization Advice
+    lighton: With the lights on, increase the CO2 concentration to 1200 ppm to take advantage of the high temperature more effectively.
+    lightoff: During the dark period, humidity naturally increases. Ensure sufficient air circulation to avoid mold.
+  counter:
+    title: Cultivation Parameters Counter
+    description: Count VPD, DLI and PPM in realtime.
+    addval: Add Values
+    results: Counted results
+    scale: Scale
 guides:
   back: Back to guides
   headline: Guides

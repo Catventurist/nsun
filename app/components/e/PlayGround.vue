@@ -138,7 +138,10 @@ useSeoMeta({
             <div class="grid gap-6 lg:grid-cols-2 justify-center">
               <div class="flex flex-col space-y-4">
                 <div class="flex flex-1 flex-col space-y-2">
-                  <UFormField label="Input" for="input">
+                  <UFormField
+                    label="Input"
+                    for="input"
+                  >
                     <UTextarea
                       id="input"
                       placeholder="New things someday."
@@ -148,7 +151,10 @@ useSeoMeta({
                   </UFormField>
                 </div>
                 <div class="flex flex-col space-y-2">
-                  <UFormField label="Instructions" for="instructions">
+                  <UFormField
+                    label="Instructions"
+                    for="instructions"
+                  >
                     <UTextarea
                       id="instructions"
                       placeholder="Fix something."

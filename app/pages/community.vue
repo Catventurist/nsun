@@ -39,7 +39,6 @@ useSeoMeta({
         :links="featLinks"
       />
       <ClientOnly>
-        <ERoleCard />
         <EFeedBack />
       </ClientOnly>
       <UPageHero

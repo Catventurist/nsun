@@ -32,8 +32,16 @@ const max = ref(props.capacity)
 
 <template>
   <UCard class="my-6 overflow-hidden duration-300 transition-colors hover:bg-linear-to-b from-primary/20">
-    <template v-if="props.image" #header>
-      <NuxtImg :src="props.image" :alt="props.title" :height="192" class="w-full h-48 object-cover -m-4 mb-0" />
+    <template
+      v-if="props.image"
+      #header
+    >
+      <NuxtImg
+        :src="props.image"
+        :alt="props.title"
+        :height="192"
+        class="w-full h-48 object-cover -m-4 mb-0"
+      />
     </template>
     <div class="flex justify-between items-start mb-4">
       <div>
@@ -41,7 +49,10 @@ const max = ref(props.capacity)
           {{ props.title }}
         </h3>
         <p class="text-sm text-muted flex items-center gap-1">
-          <UIcon name="i-lucide-users" class="text-primary" />
+          <UIcon
+            name="i-lucide-users"
+            class="text-primary"
+          />
           Organized by {{ props.organizer }}
         </p>
       </div>
@@ -58,23 +69,40 @@ const max = ref(props.capacity)
     </p>
     <div class="grid grid-cols-2 gap-4 text-sm mb-6">
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-calendar" class="text-primary" />
+        <UIcon
+          name="i-lucide-calendar"
+          class="text-primary"
+        />
         {{ props.date }}
       </div>
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-map-pin" class="text-primary" />
+        <UIcon
+          name="i-lucide-map-pin"
+          class="text-primary"
+        />
         {{ props.location }}
       </div>
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-receipt-euro" class="text-primary" />
+        <UIcon
+          name="i-lucide-receipt-euro"
+          class="text-primary"
+        />
         {{ props.price }}
       </div>
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-users" class="text-primary" />
+        <UIcon
+          name="i-lucide-users"
+          class="text-primary"
+        />
         {{ props.joined }} / {{ props.capacity }} Spots
       </div>
     </div>
-    <UProgress v-model="value" :max="max" color="primary" class="mb-4" />
+    <UProgress
+      v-model="value"
+      :max="max"
+      color="primary"
+      class="mb-4"
+    />
     <template #footer>
       <UFieldGroup class="w-full">
         <UButton

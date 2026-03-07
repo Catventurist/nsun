@@ -416,6 +416,17 @@ contact:
     sat: Lauantaisin
     sun: Sunnuntaisin
     closed: Suljettu
+  online: Saatavilla
+  busy: Kiireinen
+  away: Poissa
+  desk: Apukeskus
+  assis: Hae apua
+  copied: Kopioitu!
+  copytic: Kopioi kupiongin ID
+  emergency: Kiireellinen
+  offline: Poissa
+  feedback: Palaute
+  docs: Dokumentaatio
 strain:
   genetics: Genetiikka
   results: Katso labratulokset
@@ -428,6 +439,121 @@ strain:
   difficultyc: Viljelyn vaikeusaste
   norate: Ei määritetty
   legall: Laillisuusraja
+  empty: Lajikkeita ei löytynyt
+  stage:
+    germination: Itäminen
+    seedling: Taimivaihe
+    vegetative: Kasvuvaihe
+    flowering: Kukinta
+    harvesting: Sadonkorjuu
+    curing: Kypsytys
+  cycle: Valotus
+  phl: pH-tasot
+  ecl: EC (Ravinteet)
+  climate: Olosuhteet
+  progress: Edistyminen
+  cond: Kasvuolosuhteet
+  goalv: Tavoitearvo
+  status:
+    title: Olosuhteet
+    optimal: Optimaalinen
+    warning: Varoitus
+    alert: Huomio
+    info: Tietoa
+  analysis:
+    official: Analyysi
+    done: Tutkittu
+    total:
+      thc: THC Yhteensä
+      cbd: CBD Yhteensä
+    moisture: Kosteus
+    profile: Kannabinoidiprofiili
+    terparo: Terpeenit & Aromit
+    wateract: Vesiaktiivisuus
+    safety: Turvallisuustarkastus
+    heavy: Raskasmetallit
+    micro: Mikrobiologia
+    negative: Negatiivinen
+    detected: Havaittu
+    download: Lataa alkuperäinen COA-tutkimus (PDF)
+  intensity:
+    nope: Ei mitään
+    mild: Mieto
+    medium: Keskivahva
+    strong: Vahva
+    extreme: Huima
+    undefined: Määrittelemätön
+  trichomes: Trikomit
+  sense:
+    look: Ulkonäkö
+    smell: Haju
+    taste: Maku
+    effect: Vaikutus
+    feel: Tuntuma
+  taste:
+    title: Makuprofiili
+    sweetness: Makeus
+    earthiness: Maanmaku
+    sourness: Hppamuus
+    gas: Kaasu
+  thera:
+    title: Terapeuttiset hyödyt
+    anxiety: Ahdistus
+    pain: Kipu
+    sleep: Uni
+    focus: Keskittymiskyky
+    undefined: Määrittelemättä
+  good: Hyvää
+  bad: Huonoa
+  recommend: Ostaisin uudelleen
+  recommendno: En suosittele
+  entour: Biokemiallinen vuorovaikutusmalli
+  analyzed: Analysoidut yhdisteet
+  synergyf: Löydetyt synergia-akselit (Entourage)
+  vpdtitle: VPD-optimointi
+  insight:
+    dark: 
+      title: Pimeäjakso
+      advice: Pimeällä lehtiaukot sulkeutuvat osittain. Pidä VPD 0.8-1.0 välillä homeen estämiseksi.
+    rich:
+      title: CO2-rikas
+      advice: Korkea CO2 mahdollistaa korkeamman lämpötilan ja VPD:n. Optimaalinen VPD hiilidioksidiruokinnassa on 1.2-1.5 kPa.
+    stress:
+      title: Valostressi
+      advice: Voimakas valo ilman riittävää haihdutuspainetta nostaa lehtien lämpötilaa liikaa. Laske kosteutta tai nosta lämpöä.
+    low:
+      title: Matala
+      advice: Haihtuminen on liian hidasta. Ravinteiden otto heikkenee.
+    high:
+      title: Korkea
+      advice: Kasvi kuihtuu. Lisää ilmankosteutta välittömästi.
+    optimal:
+      title: Optimaalinen
+      advice: Tasapainoinen tila. Fotosynteesi toimii huipussaan.
+    params: 
+      title: Syötetyt Parametrit
+      temp: Lämpötila
+      humidity: Ilmankosteus
+      colevel: CO2-taso
+      light: Valo
+      lighth: Valotusaika
+      nutrients: Ravinteet
+      vpd: Haihtumispaine
+      lightcol: Valokertymä
+      nutrientcon: Ravinnepitoisuus
+    vapo: Haihtumiskuorma
+    metab: 
+      activity: Kasvin aineenvaihdunnallinen aktiivisuus
+      analysis: Metabolinen Analyysi
+    opthint: Optimointivinkki
+    lighton: Valojen ollessa päällä, nosta CO2-pitoisuutta 1200 ppm tasolle hyödyntääksesi korkean lämpötilan tehokkaammin.
+    lightoff: Pimeäjaksolla ilmankosteus nousee luonnostaan; varmista riittävä ilmankierto homehtumisen välttämiseksi.
+  counter:
+    title: Viljelyparametrien laskuri
+    description: Laske VPD, DLI ja PPM reaaliajassa
+    addval: Syötä arvot
+    results: Saadut Tulokset
+    scale: Skaala
 authors: 
   viewprofile: Näytä profiili
   lover: Tykkää Avoimesta Lähdekoodista
