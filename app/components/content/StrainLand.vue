@@ -155,5 +155,13 @@ const remediationStats = computed(() => {
         </div>
       </div>
     </div>
+    <div
+      v-if="$slots.default"
+      class="p-8 bg-muted/30 border-t border-muted"
+    >
+      <div class="prose prose-sm dark:prose-invert max-w-none italic text-muted">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>

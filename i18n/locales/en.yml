@@ -193,7 +193,7 @@ editor:
     title: Add
     image: Add Image
   slopify: Slopify
-  spelling: Fix spelling & grammar
+  spelling: Fix spelling and grammar
   extend: Extend text
   reduce: Reduce
   simplify: Simplify
@@ -330,11 +330,11 @@ jobs:
   research: 
     title: Platform Redesign
     description: Complete redesign of the user experience for an online app, focusing on improving navigation and content organization.
-    pos: UX Designer & Researcher
+    pos: UX Designer and Researcher
   product: 
     title: Mobile Application
     description: Design and develop a secure and intuitive mobile application, that allows users to learn new things.
-    pos: Product Designer & Frontend Developer
+    pos: Product Designer and Frontend Developer
   design:
     tag: Design
     title: Senior Product Designer
@@ -478,7 +478,7 @@ strain:
       cbd: Total CBD
     moisture: Moisture
     profile: Cannabinoid Profile
-    terparo: Terpenes & Aromas
+    terparo: Terpenes and Aromas
     wateract: Water Activity
     safety: Safety Audit
     heavy: Heavy Metals
@@ -513,7 +513,7 @@ strain:
     sleep: Sleep
     focus: Focus
     undefined: Undefined
-  tastep: 
+  tastep: Taste
   good: Good
   bad: Bad
   recommend: Would buy again
@@ -604,7 +604,7 @@ steps:
     title: Development Sprint
     description: Lots of writing code and solving errors
   dep:
-    title: Testing & Deployment
+    title: Testing and Deployment
     description: Final touches and publishing to the public
 product:
   title: Products
@@ -666,7 +666,7 @@ translation:
   ndraft: New Draft
   refs: Source Reference
 events:
-  title: Speaking Engagements & Workshops
+  title: Speaking Engagements and Workshops
   description: Speeches at conferences and workshops on design and development.
   more: View all events
   details: View details

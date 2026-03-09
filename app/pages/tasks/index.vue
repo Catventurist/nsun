@@ -121,7 +121,9 @@ const icons = {
 
       <LazyStarsBg />
     </UPageHero>
-
+    <ClientOnly>
+      .
+    </ClientOnly>
     <UPageSection :ui="{ container: '!pt-0' }">
       <UPageGrid class="xl:grid-cols-3">
         <UPageCard
