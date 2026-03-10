@@ -69,7 +69,7 @@ const formatEventRange = (from: Date, to: Date) => {
             <NuxtLink
               v-for="event in events"
               :key="event.title"
-              :to="event.to"
+              :to="event.link"
               class="bg-muted duration-300 hover:bg-radial from-primary/20 relative rounded-md p-2 pl-6 text-sm after:absolute after:inset-y-2 after:left-2 after:w-1 after:rounded-full"
             >
               <div class="font-medium">

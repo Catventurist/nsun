@@ -39,7 +39,7 @@ useSeoMeta({
         :links="featLinks"
       />
       <ClientOnly>
-        <EMarq id="affiliates" />
+        <EMarqLogo id="affiliates" />
         <ECareer id="career" />
         <EJobList id="jobs" />
         <UPageHero

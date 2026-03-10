@@ -670,6 +670,24 @@ events:
   description: Speeches at conferences and workshops on design and development.
   more: View all events
   details: View details
+  activity:
+    title: Activity Ahead
+    description: Something to look for
+    category: General
+    location: Main Hall
+    organizer: CBD Committee
+    free: Free
+    open: Open
+    full: Full
+    cancelled: Cancelled
+    organized: Organized by
+    spots: Spots
+    register: Register Now
+    joinw: Join Waitlist
+    closed: Closed
+    new: Create New
+    notif: Add Notification
+    price: Free
 terms:
   trigger: Terms
   title: Terms and Conditions

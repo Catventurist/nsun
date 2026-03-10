@@ -10,7 +10,6 @@ type ProductItem = {
 }
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
 const formatCurrency = (price: number) => {
   return new Intl.NumberFormat(locale.value, {
     style: 'currency',
@@ -24,7 +23,7 @@ const productItems: ProductItem[] = [
     name: 'Strong Sun 6',
     price: 12,
     badges: ['Seed', 'Strong'],
-    to: localePath('/')
+    to: '/'
   },
   {
     image: '/hero/random-2.avif',
@@ -33,7 +32,7 @@ const productItems: ProductItem[] = [
     price: 22,
     salePrice: 20,
     badges: ['Seed', 'Strong'],
-    to: localePath('/')
+    to: '/'
   },
   {
     image: '/hero/random-3.avif',
@@ -41,7 +40,7 @@ const productItems: ProductItem[] = [
     name: 'Strong Sun Ultra',
     price: 19,
     badges: ['Seed', 'Strong'],
-    to: localePath('/')
+    to: '/'
   },
   {
     image: '/hero/random-4.avif',
@@ -49,7 +48,7 @@ const productItems: ProductItem[] = [
     name: 'Strong Sun 3',
     price: 12,
     badges: ['Seed', 'Strong'],
-    to: localePath('/')
+    to: '/'
   },
   {
     image: '/hero/random-5.avif',
@@ -57,7 +56,7 @@ const productItems: ProductItem[] = [
     name: 'Special Sun',
     price: 23,
     badges: ['Seed', 'Special'],
-    to: localePath('/')
+    to: '/'
   },
   {
     image: '/hero/random-6.avif',
@@ -65,7 +64,7 @@ const productItems: ProductItem[] = [
     name: 'Simple Sun',
     price: 11,
     badges: ['Seed', 'Strong'],
-    to: localePath('/')
+    to: '/'
   }
 ]
 </script>

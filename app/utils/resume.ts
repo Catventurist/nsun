@@ -24,7 +24,7 @@ export const DATA = {
   ],
   navbar: [
     { href: '/', icon: '', label: 'Home' },
-    { href: '/blog', icon: '', label: 'Blog' }
+    { href: '/', icon: '', label: 'Blog' }
   ],
   contact: {
     email: 'hello@example.com',
@@ -86,7 +86,7 @@ export const DATA = {
       href: 'https://shopify.com',
       location: 'Remote',
       title: 'Software Engineer',
-      logoUrl: '/shopify.svg',
+      logoUrl: '/cat.png',
       start: 'January 2021',
       end: 'April 2021',
       description:
@@ -110,7 +110,7 @@ export const DATA = {
       badges: [],
       location: 'San Jose, CA',
       title: 'Software Engineer',
-      logoUrl: '/splunk.svg',
+      logoUrl: '/cat.png',
       start: 'January 2019',
       end: 'April 2019',
       description:
@@ -122,7 +122,7 @@ export const DATA = {
       badges: [],
       location: 'San Francisco, CA',
       title: 'Software Engineer',
-      logoUrl: '/lime.svg',
+      logoUrl: '/cat.png',
       start: 'January 2018',
       end: 'April 2018',
       description:

@@ -49,7 +49,10 @@ const props = withDefaults(defineProps<Props>(), {
           {{ title }}
         </h3>
         <div class="flex items-center gap-1 text-warning">
-          <UIcon name="i-lucide-star" class="size-4 fill-current" />
+          <UIcon
+            name="i-lucide-star"
+            class="size-4 fill-current"
+          />
           <span class="text-xs font-medium text-primary">
             {{ rating }} ({{ reviewsCount }})
           </span>
@@ -60,7 +63,11 @@ const props = withDefaults(defineProps<Props>(), {
       </p>
 
       <div class="flex items-center gap-2 pt-2 border-t border-muted">
-        <UAvatar :src="vendorAvatar" :alt="vendorName" size="xs" />
+        <UAvatar
+          :src="vendorAvatar"
+          :alt="vendorName"
+          size="xs"
+        />
         <div class="flex-1 min-w-0">
           <p class="text-xs font-medium truncate">
             {{ vendorName }}

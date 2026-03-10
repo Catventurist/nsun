@@ -82,11 +82,11 @@ const users = ref([
     >
       <template #body>
         <Motion
-          as-child
+          as="div"
           :initial="{ opacity: 0, scale: 0.8 }"
           :animate="{ opacity: 1, scale: 1 }"
           :while-press="{ opacity: 0.8, scale: 0.9 }"
-          :while-hover="{ opacity: 0.8, scale: 1.1 }"
+          :while-hover="{ opacity: 1, scale: 1.1 }"
           class="z-10"
         >
           <UUser

@@ -208,11 +208,11 @@
 
     "@iconify-json/lucide": ["@iconify-json/lucide@1.2.96", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-EICTusj67lvSmEaH/Lhe68ZyzcgfcPNpY00exAOkoo+z2fnLeNy31mdE3E/4/q8WjzZrICAZDxY3d6j7LzkgNA=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.72", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-wkcixntHvaCoqPqerGrNFcHQ3Yx1ux4ZkhscCDK0DEHpP62XCH+cxq1HTsRjbUiQl/M9K8bj03HF6Wgn5iE2rQ=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.73", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-nQZTwul4c2zBqH/aLP4zMOiElj93T6HawbrP+sFQKpxmBdS5x1duCK3cAnkj6dntHz84EYkzaQRM83V2pj4qxA=="],
 
-    "@iconify-json/tabler": ["@iconify-json/tabler@1.2.30", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-fhy+uBj3zwRpwWIKLc5qAaS9GB4XPvLW9/WhKqGbjNpNQeAnkcM3i3B5kylOmqlUmWwO0Pq/7qyiKqFmLyE73w=="],
+    "@iconify-json/tabler": ["@iconify-json/tabler@1.2.31", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-Jfcw5TpGhfKKWyz1dGk7e79zIgDmpMKNYL0bjt17sURBPifAxowQcWAzcEhuiWU7FGXUM2NT6UhvACFZp7Hnjw=="],
 
-    "@iconify-json/vscode-icons": ["@iconify-json/vscode-icons@1.2.44", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-3fLOIRRtsm6HD6UPJ3Y6/UztqxNTYgKA8VxrWeg1C+042MD3A/06CkWSsii1pz/f1zl0+YxvCHIVM3tXUlho+A=="],
+    "@iconify-json/vscode-icons": ["@iconify-json/vscode-icons@1.2.45", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-ow+ueibMIq79ueM1kv6cOWgHx8jfh1XJQi2RrqMHb4HLbvIBlxpy5PCMvOJXlA68R6fBAHpWQeh6uWx7VKEVsA=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.657", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-I9NQh96i/a3GroGjnF77Hb1/KimE7KhJ8B1NQPE8MuDkvN2W3oNl4DYzQR+sgiGVOFsFjzu20NHsQ/69rv1vSQ=="],
 

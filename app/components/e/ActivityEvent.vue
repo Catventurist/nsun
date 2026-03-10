@@ -10,7 +10,7 @@ interface Props {
   joined?: number
   price?: string
   image?: string
-  status?: 'Open' | 'Full' | 'Cancelled'
+  status?: 'open' | 'full' | 'cancelled'
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -24,21 +24,21 @@ const props = withDefaults(defineProps<Props>(), {
   joined: 10,
   price: 'Free',
   image: '/catbirchdark.webp',
-  status: 'Open'
+  status: 'open'
 })
 const value = ref(props.joined)
 const max = ref(props.capacity)
 </script>
 
 <template>
-  <UCard class="my-6 overflow-hidden duration-300 transition-colors hover:bg-linear-to-b from-primary/20">
+  <UCard v-bind="props" class="my-6 overflow-hidden duration-300 transition-colors hover:bg-linear-to-b from-primary/20">
     <template
       v-if="props.image"
       #header
     >
       <NuxtImg
-        :src="props.image"
-        :alt="props.title"
+        :src="image"
+        :alt="title"
         :height="192"
         class="w-full h-48 object-cover -m-4 mb-0"
       />
@@ -46,26 +46,23 @@ const max = ref(props.capacity)
     <div class="flex justify-between items-start mb-4">
       <div>
         <h3 class="text-xl font-bold">
-          {{ props.title }}
+          {{ title }}
         </h3>
         <p class="text-sm text-muted flex items-center gap-1">
           <UIcon
             name="i-lucide-users"
             class="text-primary"
           />
-          Organized by {{ props.organizer }}
+          {{ $t('events.activity.organized') }}: {{ organizer }}
         </p>
       </div>
       <UBadge
-        :color="props.status === 'Open' ? 'success' : (props.status === 'Full' ? 'warning' : 'error')"
+        :label="$t(`events.activity.${status}`)"
         variant="subtle"
-      >
-        {{ props.status }}
-      </UBadge>
+      />
     </div>
-
     <p class="text-muted mb-4">
-      {{ props.description }}
+      {{ description }}
     </p>
     <div class="grid grid-cols-2 gap-4 text-sm mb-6">
       <div class="flex items-center gap-2">
@@ -73,54 +70,54 @@ const max = ref(props.capacity)
           name="i-lucide-calendar"
           class="text-primary"
         />
-        {{ props.date }}
+        {{ date }}
       </div>
       <div class="flex items-center gap-2">
         <UIcon
           name="i-lucide-map-pin"
           class="text-primary"
         />
-        {{ props.location }}
+        {{ location }}
       </div>
       <div class="flex items-center gap-2">
         <UIcon
           name="i-lucide-receipt-euro"
           class="text-primary"
         />
-        {{ props.price }}
+        {{ price }}
       </div>
       <div class="flex items-center gap-2">
         <UIcon
           name="i-lucide-users"
           class="text-primary"
         />
-        {{ props.joined }} / {{ props.capacity }} Spots
+        {{ joined }} / {{ capacity }} {{ $t('events.activity.spots') }}
       </div>
     </div>
     <UProgress
       v-model="value"
       :max="max"
       color="primary"
-      class="mb-4"
+      class="mb-2"
     />
     <template #footer>
       <UFieldGroup class="w-full">
         <UButton
           block
-          :label="props.status === 'Open' ? 'Register Now' : (props.status === 'Full' ? 'Join Waitlist' : 'Closed')"
-          :disabled="props.status === 'Cancelled'"
-          :color="props.status === 'Open' ? 'primary' : 'neutral'"
+          :label="status === 'open' ? $t('events.activity.register') : (status === 'full' ? $t('events.activity.join') : $t('events.activity.closed'))"
+          :disabled="status === 'cancelled'"
+          :color="status === 'open' ? 'primary' : 'neutral'"
           variant="outline"
           icon="lucide-send"
         />
         <UButton
-          label="Create New"
+          :label="$t('events.activity.new')"
           icon="lucide-circle-plus"
           color="warning"
           variant="subtle"
         />
         <UButton
-          label="Add notification"
+          :label="$t('events.activity.notif')"
           trailing-icon="lucide-message-square"
           color="info"
           variant="soft"

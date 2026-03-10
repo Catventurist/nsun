@@ -31,7 +31,12 @@ const props = withDefaults(defineProps<Props>(), {
   <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-4">
     <div class="lg:col-span-7">
       <div class="h-100 rounded-xl overflow-hidden duration-300 group-hover:overflow-visible bg-muted">
-        <NuxtImg :src="props.image" :alt="title" :height="100" class="size-full rounded-md object-contain duration-300 group-hover:scale-110" />
+        <NuxtImg
+          :src="props.image"
+          :alt="title"
+          :height="100"
+          class="size-full rounded-md object-contain duration-300 group-hover:scale-110"
+        />
       </div>
     </div>
     <div class="lg:col-span-5 space-y-4">
@@ -48,14 +53,20 @@ const props = withDefaults(defineProps<Props>(), {
       </p>
 
       <div class="flex flex-col space-y-4 pt-6 border-t border-muted">
-        <UFormField label="Select Size" name="size">
+        <UFormField
+          label="Select Size"
+          name="size"
+        >
           <USelectMenu
             v-model="selectedSize"
             :items="sizes"
             icon="i-lucide-maximize"
           />
         </UFormField>
-        <UFormField label="Choose Color" name="color">
+        <UFormField
+          label="Choose Color"
+          name="color"
+        >
           <div class="flex gap-2">
             <UButton
               v-for="color in colors"
@@ -74,7 +85,10 @@ const props = withDefaults(defineProps<Props>(), {
             </UButton>
           </div>
         </UFormField>
-        <UFormField label="Quantity" name="quantity">
+        <UFormField
+          label="Quantity"
+          name="quantity"
+        >
           <UInputNumber v-model="quantity" />
           <!-- <div class="flex items-center gap-3">
             <UButton
@@ -112,7 +126,10 @@ const props = withDefaults(defineProps<Props>(), {
         />
       </div>
       <div class="flex items-center gap-2 text-sm text-muted">
-        <UIcon name="i-lucide-truck" class="size-4" />
+        <UIcon
+          name="i-lucide-truck"
+          class="size-4"
+        />
         <span>Free shipping on orders over 50 €</span>
       </div>
     </div>

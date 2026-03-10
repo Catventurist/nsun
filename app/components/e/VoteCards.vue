@@ -13,9 +13,9 @@ const DecisionSchema = z.object({
 
 const { t, d } = useI18n()
 const rawData = [
-  { id: 'dec-1', titleKey: 'community.logo', score: 35, lastVoter: 'Emma', updatedAt: new Date(), comment: t('community.logoc'), createdBy: t('community.user.current') },
-  { id: 'dec-2', titleKey: 'community.rules', score: -10, lastVoter: 'Liam', updatedAt: new Date(), comment: t('community.rulesc'), createdBy: t('community.user.current') },
-  { id: 'dec-3', titleKey: 'community.event', score: 0, lastVoter: 'Sophia', updatedAt: new Date(), comment: t('community.eventc'), createdBy: t('community.user.current') }
+  { id: 'dec-1', titleKey: 'community.logo', score: 35, lastVoter: 'Cat', updatedAt: new Date(), comment: t('community.logoc'), createdBy: t('community.user.current') },
+  { id: 'dec-2', titleKey: 'community.rules', score: -10, lastVoter: 'Kitty', updatedAt: new Date(), comment: t('community.rulesc'), createdBy: t('community.user.current') },
+  { id: 'dec-3', titleKey: 'community.event', score: 0, lastVoter: 'Feline', updatedAt: new Date(), comment: t('community.eventc'), createdBy: t('community.user.current') }
 ]
 const decisions = ref(rawData.map(item => DecisionSchema.parse(item)))
 

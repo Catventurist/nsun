@@ -657,6 +657,24 @@ events:
     sync: Yhteisötaito-kokous
     review: Kehityspalaveri
     pres: Asiakasesittely
+  activity:
+    title: Tapahtuma tuloillaan
+    description: Jotain mitä odottaa
+    category: Yleinen
+    location: Päähalli
+    organizer: CBD Klubi
+    free: Ilmainen
+    open: Avoin
+    full: Täaysi
+    cancelled: Hylätty
+    organized: Järjestäjä
+    spots: Paikkaa
+    register: Rekisteröidy
+    joinw: Liity listalle
+    closed: Suljettu
+    new: Luo uusi
+    notif: Lisää huomautus
+    price: Ilmainen
 guides: 
   back: Takaisin oppaisiin
   headline: Oppaat
