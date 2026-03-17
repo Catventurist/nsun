@@ -134,6 +134,47 @@ menu:
   delete: Poista
   team: Porukka
   logout: Kirjaudu
+  mobiwarn: Tätä animaatiota ei ole optimoitu kännykälle. Kokeile työpöytänäkymää.
+  work:    
+    business: Liiketoiminta
+    hdesk: Apukeskus
+    innovation: Kehitys
+    esc: Esc
+    create:
+      space: Luo työtila
+      project: Luo projekti
+    spaces: Työtilat
+    find:
+      space: Etsi työtila...
+      project: Etsi projekti...
+    projects: Projektit
+    empty: 
+      title: Ei vielä projekteja
+      description: Tässä työtilassa ei ole projekteja.
+  message:
+    write: Kirjoita viesti...
+    convo: Keskustelukumppani
+    age: Ikä
+    profile: '-käyttäjäprofiili'
+  board: 
+    search: Etsi...
+    task: Tehtävä
+    subtask: tehtävä listassa | tehtävää listassa
+    file: tiedosto ladattu | tiedostoa ladattu
+    comment: kommentti | kommenttia
+    empty: 
+      title: Ei mitään
+      description: Ei keskeneräisiä tehtäviä täällä.
+    newt: Uusi tehtävä
+    customize: Muokkaa
+    manage: Hallitse sarakkeita
+    state: 
+      new: Uusi
+      progress: Tekeillä
+      blocked: Estetty
+      hold: Odottaa
+      review: Tarkastuksessa
+      done: Tehty
 feedback:
   title: Arvosteluita
   lastby: Viimeisin käyttäjältä
@@ -283,6 +324,8 @@ tasks:
   high: Korkea
   medium: Keskitaso
   low: Matala
+  progress: Tehtävänä
+  total: Tehtävää
 upload:
   title: Lisää tiedosto
   load:
@@ -509,7 +552,24 @@ strain:
   recommendno: En suosittele
   entour: Biokemiallinen vuorovaikutusmalli
   analyzed: Analysoidut yhdisteet
-  synergyf: Löydetyt synergia-akselit (Entourage)
+  synergy:
+    found: Löydetyt synergia-akselit (Entourage)
+    notfound: Ei merkittäviä synergioita tunnistettu tästä profiilista.
+    myrcene:
+      title: Läpäisevyys
+      description: Lisää solukalvojen ja veri-aivoesteen läpäisevyyttä, tehostaen CBD:n imeytymistä.
+    cary:
+      title: Inflammaatio-synergia
+      description: Molemmat sitoutuvat CB2-reseptoreihin, voimistaen anti-inflammatorista vaikutusta.
+    limon:
+      title: Serotoniini-modulaatio
+      description: Tehostaa 5-HT1A-reseptoriaktiivisuutta, parantaen anksiolyyttisiä (ahdistusta vähentäviä) vaikutuksia.
+    pine:
+      title: Kognitiivinen suoja
+      description: Estää asetyylikoliiniesteraasia, mikä voi vähentää THC:n aiheuttamia muistiseikkoja.
+    linal:
+      title: Sedatiivinen tehostus
+      description: Toimii synergistisesti GABA-järjestelmän kautta, syventäen rentouttavaa vaikutusta.
   vpdtitle: VPD-optimointi
   insight:
     dark: 
@@ -554,6 +614,72 @@ strain:
     addval: Syötä arvot
     results: Saadut Tulokset
     scale: Skaala
+  decarb:
+    title: Dekarboksylaation simulaatio
+    description: Kineettinen reaktiomalli
+    slow: Hidas
+    rapid: Nopea
+    time: AIka
+    long: Pitkä
+    oxide: Alkuperäinen happipitoisuus
+    conversion: Muunnos
+    active: Aktiivinen
+    terpene: Terpeeniprofiili
+    risk:
+      title: Hajoamisriski
+      description: Lämpötilan ja ajan yhdistelmä voi rikkoa CBDn muiksi yhdisteiksi.
+  clean:
+    title: Phytoremediaation Ennakointi
+    description: Maaperän puhdistusennuste (Raskasmetallien biokertyminen)
+    original: Alkuperäinen saastuneisuus
+    lead: Lyijy
+    cadmium: Kadmium
+    area: Pinta-ala
+    mass: Biomassa
+    season: Puhdistusvaikutus / Kasvukausi
+    removed: Poistettu
+    goal: Tavoite
+    note: 
+      title: Ekologinen Huomio
+      hect: hehtaarin viljely tuottaa
+      tons: tonnia saastunutta biomassaa.
+      result: Tämä biomassa on hävitettävä turvallisesti tai käytettävä energiantuotantoon (pyrolyysi), jolloin metallit jäävät tuhkaan.
+  grow:
+    stage:
+      seedling: Istukas
+      vegetative: Kasvu
+      flowering: Kukinta
+      flush: Huuhtelu
+    cycle: Valoaika
+    level: -taso
+    temph: Lämpö / kosteus
+    respump: Tankki / pumppu
+    instructions:  Ylläpitomuistio & ohjeet
+    recipe: Ravinneresepti
+    warning: Varoitus
+    window: Optimaaliaika
+    grade: Teollisuusluokka
+    depth: Kylvösyvyys
+    mintemp: Minimi mullan lämpö
+    spacing: Riviväli
+    soil: Multa & ravinteet
+    irri: Kastelustrategia
+    proto: Istutusprotokolla
+  harvest:
+    variety:
+      title: '-lajike'
+      fiber: Kuitu
+      grain: Siemen
+      cbd: CBD
+      cbg: CBG
+    diff: Haastavuus
+    yield: Tavoitesato
+    tresh: Kynnys
+    humi: Varastokosteus
+    moist: Kosteus
+    window: Aika
+    method: Tapa
+    legal: Laillisuus
 authors: 
   viewprofile: Näytä profiili
   lover: Tykkää Avoimesta Lähdekoodista
@@ -603,6 +729,14 @@ product:
   oils:
     title: Öljyt
     description: Moneen tarkoitukseen
+  bag: Ostoskoriin
+  details: Lisätiedot ja labrat
+  stockin: Varastossa
+  stockout: Loppu
+  notify: Ilmoitus
+  total: Yhteensä
+  add: Lisää
+  cart: ostoskoriin
 translation:
   title: Käännä
   description: Käännöksiä helpottavia komponentteja.
@@ -872,6 +1006,18 @@ date:
   thisy: Tämä vuosi
   lasty: Edellinen vuosi
   invalidd: Väärä päiväys
+  jan: TAM
+  feb: HEL
+  mar: MAA
+  apr: HUH
+  may: TOU
+  jun: KES
+  jul: HEI
+  aug: ELO
+  sep: SYY
+  oct: LOK
+  nov: MAR
+  dec: JOU
 profile:
   joined: Liittynyt
   following: Seurattua
@@ -991,6 +1137,10 @@ theme:
   inspect: Katsele teeman osioita
   portal: portaalissa
   norender: renderöimätön
+  color: Väri
+  hue: Sävy
+  alpha: Alfa
+  values: Arvot
 language:
   bydefault: Käytetään kieltä
   isused: oletuksena

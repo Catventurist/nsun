@@ -107,7 +107,7 @@ useSeoMeta({
       <NuxtLayout>
         <NuxtPage
           :transition="{
-            name: 'my',
+            name: 'page',
             mode: 'out-in',
             onBeforeEnter
           }"
@@ -125,12 +125,13 @@ useSeoMeta({
 </template>
 
 <style>
-.my-enter-active,
-.my-leave-active {
-  transition: opacity 0.3s;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
 }
-.my-enter,
-.my-leave-active {
+.page-enter-from,
+.page-leave-to {
   opacity: 0;
+  filter: blur(1rem);
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Ingredient {
   name: string
-  value: number // pitoisuus % tai mg/g
+  value: number //  % / mg/g
   type: 'cannabinoid' | 'terpene'
 }
 
@@ -12,39 +12,39 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'Entourage-synergia-analyysi',
+  title: 'Entourage Synergy',
   ingredients: () => [],
   target: 'CBD'
 })
 const synergyRules = [
   {
     source: 'Myrcene', target: 'CBD',
-    effect: 'Läpäisevyys',
-    desc: 'Lisää solukalvojen ja veri-aivoesteen läpäisevyyttä, tehostaen CBD:n imeytymistä.',
+    effect: $t('strain.synergy.myrcene.title'),
+    desc: $t('strain.synergy.myrcene.description'),
     icon: 'lucide:zap'
   },
   {
     source: 'Caryophyllene', target: 'CBD',
-    effect: 'Inflammaatio-synergia',
-    desc: 'Molemmat sitoutuvat CB2-reseptoreihin, voimistaen anti-inflammatorista vaikutusta.',
+    effect: $t('strain.synergy.cary.title'),
+    desc: $t('strain.synergy.cary.description'),
     icon: 'lucide:shield-plus'
   },
   {
     source: 'Limonene', target: 'CBD',
-    effect: 'Serotoniini-modulaatio',
-    desc: 'Tehostaa 5-HT1A-reseptoriaktiivisuutta, parantaen anksiolyyttisiä (ahdistusta poistavia) vaikutuksia.',
+    effect: $t('strain.synergy.limon.title'),
+    desc: $t('strain.synergy.limon.description'),
     icon: 'lucide:smile'
   },
   {
     source: 'Pinene', target: 'THC',
-    effect: 'Kognitiivinen suoja',
-    desc: 'Estää asetyylikoliiniesteraasia, mikä voi vähentää THC:n aiheuttamia muistihäiriöitä.',
+    effect: $t('strain.synergy.pine.title'),
+    desc: $t('strain.synergy.pine.description'),
     icon: 'lucide:brain'
   },
   {
     source: 'Linalool', target: 'CBD',
-    effect: 'Sedatiivinen tehostus',
-    desc: 'Toimii synergistisesti GABA-järjestelmän kautta, syventäen rentouttavaa vaikutusta.',
+    effect: $t('strain.synergy.linal.title'),
+    desc: $t('strain.synergy.linal.description'),
     icon: 'lucide:moon'
   }
 ]
@@ -107,7 +107,7 @@ const getIngredientColor = (type: string) =>
         </div>
         <div class="lg:col-span-7">
           <h4 class="text-[10px] uppercase tracking-widest text-muted mb-6">
-            {{ $t('strain.synergyf') }}
+            {{ $t('strain.synergy.found') }}
           </h4>
           <div
             v-if="activeSynergies.length > 0"
@@ -157,7 +157,7 @@ const getIngredientColor = (type: string) =>
               class="size-12 text-muted mb-4"
             />
             <p class="text-sm font-bold text-muted uppercase">
-              Ei merkittäviä synergioita tunnistettu tästä profiilista.
+              {{ $t('strain.synergy.notfound') }}
             </p>
           </div>
         </div>

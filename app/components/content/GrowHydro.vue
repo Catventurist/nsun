@@ -2,7 +2,7 @@
 interface Props {
   title?: string
   system?: 'DWC' | 'NFT' | 'Aeroponics' | 'Ebb & Flow' | 'Deep Water'
-  stage?: 'Seedling' | 'Vegetative' | 'Flowering' | 'Flush'
+  stage?: 'seedling' | 'vegetative' | 'flowering' | 'flush'
   phRange?: string
   ecRange?: string
   temp?: string
@@ -16,9 +16,9 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'Hydroponic System Monitor',
+  title: '',
   system: 'DWC',
-  stage: 'Vegetative',
+  stage: 'vegetative',
   phRange: '5.8 - 6.2',
   ecRange: '1.2 - 1.8',
   temp: '68°F',
@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
   co2: 'Ambient',
   lightCycle: '18/6',
   ppfd: '400 - 600',
-  reservoirSize: '50 Gallons',
+  reservoirSize: '50 l',
   pumpGph: '250 GPH'
 })
 </script>
@@ -60,7 +60,7 @@ const props = withDefaults(defineProps<Props>(), {
                 variant="subtle"
                 size="xs"
               >
-                {{ stage }} Stage
+                {{ $t(`strain.grow.stage.${stage}`) }}
               </UBadge>
             </div>
           </div>
@@ -68,7 +68,7 @@ const props = withDefaults(defineProps<Props>(), {
         <div class="flex gap-3">
           <div class="text-right">
             <div class="text-[10px] uppercase font-bold text-muted">
-              Light Cycle
+              {{ $t('strain.grow.cycle') }}
             </div>
             <div class="flex items-center gap-1 font-bold text-sm">
               <UIcon
@@ -80,7 +80,7 @@ const props = withDefaults(defineProps<Props>(), {
           </div>
           <div class="text-right border-l pl-3 border-muted">
             <div class="text-[10px] uppercase font-bold text-muted">
-              CO2 Level
+              CO2 {{ $t('strain.grow.level') }}
             </div>
             <div class="flex items-center gap-1 font-bold text-sm">
               <UIcon
@@ -119,7 +119,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Temp / Humidity
+            {{ $t('strain.grow.temph') }}
           </div>
           <div class="text-sm">
             {{ temp }}
@@ -151,7 +151,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Reservoir / Pump
+            {{ $t('strain.grow.respump') }}
           </div>
           <div class="text-sm">
             {{ reservoirSize }}
@@ -161,27 +161,27 @@ const props = withDefaults(defineProps<Props>(), {
         </div>
       </div>
     </div>
-    <div class="p-6 grid lg:grid-cols-3 gap-6">
+    <div class="p-6 flex flex-col gap-6">
       <div class="lg:col-span-2 space-y-4">
         <div class="flex items-center gap-2 font-bold border-b pb-2">
           <UIcon
             name="i-lucide-clipboard"
             class="text-primary"
           />
-          Maintenance Log & Instructions
+          {{ $t('strain.grow.instructions') }}
         </div>
         <div class="prose prose-sm dark:prose-invert max-w-none">
           <slot />
         </div>
       </div>
-      <div class="space-y-4">
+      <div class="flex flex-col space-y-4">
         <div
           v-if="$slots.nutrients"
           class="p-4 rounded-xl bg-success/20 border border-success/60"
         >
           <div class="text-xs font-bold text-success uppercase mb-2 flex items-center gap-2">
             <UIcon name="i-lucide-beaker" />
-            Nutrient Recipe
+            {{ $t('strain.grow.recipe') }}
           </div>
           <div class="text-sm">
             <slot name="nutrients" />
@@ -193,7 +193,7 @@ const props = withDefaults(defineProps<Props>(), {
         >
           <div class="text-xs font-bold text-error uppercase mb-2 flex items-center gap-2">
             <UIcon name="i-lucide-alert-octagon" />
-            Warning
+            {{ $t('strain.grow.warning') }}
           </div>
           <div class="text-xs">
             <slot name="alert" />

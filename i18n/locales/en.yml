@@ -132,6 +132,47 @@ menu:
   delete: Delete
   team: Team
   logout: Login
+  mobiwarn: This effect is not optimized for mobile. Check on desktop.
+  work:
+    business: Business
+    hdesk: Help Desk
+    innovation: Innovation
+    esc: Esc
+    create:
+      space: Create Workspace
+      project: Create Project
+    spaces: Workspaces
+    find:
+      space: Find workspace...
+      project: Find project...
+    projects: Projects
+    empty: 
+      title: No projects yet
+      description: This workspace has no projects.
+  message:
+    write: Write a message...
+    convo: Conversation with
+    age: Age
+    profile: 's profile'
+  board: 
+    search: Search...
+    task: Task
+    subtask: subtask in checklist | subtasks in checklist
+    file: file uploaded | files uploaded
+    comment: comment | comments
+    empty: 
+      title: Nothing to show
+      description: There are no pending tasks to show in here.
+    newt: New Task
+    customize: Customize
+    manage: Manage columns
+    state: 
+      new: New
+      progress: In Progress
+      blocked: Blocked
+      hold: On Hold
+      review: In Review
+      done: Done
 feedback:
   title: Sentiment Analysis
   lastby: Last feedback by
@@ -229,6 +270,8 @@ tasks:
   high: High
   medium: Medium
   low: Low
+  progress: In Progress
+  total: Tasks Total
 upload:
   title: Upload
   load:
@@ -520,7 +563,24 @@ strain:
   recommendno: Would not recommend
   entour: Biochemical Entourage Model
   analyzed: Analyzed Compounds
-  synergyf: Synergy Connections Found (Entourage)
+  synergy:
+    found: Synergy Connections Found (Entourage)
+    notfound: No important synergies found from the profile.
+    myrcene:
+      title: Permeability
+      description: Increases the permeability of cell membranes and the blood-brain barrier, enhancing the absorption of CBD
+    cary:
+      title: Inflammation synergy
+      description: Both bind to CB2 receptors, enhancing the anti-inflammatory effect.
+    limon:
+      title: Serotone Modulation
+      description: Enhances 5-HT1A receptor activity, improving anxiolytic (anxiety-relieving) effects.
+    pine:
+      title: Cognitive protection
+      description: Inhibits acetylcholinesterase, which can affect THC-induced memory effects.
+    linal:
+      title: Sedative Enhancement
+      description: Works synergistically through the GABA system, deepening the relaxing effect.
   vpdtitle: VPD Optimizer
   insight:
     dark: 
@@ -565,6 +625,72 @@ strain:
     addval: Add Values
     results: Counted results
     scale: Scale
+  decarb:
+    title: Decarboxylation Simulation
+    description: Kinetic Reaction Model
+    slow: Slow
+    rapid: Rapid
+    time: Time
+    long: Long
+    oxide: Original Oxidation
+    conversion: Conversion
+    active: Active
+    terpene: Terpene Profile
+    risk:
+      title: Risk of breaking down
+      description: The combination of temperature and time can break CBD to other compounds.
+  clean:
+    title: Phytoremediation Forecasting
+    description: Soil cleaning prediction (Bioaccumulation of heavy metals)
+    original: Original rate of pollution
+    lead: Lead
+    cadmium: Cadmium
+    area: Area
+    mass: Biomass
+    season: Cleaning effect / Growing season
+    removed: Removed
+    goal: Goal
+    note: 
+      title: Ecological Note
+      hect: hectare cultivation produces
+      tons: tons of contaminated biomass.
+      result: This biomass must be disposed of safely or used for energy production (pyrolysis), leaving the metals in the ash.
+  grow:
+    stage:
+      seedling: Seedling
+      vegetative: Vegetative
+      flowering: Flowering
+      flush: Flush
+    cycle: Light Cycle
+    level: Level
+    temph: Temp / Humidity
+    respump: Reservoir / Pump
+    instructions: Maintenance Log & Instructions
+    recipe: Nutrient Recipe
+    warning: Warning
+    window: Optimal Window
+    grade: Industrial Grade
+    depth: Sowing Depth
+    mintemp: Min Soil Temp
+    spacing: Row Spacing
+    soil: Soil & Nutrients
+    irri: Irrigation Strategy
+    proto: Planting Protocol
+  harvest:
+    variety:
+      title: ' Variety'
+      fiber: Fiber
+      grain: Grain
+      cbd: CBD
+      cbg: CBG
+    diff: Harvest Difficulty
+    yield: Target Yield
+    tresh: Treshold
+    humi: Storage Humidity
+    moist: Moisture
+    window: Window
+    method: Method
+    legal: Legal Compliance
 guides:
   back: Back to guides
   headline: Guides
@@ -621,6 +747,14 @@ product:
   oils:
     title: Oils
     description: For multiple puropses
+  bag: Add to Bag
+  details: Product Details & Lab Specs
+  stockin: In Stock
+  stockout: Out of Stock
+  notify: Notify Me
+  total: Total Price
+  add: Add
+  cart: to Cart
 translation:
   title: Translate
   description: Tools to help localization.
@@ -816,6 +950,18 @@ date:
   thisy: This year
   lasty: Last year
   invalidd: Invalid date
+  jan: JAN
+  feb: FEB
+  mar: MAR
+  apr: APR
+  may: MAY
+  jun: JUN
+  jul: JUL
+  aug: AUG
+  sep: SEP
+  oct: OCT
+  nov: NOV
+  dec: DEC
 profile:
   joined: Joined
   following: Following
@@ -932,6 +1078,10 @@ theme:
   inspect: Inspect theme slots
   portal: in portal
   norender: not rendered
+  color: Color
+  hue: Hue
+  alpha: Alpha
+  values: Values
 language:
   bydefault: By default, the
   isused: locale is used

@@ -31,7 +31,10 @@ const max = ref(props.capacity)
 </script>
 
 <template>
-  <UCard v-bind="props" class="my-6 overflow-hidden duration-300 transition-colors hover:bg-linear-to-b from-primary/20">
+  <UCard
+    v-bind="props"
+    class="my-6 overflow-hidden duration-300 transition-colors hover:bg-linear-to-b from-primary/20"
+  >
     <template
       v-if="props.image"
       #header

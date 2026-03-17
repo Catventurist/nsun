@@ -56,7 +56,7 @@ const getDliStatus = (val: number) => {
         <div class="flex flex-col justify-around gap-6">
           <UFormField
             :label="$t('strain.insight.params.temp') + ' (°C)'"
-            class="max-w-40"
+            class="w-full"
           >
             <USlider
               v-model="airTemp"
@@ -75,8 +75,14 @@ const getDliStatus = (val: number) => {
               :max="90"
             />
           </UFormField>
-          <UFormField :label="$t('strain.insight.params.light') + ' (PPFD)'">
-            <UInputNumber v-model="ppfd" />
+          <UFormField
+            for="ppfd"
+            :label="$t('strain.insight.params.light') + ' (PPFD)'"
+          >
+            <UInputNumber
+              id="ppfd"
+              v-model="ppfd"
+            />
           </UFormField>
           <UFormField :label="$t('strain.insight.params.lighth') + ' (h)'">
             <UInputNumber
@@ -105,9 +111,9 @@ const getDliStatus = (val: number) => {
               </span>
               <span class="text-3xl text-primary">
                 {{ vpd }}
-                <small class="text-xs opacity-80">
+                <span class="text-xs opacity-80">
                   kPa
-                </small>
+                </span>
               </span>
             </div>
             <Icon
@@ -122,9 +128,9 @@ const getDliStatus = (val: number) => {
               </span>
               <span class="text-3xl text-primary">
                 {{ dli }}
-                <small class="text-xs opacity-80">
+                <span class="text-xs opacity-80">
                   mol/m²/d
-                </small>
+                </span>
               </span>
               <div :class="['text-[10px] mt-1 uppercase', getDliStatus(dli).color]">
                 {{ $t('strain.status.title') }}: {{ getDliStatus(dli).label }}
@@ -142,9 +148,9 @@ const getDliStatus = (val: number) => {
               </span>
               <span class="text-3xl text-success">
                 {{ ppm }}
-                <small class="text-xs opacity-80">
+                <span class="text-xs opacity-80">
                   ppm
-                </small>
+                </span>
               </span>
               <span class="text-[9px] block text-muted font-bold uppercase mt-1">
                 {{ $t('strain.counter.scale') }}: 500 (TDS/NaCl)

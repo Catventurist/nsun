@@ -40,22 +40,22 @@ const remediationStats = computed(() => {
       </div>
       <div>
         <h3 class="text-2xl  uppercase tracking-tighter italic leading-none">
-          Phytoremediation Estimator
+          {{ $t('strain.clean.title') }}
         </h3>
         <p class="text-[10px] font-bold text-muted uppercase tracking-widest mt-1">
-          Maaperän puhdistusennuste (Raskasmetallien biokertyminen)
+          {{ $t('strain.clean.description') }}
         </p>
       </div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="p-8 space-y-6">
         <h4 class="text-[10px] uppercase tracking-widest text-muted mb-6 italic">
-          Alkuperäinen saastuneisuus (mg/kg)
+          {{ $t('strain.clean.original') }} (mg/kg)
         </h4>
         <div class="space-y-6">
           <div class="space-y-2">
             <div class="flex justify-between text-xs uppercase">
-              <span>Lyijy (Pb)</span>
+              <span>{{ $t('strain.clean.lead') }} (Pb)</span>
               <span class="text-success">{{ soilPb }} mg/kg</span>
             </div>
             <USlider
@@ -67,7 +67,7 @@ const remediationStats = computed(() => {
           </div>
           <div class="space-y-2">
             <div class="flex justify-between text-xs uppercase">
-              <span>Kadmium (Cd)</span>
+              <span>{{ $t('strain.clean.cadmium') }} (Cd)</span>
               <span class="text-success">{{ soilCd }} mg/kg</span>
             </div>
             <USlider
@@ -80,12 +80,16 @@ const remediationStats = computed(() => {
           </div>
           <div class="grid grid-cols-2 gap-4 pt-4 border-t border-muted">
             <div class="space-y-2">
-              <label class="text-[9px] uppercase text-muted">Pinta-ala (ha)</label>
-              <UInputNumber v-model="areaHectares" />
+              <UFormField class="text-[9px] uppercase text-muted">
+                {{ $t('strain.clean.area') }} (ha)
+                <UInputNumber v-model="areaHectares" />
+              </UFormField>
             </div>
             <div class="space-y-2">
-              <label class="text-[9px] uppercase text-muted">Biomassa (t/ha)</label>
-              <UInputNumber v-model="biomassYield" />
+              <UFormField class="text-[9px] uppercase text-muted">
+                {{ $t('strain.clean.mass') }} (t/ha)
+                <UInputNumber v-model="biomassYield" />
+              </UFormField>
             </div>
           </div>
         </div>
@@ -93,7 +97,7 @@ const remediationStats = computed(() => {
       <div class="p-8 bg-muted/20 flex flex-col justify-between">
         <div>
           <h4 class="text-[10px] uppercase tracking-widest text-muted mb-8 italic">
-            Puhdistusvaikutus / Kasvukausi
+            {{ $t('strain.clean.season') }}
           </h4>
           <div class="space-y-4 mb-10">
             <div class="flex items-center justify-between p-5 rounded-3xl bg-default/80 border border-muted shadow-sm shadow-primary">
@@ -105,7 +109,9 @@ const remediationStats = computed(() => {
                   />
                 </div>
                 <div>
-                  <span class="text-[10px] text-muted uppercase">Poistettu Lyijy</span>
+                  <span class="text-[10px] text-muted uppercase">
+                    {{ $t('strain.clean.removed') }} {{ $t('strain.clean.lead') }}
+                  </span>
                   <p class="text-xl">
                     {{ remediationStats.pbReduction }} kg/ha
                   </p>
@@ -113,7 +119,7 @@ const remediationStats = computed(() => {
               </div>
               <div class="text-right">
                 <span class="text-[10px] text-success uppercase">
-                  Tavoite: {{ remediationStats.yearsPb }} v.
+                  {{ $t('strain.clean.goal') }}: {{ remediationStats.yearsPb }} v.
                 </span>
               </div>
             </div>
@@ -126,7 +132,9 @@ const remediationStats = computed(() => {
                   />
                 </div>
                 <div>
-                  <span class="text-[10px] text-muted uppercase">Poistettu Kadmium</span>
+                  <span class="text-[10px] text-muted uppercase">
+                    {{ $t('strain.clean.removed') }} {{ $t('strain.clean.cadmium') }}
+                  </span>
                   <p class="text-xl">
                     {{ remediationStats.cdReduction }} kg/ha
                   </p>
@@ -146,11 +154,11 @@ const remediationStats = computed(() => {
             class="absolute -right-2 -top-2 size-16 opacity-10"
           />
           <h5 class="text-[10px] uppercase tracking-widest opacity-60 mb-2">
-            Ekologinen Huomio
+            {{ $t('strain.clean.note.title') }}
           </h5>
           <p class="text-xs font-bold leading-relaxed relative z-10">
-            {{ areaHectares }} hehtaarin viljely tuottaa {{ remediationStats.totalBiomass }} tonnia saastunutta biomassaa.
-            Tämä biomassa on hävitettävä turvallisesti tai käytettävä energiantuotantoon (pyrolyysi), jolloin metallit jäävät tuhkaan.
+            {{ areaHectares }} {{ $t('strain.clean.note.hect') }} {{ remediationStats.totalBiomass }} {{ $t('strain.clean.note.tons') }}
+            {{ $t('strain.clean.note.result') }}
           </p>
         </div>
       </div>

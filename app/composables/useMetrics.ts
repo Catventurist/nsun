@@ -1,4 +1,4 @@
-export const formatCurrency = (value: number, locale: string, currency: string = 'USD') => {
+export const formatCurrency = (value: number, locale: string, currency: string = 'EUR') => {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: currency,
@@ -19,7 +19,7 @@ export const formatPercent = (value: number, locale: string) => {
 export const useMetrics = () => {
   const { locale, t } = useI18n()
 
-  const generateMetric = (key: string, start: number, end: number, currency: string = 'USD') => {
+  const generateMetric = (key: string, start: number, end: number, currency: string = 'EUR') => {
     const diff = end - start
     const percentChange = (diff / start) * 100
     return {

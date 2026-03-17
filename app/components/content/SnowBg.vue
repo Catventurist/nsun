@@ -119,10 +119,14 @@ function animate() {
 <template>
   <div
     ref="canvasContainerRef"
-    class="pointer-events-none absolute inset-0"
+    class="pointer-events-none relative flex flex-col items-center justify-center"
     :class="props.class"
     aria-hidden="true"
   >
-    <canvas ref="canvasRef" />
+    <canvas
+      ref="canvasRef"
+      class="absolute"
+    />
+    <slot />
   </div>
 </template>

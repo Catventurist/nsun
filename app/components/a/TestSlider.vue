@@ -132,8 +132,12 @@ onUnmounted(() => {
         />
       </button>
       <div class="flex flex-col items-center gap-1">
-        <span class="text-lg bold">{{ testimonials.at(active)?.name }}</span>
-        <span class="text-sm italic text-muted">{{ testimonials.at(active)?.role }}</span>
+        <span class="text-lg bold">
+          {{ testimonials.at(active)?.name }}
+        </span>
+        <span class="text-sm italic text-muted">
+          {{ testimonials.at(active)?.role }}
+        </span>
       </div>
       <button
         class="group/button flex size-7 items-center justify-center rounded-full bg-muted"

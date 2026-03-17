@@ -40,10 +40,16 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 1))
+
+const stats = computed(() => [
+  { label: $t('strain.analysis.total.thc'), value: props.totalThc, isThc: true },
+  { label: $t('strain.analysis.total.cbd'), value: props.totalCbd, isThc: false },
+  { label: $t('strain.analysis.moisture'), value: props.moisture, isThc: false }
+])
 </script>
 
 <template>
-  <div class="my-12 bg-default border border-muted rounded-4l overflow-hidden">
+  <div class="my-12 bg-default border border-muted rounded-4xl overflow-hidden">
     <div class="p-8 bg-default/80 border-b border-muted">
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         <div>
@@ -68,15 +74,15 @@ const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 
 
         <div class="flex flex-wrap gap-4">
           <div
-            v-for="(val, label) in { 'Total THC': totalThc, 'Total CBD': totalCbd, 'Moisture': moisture }"
-            :key="label"
+            v-for="stat in stats"
+            :key="stat.label"
             class="px-5 py-3 bg-default p-4 border border-muted rounded-2xl shadow-sm shadow-primary text-center min-w-[100px]"
           >
             <span class="block text-[9px] text-muted uppercase tracking-widest mb-1">
-              {{ label }}
+              {{ stat.label }}
             </span>
-            <span :class="['text-xl', label.includes('THC') ? 'text-error' : 'text-primary']">
-              {{ val }}{{ label === 'Moisture' ? '%' : '%' }}
+            <span :class="['text-xl', stat.isThc ? 'text-error' : 'text-primary']">
+              {{ stat.value }}%
             </span>
           </div>
         </div>
@@ -107,7 +113,7 @@ const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 
             </div>
             <div class="h-1.5 w-full bg-muted rounded-full overflow-hidden">
               <div
-                class="h-full group-hover:bg-radial from-primary/20 transition-all duration-500"
+                class="h-full bg-linear-to-l from-primary/60 to-primary/10 transition-colors duration-500"
                 :style="{ width: `${(item.value / maxVal) * 100}%` }"
               />
             </div>
@@ -143,7 +149,7 @@ const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 
           v-if="waterActivity"
           class="p-4 rounded-2xl bg-info/20 border border-muted"
         >
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col items-center justify-between">
             <div class="flex items-center gap-2">
               <Icon
                 name="lucide:droplets"
@@ -167,7 +173,7 @@ const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 
         </h4>
         <div class="space-y-2">
           <span class="text-[9px] text-muted uppercase tracking-widest block mb-2">
-            Raskasmetallit (LOQ)
+            {{ $t('strain.analysis.heavy') }} (LOQ)
           </span>
           <div
             v-for="metal in heavyMetals"
@@ -215,7 +221,7 @@ const maxVal = computed(() => Math.max(...props.cannabinoids.map(c => c.value), 
         </div>
       </div>
     </div>
-    <div class="p-8 bg-muted/30 border-t border-muted flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="p-8 bg-muted/30 border-t border-muted flex flex-col items-center justify-between gap-6">
       <div class="max-w-md text-sm text-muted leading-relaxed italic">
         <slot />
       </div>

@@ -42,10 +42,10 @@ const terpeneAnalysis = computed(() => {
       </div>
       <div>
         <h3 class="text-2xl uppercase tracking-tighter italic leading-none">
-          Decarboxylation Simulator
+          {{ $t('strain.decarb.title') }}
         </h3>
         <p class="text-[10px] font-bold text-muted uppercase tracking-widest mt-1">
-          Kineettinen reaktiomalli: CBDa ➔ CBD + CO₂
+          {{ $t('strain.decarb.description') }}: CBDa ➔ CBD + CO₂
         </p>
       </div>
     </div>
@@ -53,9 +53,12 @@ const terpeneAnalysis = computed(() => {
       <div class="p-8 space-y-8">
         <div class="space-y-4">
           <div class="flex justify-between items-center">
-            <label class="text-[10px] uppercase tracking-widest">
-              Lämpötila
-            </label>
+            <p
+              id="temp"
+              class="text-[10px] uppercase tracking-widest"
+            >
+              {{ $t('strain.insight.params.temp') }}
+            </p>
             <span class="text-lg">
               {{ temp }}°C
             </span>
@@ -69,15 +72,15 @@ const terpeneAnalysis = computed(() => {
             class="w-full"
           />
           <div class="flex justify-between text-[9px] font-bold text-muted uppercase">
-            <span>Slow (80°C)</span>
-            <span>Fast (160°C)</span>
+            <span>{{ $t('strain.decarb.slow') }} (80°C)</span>
+            <span>{{ $t('strain.decarb.rapid') }} (160°C)</span>
           </div>
         </div>
         <div class="space-y-4">
           <div class="flex justify-between items-center">
-            <label class="text-[10px] uppercase tracking-widest">
-              Aika (Minuuttia)
-            </label>
+            <p class="text-[10px] uppercase tracking-widest">
+              {{ $t('strain.decarb.time') }}
+            </p>
             <span class="text-lg">
               {{ time }} min
             </span>
@@ -91,15 +94,18 @@ const terpeneAnalysis = computed(() => {
             class="w-full"
           />
           <div class="flex justify-between text-[9px] font-bold text-muted uppercase">
-            <span>Flash (5 min)</span>
-            <span>Long (120 min)</span>
+            <span>{{ $t('strain.decarb.rapid') }} (5 min)</span>
+            <span>{{ $t('strain.decarb.long') }} (120 min)</span>
           </div>
         </div>
         <div class="p-4 rounded-2xl bg-default border border-muted">
-          <label class="text-[9px] uppercase tracking-widest text-muted block mb-2">
-            Alkuperäinen happopitoisuus (mg/g)
-          </label>
-          <UInputNumber v-model="initialAcid" />
+          <p class="text-[9px] uppercase tracking-widest text-muted block mb-2">
+            {{ $t('strain.decarb.oxide') }} (mg/g)
+          </p>
+          <UInputNumber
+            id="acid"
+            v-model="initialAcid"
+          />
         </div>
       </div>
       <div class="p-8 bg-default/20 space-y-6">
@@ -112,7 +118,7 @@ const terpeneAnalysis = computed(() => {
         <div class="grid grid-cols-2 gap-4">
           <div class="p-5 rounded-3xl border border-muted shadow-sm">
             <span class="text-[9px] text-muted uppercase block mb-1">
-              Muunnos
+              {{ $t('strain.decarb.conversion') }}
             </span>
             <span class="text-3xl text-muted">
               {{ stats.conversionPercent }}%
@@ -120,7 +126,7 @@ const terpeneAnalysis = computed(() => {
           </div>
           <div class="p-5 rounded-3xl border border-muted shadow-sm">
             <span class="text-[9px] text-muted uppercase block mb-1">
-              Aktiivinen CBD
+              {{ $t('strain.decarb.active') }} CBD
             </span>
             <span class="text-3xl">
               {{ stats.activeMg }}
@@ -138,7 +144,7 @@ const terpeneAnalysis = computed(() => {
             />
             <div class="flex-1">
               <span class="text-xs uppercase opacity-60">
-                Terpeeniprofiili
+                {{ $t('strain.decarb.terpene') }}
               </span>
               <p class="text-xs font-bold">
                 {{ terpeneAnalysis.status }}
@@ -155,10 +161,10 @@ const terpeneAnalysis = computed(() => {
             />
             <div class="flex-1">
               <span class="text-xs uppercase opacity-80">
-                Hajoamisriski
+                {{ $t('strain.decarb.risk.title') }}
               </span>
               <p class="text-xs font-bold">
-                Lämpötila/Aika yhdistelmä voi muuttaa CBD:n muiksi yhdisteiksi.
+                {{ $t('strain.decarb.risk.description') }}
               </p>
             </div>
           </div>

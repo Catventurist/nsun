@@ -73,9 +73,9 @@ const getStatusColor = (status?: string) => {
             {{ spec.unit }}
           </span>
         </div>
-        <div class="pt-3 border-t border-dashed border-muted flex items-center justify-between">
+        <div class="pt-3 border-t border-dashed border-muted flex flex-col items-center justify-between">
           <span class="text-[10px] font-bold text-primary uppercase">
-            {{ $t('strain.goalv') }}:
+            {{ $t('strain.goalv') }}
           </span>
           <span class="text-md font-mono font-bold text-dimmed">
             {{ spec.target }}

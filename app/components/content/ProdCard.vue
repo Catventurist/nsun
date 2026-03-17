@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<Props>(), {
 const accordionItems = computed(() => {
   if (!props.qualities.length) return []
   return [{
-    label: 'Product Details & Lab Specs',
+    label: $t('product.details'),
     icon: 'i-lucide-list-checks',
     slot: 'details'
   }]
@@ -39,7 +39,7 @@ const accordionItems = computed(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div>
     <UCard class="flex flex-col h-full overflow-hidden mb-12 transition-all hover:ring-2 hover:ring-primary/40">
       <template #header>
         <div class="relative -m-4 mb-4 min-h-[200px] flex items-center justify-center">
@@ -60,7 +60,7 @@ const accordionItems = computed(() => {
             v-if="badgeLabel"
             :color="badgeColor"
             variant="subtle"
-            class="absolute top-4 right-4 shadow-sm shadow-primary"
+            class="absolute top-4 right-4 bg-muted/40 shadow-sm shadow-primary"
           >
             {{ badgeLabel }}
           </UBadge>
@@ -130,21 +130,20 @@ const accordionItems = computed(() => {
                 :class="inStock ? 'bg-success' : 'bg-error'"
               />
               <span class="text-[10px] uppercase tracking-widest font-bold text-muted">
-                {{ inStock ? 'In Stock' : 'Out of Stock' }}
+                {{ inStock ? $t('product.stockin') : $t('product.stockout') }}
               </span>
             </div>
           </div>
           <slot name="footer">
             <UButton
               :to="ctaLink"
+              :label="inStock ? ctaLabel : $t('product.notify')"
               :disabled="!inStock"
               :color="inStock ? 'success' : 'neutral'"
               variant="soft"
               size="xl"
               :trailing-icon="inStock ? 'i-lucide-shopping-bag' : 'i-lucide-bell'"
-            >
-              {{ inStock ? ctaLabel : 'Notify Me' }}
-            </UButton>
+            />
           </slot>
         </div>
       </template>

@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'reka-ui/nuxt'
   ],
 
   devtools: {
@@ -32,11 +33,9 @@ export default defineNuxtConfig({
     '/en/docs/**': { appLayout: 'docs' },
     '/en/login/**': { appLayout: 'auth' },
     '/en/signup/**': { appLayout: 'auth' },
-    '/en/editor/**': { appLayout: 'edit' },
     '/fi/docs/**': { appLayout: 'docs' },
     '/fi/login/**': { appLayout: 'auth' },
-    '/fi/signup/**': { appLayout: 'auth' },
-    '/fi/editor/**': { appLayout: 'edit' }
+    '/fi/signup/**': { appLayout: 'auth' }
   },
 
   compatibilityDate: '2026-02-23',
@@ -53,13 +52,11 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
-        '@nuxt/ui > prosemirror-state',
-        '@nuxt/ui > prosemirror-transform',
-        '@nuxt/ui > prosemirror-model',
-        '@nuxt/ui > prosemirror-view',
-        '@nuxt/ui > prosemirror-gapcursor',
-        '@nuxt/ui > prosemirror-tables',
-        'yjs'
+        'tailwindcss/colors',
+        'tailwind-variants',
+        'motion-v',
+        '@internationalized/date',
+        'zod/v4'
       ]
     }
   },

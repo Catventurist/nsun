@@ -85,9 +85,8 @@ useSeoMeta({
       <ClientOnly>
         <AProjectLine id="roadmap" />
         <MContactBlock id="contact" />
-        <AExpGallery :images="eimages" />
+        <ExpGallery :images="eimages" />
         <AFeatureAround id="values" />
-        <AProductList id="products" />
         <EStatsLinks />
         <ELogOrb />
         <!--

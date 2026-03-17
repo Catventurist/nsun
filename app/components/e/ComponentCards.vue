@@ -126,8 +126,14 @@ const eventItems = ref({
       </UPageColumns>
       <ClientOnly>
         <UPageHeader title="Sections">
-          <EContScroll id="containerscroll" class="container" />
-          <AExpGallery id="expgallery" :images="eimages" />
+          <EContScroll
+            id="containerscroll"
+            class="container"
+          />
+          <AExpGallery
+            id="expgallery"
+            :images="eimages"
+          />
           <ELogOrb id="orblogos" />
           <AProjectLine />
           <ECareer />
@@ -260,8 +266,14 @@ const eventItems = ref({
           <EHeroVideo />
           <ENewPass />
           <EPopTour />
-          <EProdCard :price="10" title="Oil" />
-          <EProdProps :price="20" title="Shirt" />
+          <EProdCard
+            :price="10"
+            title="Oil"
+          />
+          <EProdProps
+            :price="20"
+            title="Shirt"
+          />
           <ESpringCal />
           <ETableFull />
           <ETablePay />

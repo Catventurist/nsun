@@ -41,16 +41,14 @@ const props = withDefaults(defineProps<Props>(), {
       </div>
       <UButton
         :to="buttonLink"
-        variant="link"
+        :label="buttonLabel"
+        variant="soft"
         color="primary"
         trailing-icon="i-lucide-arrow-right"
-        class="p-0 font-semibold"
-      >
-        {{ buttonLabel }}
-      </UButton>
+      />
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <UCard
         v-for="item in items"
         :key="item.id"
@@ -68,20 +66,20 @@ const props = withDefaults(defineProps<Props>(), {
             class="absolute top-3 left-3"
           >
             <UBadge
-              label="New"
+              :label="$t('product.new')"
               color="primary"
               variant="solid"
               size="xs"
               class="uppercase tracking-wider font-bold"
             />
           </div>
-          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10 backdrop-blur-[2px]">
+          <div class="absolute inset-0 h-66 flex items-center justify-center opacity-0 duration-300 group-hover:opacity-100 transition-opacity bg-muted/60 backdrop-blur-[2px]">
             <UButton
               icon="i-lucide-eye"
               color="primary"
               variant="soft"
               square
-              class="shadow-xl shadow-primary"
+              class="text-2xl"
             />
           </div>
         </div>
@@ -98,7 +96,7 @@ const props = withDefaults(defineProps<Props>(), {
         </div>
         <template #footer>
           <UButton
-            label="Add to Bag"
+            :label="$t('product.bag')"
             block
             icon="i-lucide-shopping-bag"
             variant="soft"

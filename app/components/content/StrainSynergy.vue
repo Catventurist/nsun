@@ -59,10 +59,10 @@ const issues = computed(() => {
       </div>
       <div>
         <h3 class="text-2xl uppercase tracking-tighter italic leading-none">
-          Nutrient Antagonism Mapper
+          Ravinteiden antagonismin kartoittaja
         </h3>
         <p class="text-[10px] font-bold text-muted uppercase tracking-widest mt-1">
-          Hampun ravinteiden väliset vuorovaikutukset (Mulderin kaavio)
+          Ravinteiden väliset vuorovaikutukset (Mulderin kaavio)
         </p>
       </div>
     </div>
@@ -87,13 +87,13 @@ const issues = computed(() => {
                   {{ n.name }} ({{ n.id }})
                 </span>
               </div>
-              <span class="text-primary text-xs">
+              <div class="flex flex-row text-primary text-sm">
                 <MCountUp
                   :max="n.val"
                   :min="0"
                 />
                 /10
-              </span>
+              </div>
             </div>
             <USlider
               v-model="n.val"

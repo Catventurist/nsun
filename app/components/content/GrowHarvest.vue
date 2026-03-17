@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
   title?: string
-  variety?: 'Fiber' | 'Grain' | 'CBD' | 'CBG'
+  variety?: 'fiber' | 'grain' | 'cbd' | 'cbg'
   moisture?: string
   window?: string
   method?: string
@@ -14,7 +14,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   title: 'Hemp Harvest Protocol',
-  variety: 'Fiber',
+  variety: 'fiber',
   moisture: '10% - 12%',
   window: '70 - 120 Days',
   method: 'Combine / Hand',
@@ -24,11 +24,13 @@ const props = withDefaults(defineProps<Props>(), {
   humidity: '50% - 60%',
   difficulty: 3
 })
+
+const badge = ref($t(`strain.harvest.variety.${props.variety}`) + $t(`strain.harvest.variety.title`))
 </script>
 
 <template>
   <div class="my-8 border border-muted rounded-2xl overflow-hidden">
-    <div class="p-6 bg-linear-to-r from-primary/20 to-warning/20 border-b border-muted">
+    <div class="p-6 bg-linear-to-r from-muted/60 border-b border-muted">
       <div class="flex justify-between items-start">
         <div class="flex items-center gap-4">
           <div class="p-3 bg-muted rounded-lg">
@@ -43,10 +45,10 @@ const props = withDefaults(defineProps<Props>(), {
             </h3>
             <div class="flex items-center gap-2 mt-1">
               <UBadge
-                :label="variety && ' Variety'"
+                :label="badge"
                 color="primary"
                 variant="subtle"
-                size="xs"
+                size="sm"
               />
               <span class="text-xs text-muted font-medium flex items-center gap-1">
                 <UIcon
@@ -60,7 +62,7 @@ const props = withDefaults(defineProps<Props>(), {
         </div>
         <div class="text-right">
           <div class="text-[10px] uppercase font-bold text-muted mb-1">
-            Harvest Difficulty
+            {{ $t(`strain.harvest.diff`) }}
           </div>
           <div class="flex gap-1">
             <div
@@ -81,7 +83,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Target Yield
+            {{ $t(`strain.harvest.yield`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ yield }}
@@ -95,7 +97,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            THC Threshold
+            THC {{ $t(`strain.harvest.tresh`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ thcLimit }}
@@ -109,7 +111,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Storage Humidity
+            {{ $t(`strain.harvest.humi`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ humidity }}
@@ -123,7 +125,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Moisture
+            {{ $t(`strain.harvest.moist`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ moisture }}
@@ -137,7 +139,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Window
+            {{ $t(`strain.harvest.window`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ window }}
@@ -151,7 +153,7 @@ const props = withDefaults(defineProps<Props>(), {
         />
         <div>
           <div class="text-[10px] uppercase font-bold text-muted">
-            Method
+            {{ $t(`strain.harvest.method`) }}
           </div>
           <div class="text-sm font-bold text-primary">
             {{ method }}
@@ -169,7 +171,7 @@ const props = withDefaults(defineProps<Props>(), {
       >
         <div class="flex items-center gap-2 text-error font-bold text-xs uppercase mb-2">
           <UIcon name="i-lucide-gavel" />
-          Legal Compliance
+          {{ $t(`strain.harvest.legal`) }}
         </div>
         <div class="text-sm">
           <slot name="compliance" />

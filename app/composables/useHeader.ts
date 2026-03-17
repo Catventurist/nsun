@@ -40,11 +40,11 @@ export function useHeader() {
         description: t('header.authors.description'),
         to: localePath('/authors'),
         icon: appConfig.ui.icons.users
-      }, {
+      /*  }, {
         label: t('editor.title'),
         description: t('editor.description'),
         to: localePath('/editor'),
-        icon: appConfig.ui.icons.pen
+        icon: appConfig.ui.icons.pen */
       }, {
         label: t('header.community.title'),
         description: t('header.community.description'),
@@ -101,10 +101,10 @@ export function useHeader() {
     label: t('header.pricing.title'),
     to: localePath('/pricing'),
     icon: appConfig.ui.icons.euro
-  }, {
+  /* }, {
     label: t('editor.title'),
     to: localePath('/editor'),
-    icon: appConfig.ui.icons.pen
+    icon: appConfig.ui.icons.pen */
   }, {
     label: t('header.community.title'),
     to: localePath('/community'),

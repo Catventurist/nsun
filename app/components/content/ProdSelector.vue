@@ -8,7 +8,7 @@ interface ProductOption {
   suffix?: string
 }
 
-interface Props {
+interface prodProps {
   label?: string
   description?: string
   icon?: string
@@ -18,7 +18,7 @@ interface Props {
   color?: 'success' | 'primary' | 'secondary' | 'info' | 'warning' | 'error' | 'neutral' | undefined
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<prodProps>(), {
   label: 'Select Variation',
   description: 'Choose the concentration that fits your needs',
   icon: 'i-lucide-settings-2',
@@ -41,7 +41,7 @@ const selectedOption = computed(() =>
 </script>
 
 <template>
-  <div class="p-6 border border-muted rounded-xlspace-y-6">
+  <div class="p-4 border border-muted rounded-xlspace-y-6">
     <div class="flex items-start gap-4 mb-4">
       <div
         v-if="icon"
@@ -82,7 +82,7 @@ const selectedOption = computed(() =>
             <UIcon
               v-if="selectedOption.icon"
               :name="selectedOption.icon"
-              class="w-4 h-4"
+              class="size-4"
             />
             <span>{{ selectedOption.label }}</span>
             <span
@@ -99,10 +99,12 @@ const selectedOption = computed(() =>
         v-model="selected"
         :items="options"
         :size="size"
-        :ui="{ wrapper: 'grid grid-cols-1 gap-3' }"
+        variant="table"
+
+        :ui="{ wrapper: 'grid grid-cols-1 gap-3', base: 'mt-8' }"
       >
         <template #label="{ item }">
-          <div class="flex items-center justify-between w-full p-1 cursor-pointer rounded-xl duration-300 hover:bg-linear-to-b from-primary/20">
+          <div class="flex items-center justify-between w-full cursor-pointer rounded-xl duration-300 hover:bg-linear-to-b from-primary/20">
             <div class="flex items-center gap-3">
               <UIcon
                 v-if="item.icon"
@@ -110,13 +112,15 @@ const selectedOption = computed(() =>
                 class="size-5 text-muted"
               />
               <div class="flex flex-col">
-                <span class="font-bold">{{ item.label }}</span>
-                <span
+                <span class="font-bold">
+                  {{ item.label }}
+                </span>
+                <!-- <span
                   v-if="item.description"
                   class="text-xs text-muted italic"
                 >
                   {{ item.description }}
-                </span>
+                </span> -->
               </div>
             </div>
             <span
@@ -129,13 +133,13 @@ const selectedOption = computed(() =>
         </template>
       </URadioGroup>
     </div>
-    <div class="pt-4 border-t border-muted">
+    <div class="pt-2">
       <slot :selected="selectedOption" />
     </div>
     <div class="flex items-center justify-between gap-4 pt-2">
       <div class="flex flex-col">
         <span class="text-xs font-bold uppercase tracking-widest text-muted">
-          Total Price
+          {{ $t('product.total') }}
         </span>
         <span class="text-2xl">
           {{ selectedOption?.price || '---' }}€
@@ -147,7 +151,7 @@ const selectedOption = computed(() =>
         icon="i-lucide-shopping-cart"
         variant="soft"
       >
-        Add {{ selectedOption?.label }} to Cart
+        {{ $t('product.add') }} {{ selectedOption?.label }} {{ $t('product.cart') }}
       </UButton>
     </div>
   </div>

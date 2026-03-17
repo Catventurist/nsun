@@ -72,9 +72,10 @@ const props = withDefaults(defineProps<Props>(), {
           <p class="text-xs font-medium truncate">
             {{ vendorName }}
           </p>
-          <p class="text-[10px] text-muted">
-            Verified Seller
-          </p>
+          <UIcon
+            name="lucide-badge-check"
+            class="text-success"
+          />
         </div>
         <UButton
           :to="vendorLink"

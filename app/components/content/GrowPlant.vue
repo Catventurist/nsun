@@ -8,11 +8,11 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'Hemp Planting Specification',
+  title: '',
   season: 'Spring / Early Summer',
   depth: '0.5 - 1.0 inches',
   spacing: '4 - 6 inches',
-  temperature: '50°F (10°C)'
+  temperature: '10°C'
 })
 </script>
 
@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<Props>(), {
               name="i-lucide-calendar"
               class="size-4"
             />
-            Optimal Window: {{ season }}
+            {{ $t('strain.grow.window') }}: {{ season }}
           </div>
         </div>
         <UBadge
@@ -38,7 +38,7 @@ const props = withDefaults(defineProps<Props>(), {
           size="lg"
           class="font-semibold uppercase"
         >
-          Industrial Grade
+          {{ $t('strain.grow.grade') }}
         </UBadge>
       </div>
     </div>
@@ -48,24 +48,36 @@ const props = withDefaults(defineProps<Props>(), {
           name="i-lucide-ruler"
           class="size-6 text-primary"
         />
-        <span class="text-xs uppercase font-bold text-muted">Sowing Depth</span>
-        <span class="font-medium text-primary">{{ depth }}</span>
+        <span class="text-xs uppercase font-bold text-muted">
+          {{ $t('strain.grow.depth') }}
+        </span>
+        <span class="font-medium text-primary">
+          {{ depth }}
+        </span>
       </div>
       <div class="p-4 flex flex-col items-center text-center gap-1">
         <UIcon
           name="i-lucide-thermometer-sun"
           class="size-6 text-warning"
         />
-        <span class="text-xs uppercase font-bold text-muted">Min Soil Temp</span>
-        <span class="font-medium text-primary">{{ temperature }}</span>
+        <span class="text-xs uppercase font-bold text-muted">
+          {{ $t('strain.grow.mintemp') }}
+        </span>
+        <span class="font-medium text-primary">
+          {{ temperature }}
+        </span>
       </div>
       <div class="p-4 flex flex-col items-center text-center gap-1">
         <UIcon
           name="i-lucide-arrow-left-right"
           class="size-6 text-info"
         />
-        <span class="text-xs uppercase font-bold text-muted">Row Spacing</span>
-        <span class="font-medium text-primary">{{ spacing }}</span>
+        <span class="text-xs uppercase font-bold text-muted">
+          {{ $t('strain.grow.spacing') }}
+        </span>
+        <span class="font-medium text-primary">
+          {{ spacing }}
+        </span>
       </div>
     </div>
     <div class="p-6 grid gap-6 md:grid-cols-2">
@@ -75,7 +87,7 @@ const props = withDefaults(defineProps<Props>(), {
             name="i-lucide-beaker"
             class="text-primary"
           />
-          Soil & Nutrients
+          {{ $t('strain.grow.soil') }}
         </div>
         <div class="text-sm prose dark:prose-invert max-w-none">
           <slot name="soil" />
@@ -87,7 +99,7 @@ const props = withDefaults(defineProps<Props>(), {
             name="i-lucide-droplets"
             class="text-info"
           />
-          Irrigation Strategy
+          {{ $t('strain.grow.irri') }}
         </div>
         <div class="text-sm prose dark:prose-invert max-w-none">
           <slot name="water" />
@@ -95,10 +107,10 @@ const props = withDefaults(defineProps<Props>(), {
       </section>
     </div>
     <div class="px-6 pb-6">
-      <div class="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 border border-gray-100 dark:border-gray-800">
+      <div class="bg-muted/50 rounded-lg p-4 border border-muted">
         <div class="flex items-center gap-2 mb-4 font-semibold">
           <UIcon name="i-lucide-clipboard-list" />
-          Planting Protocol
+          {{ $t('strain.grow.proto') }}
         </div>
         <div class="text-sm prose dark:prose-invert max-w-none prose-li:my-1">
           <slot />

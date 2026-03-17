@@ -44,7 +44,7 @@ const things: Stocky[] = [
 <template>
   <AWidGet>
     <div class="items-center">
-      <div class="grid size-full grid-cols-2 items-center gap-6">
+      <div class="grid size-full grid-cols-2 items-center gap-4">
         <div
           v-for="stock in things"
           :key="stock.text"
