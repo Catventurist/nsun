@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     enabled: false
   },
   css: ['~/assets/css/main.css'],
+
+  /* content: {
+    experimental: { sqliteConnector: 'native' }
+  }, */
+
   mdc: {
     highlight: {
       noApiRoute: false

@@ -64,6 +64,9 @@ const isYearly = ref('0')
         />
       </template> -->
     </UPageHero>
+    <ClientOnly>
+      .
+    </ClientOnly>
     <UContainer>
       <UPricingPlans scale>
         <UPricingPlan
@@ -77,7 +80,7 @@ const isYearly = ref('0')
     </UContainer>
 
     <UPageSection>
-      <UPageLogos>
+      <UPageLogos class="text-primary">
         <UIcon
           v-for="icon in page.logos.icons"
           :key="icon"
