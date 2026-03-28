@@ -3,7 +3,6 @@ import { MemberSettingsSchema, useMemberSettings } from '~/composables/useMember
 
 const settings = useMemberSettings()
 const error = ref<string | boolean | undefined>()
-
 const colors = ['red', 'orange', 'amber', 'yellow', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
 const tones = ['slate', 'cool', 'zinc', 'neutral', 'stone']
 const radii = [
@@ -144,7 +143,7 @@ watch(settings, () => {
               </span>
             </div>
           </div>
-          <USwitch v-model="settings.privacyMode" />
+          <!-- <USwitch v-model="settings.privacyMode" /> -->
         </div>
         <div class="flex items-center justify-between p-3 border rounded-lg">
           <div class="flex items-center gap-3">
@@ -156,7 +155,7 @@ watch(settings, () => {
               <span class="text-sm font-medium">Compact Interface</span>
             </div>
           </div>
-          <USwitch v-model="settings.compactMode" />
+          <!-- <USwitch v-model="settings.compactMode" /> -->
         </div>
       </div>
       <template #footer>

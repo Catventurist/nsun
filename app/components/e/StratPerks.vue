@@ -168,7 +168,7 @@ const copyReferral = () => {
               class="bg-warning/20 border border-warning p-4 rounded-2xl flex items-center justify-between duration-300 hover:bg-radial from-primary/20"
             >
               <div>
-                <span class="text-[10px] bg-warning/20 px-2 py-0.5 rounded-full mb-2 inline-block uppercase">
+                <span class="text-sm bg-warning/20 px-2 py-0.5 rounded-full mb-2 inline-block uppercase">
                   Limited Time
                 </span>
                 <p class="font-bold">
@@ -186,7 +186,7 @@ const copyReferral = () => {
                 <p class="text-2xl text-warning">
                   x{{ perk.multiplier }}
                 </p>
-                <p class="text-[10px] text-warning/80 font-bold uppercase tracking-tighter">
+                <p class="text-sm text-warning/80 font-bold uppercase tracking-tighter">
                   Multiplier
                 </p>
               </div>
@@ -231,13 +231,13 @@ const copyReferral = () => {
                 </p>
                 <p
                   v-if="!badge.isLocked"
-                  class="text-sm text-sm"
+                  class="text-sm"
                 >
                   Unlocked {{ badge.unlockedAt }}
                 </p>
                 <p
                   v-else
-                  class="text-[10px] text-muted italic"
+                  class="text-sm text-muted italic"
                 >
                   Keep participating to unlock
                 </p>

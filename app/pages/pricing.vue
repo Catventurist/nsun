@@ -65,7 +65,7 @@ const isYearly = ref('0')
       </template> -->
     </UPageHero>
     <ClientOnly>
-      .
+      -
     </ClientOnly>
     <UContainer>
       <UPricingPlans scale>

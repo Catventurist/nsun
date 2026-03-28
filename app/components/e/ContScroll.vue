@@ -2,13 +2,13 @@
   <div class="flex flex-col overflow-hidden">
     <AContainerScroll>
       <template #title>
-        <h1 class="text-4xl font-semibold text-default">
-          {{ $t('site.description') }}
+        <h2 class="text-3xl font-semibold text-success">
+          Mining and Ecology
           <br>
-          <span class="mt-1 text-4xl leading-none font-bold md:text-[6rem] text-warning">
-            {{ $t('site.title') }}
+          <span class="mt-1 text-4xl leading-none font-bold text-warning">
+            The Earth at the Turning Point
           </span>
-        </h1>
+        </h2>
       </template>
       <template #card>
         <NuxtImg

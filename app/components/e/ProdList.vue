@@ -134,7 +134,7 @@ const productItems: ProductItem[] = [
                   </span>
                 </div>
                 <div class="flex flex-row items-center">
-                  <UCheckbox
+                  <!-- <UCheckbox
                     class="focus-visible:ring-default/50 rounded-sm p-2.5 outline-none focus-visible:ring-3 **:data-[state=checked]:text-error **:data-[state=checked]:bg-default **:data-[state=indeterminate]:bg-muted **:data-[state=indeterminate]:text-muted"
                     icon="i-lucide-heart"
                     default-value="indeterminate"
@@ -149,7 +149,7 @@ const productItems: ProductItem[] = [
                     indeterminate-icon="i-lucide-shopping-cart"
                     size="xl"
                     aria-label="Cart icon"
-                  />
+                  /> -->
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const items = ref([
+import type { DropdownMenuItem } from '@nuxt/ui'
+
+const items = ref<DropdownMenuItem[][]>([
   [
     {
       label: 'Cat',

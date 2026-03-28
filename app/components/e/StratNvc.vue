@@ -137,7 +137,7 @@ const setStep = (index: number) => {
     </UCard>
     <div
       v-if="fullStatement"
-      class="bg-gray-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden"
+      class="p-8 rounded-3xl shadow-2xl relative overflow-hidden"
     >
       <h4 class="text-xs font-bold text-primary-400 uppercase tracking-[0.3em] mb-4">
         Integrated Statement
